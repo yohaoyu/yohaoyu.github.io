@@ -20,7 +20,7 @@ permalink:           none
 plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
 
 # Customise atom feed settings 
-title:		           'Haoyu Yue'
+title:		           'Haoyu Yue 岳皓宇'
 description:	       'A City Lover'
 author:              'Haoyu'
 
