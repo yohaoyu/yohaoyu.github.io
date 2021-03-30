@@ -1,6 +1,6 @@
 # Change 'comments' to true for Disqus comments
 disqus:
-  comments: false
+  comments: true
   disqus_shortname: ''
 
 # If you are not using Google Analytics, please change 'google-ID' to an empty string
@@ -8,25 +8,23 @@ google-ID: ''
 
 menu:
 - {name: 'About', path: 'menu', url: 'about.html'}
-- {name: 'Writing', path: 'menu', url: 'writing.html'}
-- {name: 'Contact', path: 'menu', url: 'contact.html'}
+- {name: 'Cities', path: 'menu', url: 'cities.html'}
+- {name: 'Informatics', path: 'menu', url: 'informatics.html'}
+- {name: 'More', path: 'menu', url: 'more.html'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
-- {icon: 'github', link: ''}
-- {icon: 'twitter', link: ''}
-- {icon: 'linkedin', link: ''}
-- {icon: 'envelope', link: 'mailto:'}
+- {icon: 'github', link: 'https://github.com/Yohaoyu'}
+- {icon: 'linkedin', link: 'https://www.linkedin.com/in/yohaoyu/'}
+- {icon: 'envelope', link: 'mailto:yohaoyu@outlook.com'}
 - {icon: 'rss-square', link: '/feed.xml'}
 # - {icon: 'rss-square', link: '/rss-feed.xml'}
 
 # Customize site text
 pagination:
-  next_page: 'Newer'
-  previous_page: 'Older'
+  next_page: 'Next'
+  previous_page: 'Before'
 
-sharing_button_prompt: 'Feel free to share!'
-
-related_posts: 'You may also enjoy:'
+related_posts: 'More:'
 
 post_date_prefix: 'Written on'
