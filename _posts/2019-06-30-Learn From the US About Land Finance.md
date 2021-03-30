@@ -2,7 +2,7 @@
 layout: post
 title: "Learn From the US About Land Finance"
 author: "Haoyu"
-categories: journal
+categories: Cities
 tags: [land use,finance,US,China]
 
 ---
@@ -11,7 +11,7 @@ tags: [land use,finance,US,China]
 
 Since the establishment of the credit system in modern times, the government can overdraw the future income for the accumulation of original capital; the tax sharing system reform in 1994 reduced the local government’s tax revenue but made the local government obtain the right of land tax. Since then, China has started “land finance”.
 
- # 1 Current Land Finance Mode in China
+# Current Land Finance Mode in China
 
 In the traditional economy, large-scale urbanization mainly relies on the accumulation of surplus wealth in the past; however, due to the huge one-time investment, the development of the city is seriously restricted. Since the establishment of the credit system in modern times, the government can overdraw the future income for the accumulation of original capital; the tax sharing system reform in 1994 reduced the local government’s tax revenue but made the local government obtain the right of land tax. Since then, China has started “land finance”.
 
@@ -21,7 +21,7 @@ Professor Zhao Yanjing proposed that the essence of land finance is financing ra
 
 The origin of land finance mentioned above is mainly due to the need for a large number of original capital for large-scale urban construction; with the reduction of large-scale urban construction and the completion of original capital accumulation, land finance should shift from one-time financing to sustainable growth of taxation. Many western countries have experienced this transformation and achieved good results. Therefore, I will discuss the road of china’s transformation based on the evolution of land finance in the united states.
 
-# 2 Land Finance Development in the United States
+# Land Finance Development in the United States
 
 The development and evolution of land revenue in the united states can be divided into the following stages: the first stage, from 1776 to 1861, was dominated by land sales; the second stage was the period from the beginning of the civil war to 1900 when property tax began to be generally collected in all states, land revenue is mainly concentrated at the state level, accounting for more than 50% of the total revenue; the third stage is from 1900 to 1942, the land fiscal revenue transferred from the state to the local governments below, accounting for 70% of the total revenue; the fourth stage is from the mid-1940s to the present, the land revenue of local governments below the state level is mainly property tax, and the proportion of land revenue in the total revenue is gradually reduced to 30%.
 
@@ -29,7 +29,7 @@ Among the various components of land revenue in the united states, in the early 
 
 There are two main types of land tax revenue in the united states, namely property tax, and inheritance tax. The property tax in the united states has a long history and is relatively stable. It has been levied since the beginning of the 19th century, while the inheritance tax is relatively late and the amount is small. Therefore, the land tax revenue in the united states is mainly property tax, and its internal structure has not changed significantly, so it is relatively stable. The united states have not collected all kinds of taxes on land like other countries and have always used a single property tax system to obtain land income.
 
-# 3 Ideas Learned from "American Style"
+# Ideas Learned from "American Style"
 
 In the process of transformation in the united states, the federal government gives up land revenue, and local governments levy property taxes. This means that a large number of taxes need to be devolved from the central government to the local government or even to the “school districts” at the lower level. Obviously, the central government can not pay a huge amount of land sales revenue, so it can not be realized through the first method of the united states, i.e., decentralization of tax rights.
 
