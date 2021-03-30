@@ -1,6 +1,6 @@
 # Change 'comments' to true for Disqus comments
 disqus:
-  comments: true
+  comments: false
   disqus_shortname: ''
 
 # If you are not using Google Analytics, please change 'google-ID' to an empty string
@@ -22,8 +22,8 @@ social:
 
 # Customize site text
 pagination:
-  next_page: 'Next'
-  previous_page: 'Before'
+  next_page: 'Newer'
+  previous_page: 'Older'
 
 related_posts: 'More:'
 

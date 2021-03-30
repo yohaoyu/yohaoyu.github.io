@@ -9,7 +9,7 @@ tags: [land use,finance,US,China]
 
 
 
-*#AUTO TRANSLATED FROM CHINESE VISION*
+*#Auto Translated From Chinese Version By Google Translator*
 
 Since the establishment of the credit system in modern times, the government can overdraw the future income for the accumulation of original capital; the tax sharing system reform in 1994 reduced the local government’s tax revenue but made the local government obtain the right of land tax. Since then, China has started “land finance”.
 
