@@ -4,7 +4,6 @@ title: "Park Visiting in WA. During the COVID-19"
 author: "Haoyu"
 categories: Informatics
 tags: [COVID-19,travel pattern,Washington State]
-image: image-20210330234514130.png
 
 ---
 
