@@ -2,7 +2,7 @@
 layout: post
 title: "I'm Reading Planning Theory"
 author: "Haoyu"
-categories: Cities
+categories: "Cities" 
 tags: [theory,planning,notebooks]
 
 ---
