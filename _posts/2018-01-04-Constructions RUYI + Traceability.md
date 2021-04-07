@@ -4,7 +4,6 @@ title: "Constructions: RUYI + Traceability"
 author: "Haoyu"
 categories: "Cities" 
 tags: [theory,planning,notebooks]
-image: cropped-DSC_3934.jpg
 
 ---
 
@@ -14,6 +13,6 @@ image: cropped-DSC_3934.jpg
 
 
 
-<!--Location: Changsha, China-->
-
-<!--Date: 06/2017 & 01/2018-->
+> Location: Changsha, China
+>
+> Date: 06/2017 & 01/2018
