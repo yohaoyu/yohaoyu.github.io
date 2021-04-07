@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Cities
+title: Infomatics
 ---
 <ul class="posts">
   {% for post in site.posts %}
