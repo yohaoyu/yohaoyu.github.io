@@ -2,7 +2,7 @@
 layout: post
 title: "Learn From the US About Land Finance"
 author: "Haoyu"
-categories: "2"
+categories: "Informatics"
 tags: [land use,finance,US,China]
 
 ---
