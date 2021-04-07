@@ -4,7 +4,7 @@ title: Infomatics
 ---
 <ul class="posts">
   {% for post in site.posts %}
-    {% if post.categories == "Informatics" %}
+    {% if post.categories == 2 %}
         {% unless post.next %}
           <h3>{{ post.date | date: '%Y' }}</h3>
         {% else %}
