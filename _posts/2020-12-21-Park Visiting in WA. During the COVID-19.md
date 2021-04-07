@@ -103,7 +103,7 @@ Use the data in 2019/4 to redo the analysis and then compare the results before 
 
 ### Regression Results - 2019
 
-|                          | **Estimate** | **Standardized** | **Std. Error** | **T value** | **P-value** |
+|                          | **Estimate** | **SD** | **Std. Error** | **T value** | **P-value** |
 | ------------------------ | ------------ | ---------------- | -------------- | ----------- | ----------- |
 | **Percent of Non-White** | 560.5        | 0.04728          | 360.6          | 1.554       | 0.1204      |
 | **Percent of Over 65**   | -2944        | -0.1029          | 806.1          | -3.652      | 0.0002707   |
@@ -111,7 +111,7 @@ Use the data in 2019/4 to redo the analysis and then compare the results before 
 
 ### Regression Results - 2020
 
-|                           | **Estimate** | **Standardized** | **Std. Error** | **T value** | **P-value** |
+|                           | **Estimate** | **SD** | **Std. Error** | **T value** | **P-value** |
 | ------------------------- | ------------ | ---------------- | -------------- | ----------- | ----------- |
 | **Percent  of Non-White** | -30.25       | -0.01568         | 41.08          | -0.7365     | 0.4615      |
 | **Percent of Over 65**    | -391.3       | -0.08582         | 89.9           | -4.352      | 1.4e-05     |
