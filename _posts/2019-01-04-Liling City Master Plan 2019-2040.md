@@ -15,6 +15,8 @@ tags: [project,planning]
 
 ![PAGE05](../assets/img/PAGE05.png)
 
+Type: Group Project
+
 Location: Zhuzhou, China
 
 Date: 01/2019
