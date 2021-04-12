@@ -5,7 +5,11 @@ title: Books
 
 ---
 
-![演讲的力量 - 克里斯·安德森](../assets/img/%E6%BC%94%E8%AE%B2%E7%9A%84%E5%8A%9B%E9%87%8F%20-%20%E5%85%8B%E9%87%8C%E6%96%AF%C2%B7%E5%AE%89%E5%BE%B7%E6%A3%AE.jpg)
+<img src="../assets/img/%E6%BC%94%E8%AE%B2%E7%9A%84%E5%8A%9B%E9%87%8F%20-%20%E5%85%8B%E9%87%8C%E6%96%AF%C2%B7%E5%AE%89%E5%BE%B7%E6%A3%AE.jpg" alt="演讲的力量 - 克里斯·安德森" width = "50" />
+
+
+
+ width=“100px”}
 
 ![优秀的绵羊 - 威廉·德雷谢维奇](../assets/img/%E4%BC%98%E7%A7%80%E7%9A%84%E7%BB%B5%E7%BE%8A%20-%20%E5%A8%81%E5%BB%89%C2%B7%E5%BE%B7%E9%9B%B7%E8%B0%A2%E7%BB%B4%E5%A5%87.jpg)
 
