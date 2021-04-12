@@ -9,7 +9,6 @@ google-ID: ''
 menu:
 - {name: 'Writing', path: 'menu', url: 'writing.html'}
 - {name: 'Informatics', path: 'menu', url: 'informatics.html'}
-- {name: 'Books', path: 'menu', url: 'books.html'}
 - {name: 'About', path: 'menu', url: 'about.html'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
