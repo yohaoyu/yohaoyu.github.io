@@ -7,18 +7,56 @@ tags: [theory,planning,notebooks]
 
 ---
 
-# Introduction
+## Overall introduction
 
-## Friedmann, J. (2003) Why Do Planning Theory? Planning Theory 2(1): 7-10.
+### 1800s
 
-## Friedmann, J. (2008) The Uses of Planning Theory: A Bibliographic Essay. Journal of Planning Education and Research 28: 247-257.
+Thomas Jefferson
 
-## Friedmann, J. (1987) Planning in the Public Domain: From Knowledge to Action, Princeton, Princeton University Press, pp. 3-85.
 
-### Overall introduction
 
-#### 18 century
+### 1900s - Social planning
 
-### The terrain of planning theory
+### 1929 - Great depression
 
-### Two centuries of planning theory
+### 1940s
+
+### 1950s - 1960s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Why Do Planning Theory?
+
+## The Uses of Planning Theory
+
+## The Terrain of Planning Theory
+
+
+
+## Two Centuries of Planning Theory
+
+## 
+
+
+
+
+
+> Friedmann, J. (2003) Why Do Planning Theory? Planning Theory 2(1): 7-10.
+>
+> Friedmann, J. (2008) The Uses of Planning Theory: A Bibliographic Essay. Journal of Planning Education and Research 28: 247-257.
+>
+> Friedmann, J. (1987) Planning in the Public Domain: From Knowledge to Action, Princeton, Princeton University Press, pp. 3-85.

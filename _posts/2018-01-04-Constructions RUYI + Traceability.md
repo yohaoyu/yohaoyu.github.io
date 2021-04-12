@@ -3,7 +3,7 @@ layout: post
 title: "Constructions: RUYI + Traceability"
 author: "Haoyu"
 categories: "Cities" 
-tags: [theory,planning,notebooks]
+tags: [project,models]
 
 ---
 
