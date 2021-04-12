@@ -2,8 +2,8 @@
 
 # Jekyll-paginate-v2 configuration
 #  pagination:
-#   enabled: true
-#   per_page: 0
+#   enabled: false
+#   per_page: 4
 #   permalink: '/page/:num/'
 #   title: ':title - page :num of :max'
 #   limit: 0
@@ -11,7 +11,7 @@
 #   sort_reverse: true
 
 # jekyll-paginate configuration
-paginate:            0
+paginate:            4
 
 # Build settings
 markdown:            kramdown
@@ -21,7 +21,7 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 
 # Customise atom feed settings 
 title:		           'Haoyu Yue'
-description:	       'A City Lover'
+description:	       'a city learner and lover'
 author:              'Haoyu'
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
