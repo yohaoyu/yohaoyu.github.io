@@ -1,0 +1,29 @@
+title:               Yohaoyu
+url:                 https://yohaoyu.github.io
+baseurl:             ""
+
+markdown:            kramdown
+highlighter:         rouge
+
+exclude:             ['*.sublime-*', 'README.md', 'LICENSE', 'Gemfile', 'Gemfile.lock', 'vendor/bundle']
+
+permalink:           pretty
+paginate:            5
+paginate_path:       /blog/:num
+
+blog:
+  truncated_preview: false
+
+sass:
+  sass_dir:          _sass
+  style:             :compressed
+
+author:
+  name:              Haoyu Yue
+  url:               yohaoyu.github.io
+  email:             yohaoyu@outlook.com
+
+plugins:
+  - jekyll-coffeescript
+  - jekyll-paginate
+  - jekyll-gist
