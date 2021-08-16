@@ -54,7 +54,7 @@ Use **Excel** to reorganize the data and make two versions, one is for R and reg
 
 Active **Network Analyst** and then **Create Route** called *Routes_2020*. **Load location** *KC_2020* for *Stops* then click **Solve**.
 
-![image-20210330234514130](2020-12-Park Visiting in WA. During the COVID-19/image-20210330234514130.png)
+![image-20210330234514130](2020/12/21/Park Visiting in WA. During the COVID-19/image-20210330234514130.png)
 
 #### (6)  Output
 
@@ -90,11 +90,11 @@ Use the data in 2019/4 to redo the analysis and then compare the results before 
 
 ### Visiting Pattern - 2019                         
 
-![image-20210330234538174](2020-12-Park Visiting in WA. During the COVID-19/image-20210330234538174.png)
+![image-20210330234538174](2020/12/21/Park Visiting in WA. During the COVID-19/image-20210330234538174.png)
 
 ### Visiting Pattern - 2020 
 
-![image-20210330234610593](2020-12-Park Visiting in WA. During the COVID-19/image-20210330234610593.png)
+![image-20210330234610593](2020/12/21/Park Visiting in WA. During the COVID-19/image-20210330234610593.png)
 
 ### Regression Results - 2019
 
