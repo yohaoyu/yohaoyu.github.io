@@ -8,8 +8,6 @@ tags: [COVID-19,travel pattern,Washington State]
 
 
 
-## Research Question                         
-
 At the beginning of 2020, COVID-19 began to become pandemic all over the world. Governments proposed shelter in place orders to restrict social distance and the use of public space to prevent the spread of the virus. CDC proposed that during the pandemic urban green space, such as parks, are important to the mental and physical health of citizens. Although the orders restrict all people, such restrictions will have a severe impact on some socio-economic disadvantaged groups. So, I would like to explore the relationships between the distance of park visiting and socio-economic status before and during the pandemic. ArcMap, ArcCatalog, Excel, and R will be used in the Lab session. 
 
 ## Data Description                             
