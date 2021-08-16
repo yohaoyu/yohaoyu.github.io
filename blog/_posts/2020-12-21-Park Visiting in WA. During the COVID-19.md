@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Park Visiting Patterns in WA. During the COVID-19 Pandemic"
+title: "Park Visiting Patterns in Washington State During the COVID-19 Pandemic"
 author: "Haoyu"
 tags: [COVID-19,travel pattern,Washington State]
 
