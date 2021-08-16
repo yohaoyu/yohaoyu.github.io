@@ -6,27 +6,29 @@
   <body>
     <nav class="nav-main">
       <ul>        
-        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/">HOME</a></li>
+        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/">home</a></li>
         <!--<li class="logo"><a class="hvr-ripple-out" href="{{ site.baseurl }}/">C</a></li> -->   
-        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/about/">ABOUT</a></li>
-        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/blog/">BLOG</a></li>
-        
-      </ul>
+       <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/blog/">blog</a></li>
+       <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/about/">about</a></li>
+      
+      </ul>       
     </nav>
-
+        
+    
     <div class="container content">
       <main>
         {{ content }}
       </main>
-
+    
       <footer class="footer">
         <small>
             <span class="copyright"><i class="fa fa-copyright"></i> 2020-<time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}</span> &middot;
             <span>Powered by <a href="http://jekyllrb.com/">Jekyll</a></span>
         </small>
         <div class="ftr-links">
-        
-          
+
+
+​          
           <a href="https://github.com/yohaoyu"><i class="fa fa-github"></i></a>
           <a href="mailto:yohaoyu@outlook.com"><i class="fa fa-envelope"></i></a>
           <a href="https://twitter.com/haoyu_city"><i class="fa fa-twitter"></i></a>
