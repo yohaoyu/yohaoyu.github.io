@@ -95,11 +95,11 @@ Use the data in 2019/4 to redo the analysis and then compare the results before 
 
 ### Visiting Pattern - 2019                         
 
-![image-20210330234538174](2020-12-21-Park Visiting in WA. During the COVID-19.assets/image-20210330234538174.png)
+![image-20210330234538174](image-20210330234538174.png)
 
 ### Visiting Pattern - 2020 
 
-![image-20210330234610593](2020-12-21-Park Visiting in WA. During the COVID-19.assets/image-20210330234610593.png)
+![image-20210330234610593](../../assets/img/image-20210330234610593.png)
 
 (One line represents a route from a census block to a park)
 
