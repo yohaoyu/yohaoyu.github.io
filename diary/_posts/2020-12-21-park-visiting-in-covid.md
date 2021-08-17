@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: diary
 title: "Park Visiting Patterns in Washington State During the COVID-19 Pandemic"
 author: "Haoyu"
 tags: [COVID-19,travel pattern,Washington State]
