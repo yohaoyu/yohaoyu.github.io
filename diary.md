@@ -1,22 +1,49 @@
 ---
 layout: page
-title: About
+title: Diary
 ---
 
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+  Hey there! This page records the interesting memories I had during my college life. However, I have to apologize that most of them are extremely boring and written in Chinese due to the limitation of my writing skills. Carry on and be free to reach out to me if anything interests you!
 </p>
 
-Celeste is a lightweight Jekyll theme that features a minimalist, content-first design. It places your content center stage and lets your readers view them in a clutter-free environment without visual distractions. It is based on [Poole](https://github.com/poole/poole), the Jekyll butler, by [@mdo](https://twitter.com/mdo).
+## 中学
 
-In addition to using Poole as its foundation, Celeste is also built using the following open-source projects:
+### 一路交际（2012.09 - 2013.08）
 
-* [normalize.css](http://necolas.github.io/normalize.css/), a modern, HTML5-ready alternative to CSS resets.
-* [Font Awesome](https://fontawesome.com/v4.7.0/), the iconic font and CSS toolkit.
-* [Hover.css](http://ianlunn.github.io/Hover/), a collection of CSS3 powered hover effects.
+### 疯癫逍遥（2013.09 - 2014.08）
 
-Celeste is <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by [@nicoelayda](https://github.com/nicoelayda). Learn more and contribute on [GitHub](https://github.com/nicoelayda/celeste).
+### 云淡风轻（2014.09 - 2015.08）
 
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/nicoelayda/celeste/issues/new) or [ask me on Twitter](https://twitter.com/nicoelayda).
+## 大学
 
-Thanks for reading!
+### 无趣生活（2015.09 - 2016.02）
+
+### 回归传统（2016.03  -2016.08）
+
+### 后秋菜园（2016.09 - 2017.02）
+
+### 规规矩矩（2017.03  -2017.08）
+
+### 高光时刻（2017.09 - 2018.02）
+
+### 人坚不拆（2018.03  -2018.08）
+
+### 拉卡贝拉（2018.09 - 2019.02）
+
+### 疯狂假日（2019.03  -2019.08）
+
+### 再来一遍（2019.09 - 2020.02）
+
+### 疫情肆虐（2020.03 - 2020.09）
+
+## 硕士
+
+### 深夜直播（2020.10 - 2020.12）
+
+### 人生焦虑（2021.01 - 2020.03）
+
+### 私定终身（2021.04 - 2021.06）
+
+### 理想生活（2021.07 - 2021.09）
+

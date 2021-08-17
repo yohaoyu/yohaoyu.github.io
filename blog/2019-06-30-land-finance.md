@@ -8,13 +8,11 @@ tags: [land use,finance,US,China]
 
 
 
-*#Auto Translated From Chinese Version By Google Translator*
-
-Since the establishment of the credit system in modern times, the government can overdraw the future income for the accumulation of original capital; the tax sharing system reform in 1994 reduced the local government’s tax revenue but made the local government obtain the right of land tax. Since then, China has started “land finance”.
+Since the establishment of the credit system, the government can overdraw the future income for the accumulation of original capital; the tax sharing system reform in 1994 reduced the local government’s tax revenue but made the local government obtain the right of land tax. Since then, China has started “land finance”.
 
 ## Current Land Finance Mode in China
 
-In the traditional economy, large-scale urbanization mainly relies on the accumulation of surplus wealth in the past; however, due to the huge one-time investment, the development of the city is seriously restricted. Since the establishment of the credit system in modern times, the government can overdraw the future income for the accumulation of original capital; the tax sharing system reform in 1994 reduced the local government’s tax revenue but made the local government obtain the right of land tax. Since then, China has started “land finance”.
+In the tradition, large-scale urbanization mainly relies on the accumulation of surplus wealth in the past. However, due to the large amount of one-time investments, the development of the city is seriously restricted. Since the establishment of the credit system in modern times, the government can overdraw the future income for the accumulation of original capital; the tax sharing system reform in 1994 reduced the local government’s tax revenue but made the local government obtain the right of land tax. Since then, China has started “land finance”.
 
 Professor Zhao Yanjing proposed that the essence of land finance is financing rather than income. Western governments collect personal tax to provide corresponding public services; but in China, due to the imperfection of personal tax system and the small proportion of the taxed population, local governments can not identify who has the right to enjoy urban public services, so they have to use household registration to limit the supply of public services. Household registration is closely related to real estate, so the essence of land finance is to invest in urban public services through one-time financing.
 
