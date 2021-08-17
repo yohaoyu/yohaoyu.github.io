@@ -4,7 +4,7 @@ title: Diary
 ---
 
 <div class="diary">
-  {% for diary in paginator.posts %}
+  {% for post in paginator.posts %}
   <article class="post">
     <h1 class="post-title">
       <a href="{{ site.baseurl }}{{ post.url }}">
