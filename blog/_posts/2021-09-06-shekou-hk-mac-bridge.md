@@ -1,8 +1,10 @@
 ---
 layout: post
-title: "Shekou and HK-MAC-Zhuhai Bridge"
+title: "Shekou and HK-Zhuhai-MAC Bridge"
 author: "Haoyu"
 ---
+
+The tiny trip to SheKou, Shenzhen and HK-Zhuhai-MAC Bridge. 
 
 ![shenzhen](shenzhen.jpg)
 
@@ -10,5 +12,6 @@ SheKou Port is an important port in southern China, as the same time is the firs
 
 ![bridge](bridge.jpg)
 
-Hong Kong-Zhuhai-Macao Bridge is the longest cross-sea bridge in the world, which is 55 km with 4 artificial islands and 7-km-long undersea tunnel. The photo here is the piers of the bridge. The shapes indicate the Chinese knot and good luck for every boats and vehicles.  
+Hong Kong-Zhuhai-Macao Bridge is the longest cross-sea bridge in the world, which is 55 km with 4 artificial islands and 7-km-long undersea tunnel. The photo here is the piers of the bridge. The shape of piers indicates the Chinese knot and good luck for every boats and vehicles.  
 
+*Photo by Haoyu* 
