@@ -4,7 +4,7 @@ title: "Shekou and HK-Zhuhai-MAC Bridge"
 author: "Haoyu"
 ---
 
-The tiny trip to SheKou, Shenzhen and HK-Zhuhai-MAC Bridge. 
+The tiny trip to SheKou, Shenzhen and Hong Kong-Zhuhai-Macao Bridge. 
 
 ![shenzhen](shenzhen.jpg)
 
