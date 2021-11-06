@@ -29,11 +29,11 @@ a.pagination-item {
   &:focus,
   &:hover {
     text-decoration: none;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
   }
 }
 
-@media (max-width: 30em) {
+@media (max-width: 40em) {
   .pagination {
     margin: 0 -1.5rem 1rem;
 
