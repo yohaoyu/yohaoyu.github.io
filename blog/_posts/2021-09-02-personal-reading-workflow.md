@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My Personal Literature Reading Workflow"
+title: "My Reading Workflow"
 author: "Haoyu"
 ---
 
