@@ -2,7 +2,6 @@
 layout: post
 title: "Traceability of Central South University"
 author: "Haoyu"
-categories: "Cities" 
 tags: [project,models]
 
 ---

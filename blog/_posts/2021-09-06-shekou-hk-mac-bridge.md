@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Shekou and HK-Zhuhai-MAC Bridge"
+title: "Hong Kong-Zhuhai-Macao Bridge"
 author: "Haoyu"
 ---
 
