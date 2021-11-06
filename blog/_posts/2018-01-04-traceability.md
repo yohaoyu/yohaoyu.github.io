@@ -15,4 +15,4 @@ Type: Group Project
 
 Location: Changsha, China
 
-Date: 06/2017 & 01/2018
+Date: 01/2018
