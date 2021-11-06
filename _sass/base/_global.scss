@@ -12,7 +12,7 @@ html {
   font-size: $font-size;
   line-height: 1.5;
 
-  @media (max-width: 48em) {
+  @media (max-width: 40em) {
     font-size: $font-size-mobile;
   }
 }
