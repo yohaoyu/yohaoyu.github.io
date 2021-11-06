@@ -3,6 +3,9 @@ layout: post
 title: "My Urban Informatics Curriculum at UW"
 author: "Haoyu"
 ---
+
+Urban Informatics is an unofficial [specilization](https://urbdp.be.uw.edu/programs/mup-graduate-degree/specializations/) in UW now (11/05/2021). Anyone who is willing to choose this area needs to submit the *Individualized Specialization Application* to get permission. I chose this path and here is the my curriculum for reference.
+
 ## Regular Schedule
 
 ### 1st, Au2020
