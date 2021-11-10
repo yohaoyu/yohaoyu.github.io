@@ -6,7 +6,7 @@ title: WeChat
 <p>
 </p>
 
-<p align="center"><img src="qrcode.png" alt="qrcode" style="zoom:70%;" /></p>
+<p align="center"><img src="qrcode.png" alt="qrcode" style="zoom:50%;" /></p>
 
 
 
