@@ -9,7 +9,7 @@ title: WeChat
 
 
 
-<img align = "center" src="wechat/qrcode.png" alt="qrcode" style="zoom:100%;" />
+<img align = "center" src="qrcode.png" alt="qrcode" style="zoom:100%;" />
 
 
 
