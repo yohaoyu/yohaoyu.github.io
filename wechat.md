@@ -3,15 +3,17 @@ layout: page
 title: WeChat
 ---
 
+<p>
+
+</p>
 
 
 
+<img align = "center" src="wechat/qrcode.png" alt="qrcode" style="zoom:100%;" />
 
 
 
+---
 
-
-<center >Use WeChat or WeCom to scan my QR code and add me as friend</center>
-
-<img align="center" src="/qr.png" alt="image-20211110004157068"  />
+<center >Use WeChat or WeCom to scan my QR code and add me as friend.</center>
 
