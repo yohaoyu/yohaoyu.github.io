@@ -10,54 +10,54 @@ Urban Informatics is an unofficial [specilization](https://urbdp.be.uw.edu/progr
 
 ### 1st, Au2020
 
-- URBDP 500 Survey of Urban Planning (4)
-- URBDP 504 Intro to GIS (3)
-- URBDP 505 The Urban Form (4)
-- URBDP 520 Quantitative Methods in Urban Planning (5)
+- **URBDP 500 Survey of Urban Planning (4)**
+- **URBDP 504 Intro to GIS (3)**
+- **URBDP 505 The Urban Form (4)**
+- **URBDP 520 Quantitative Methods in Urban Planning (5)**
 
 ### 2nd, W2021
 
-- URBDP 501 Comprehensive Planning and Implementation (4)
-- URBDP 506 Planning Studio Preparation (3)
-- URBDP 510 Theories Methodologies of Planning (4)
+- **URBDP 501 Comprehensive Planning and Implementation (4)**
+- **URBDP 506 Planning Studio Preparation (3)**
+- **URBDP 510 Theories Methodologies of Planning (4)**
   - Some methods for planning practice, such as economic base analysis, cohort component population projection, land capacity analysis.
   - We generated an indicator system for evaluating the happiness level in cities during the COVID-19.
-- PUBPOL 542 Computational Thinking for Governance Analytics (4) 
+- **PUBPOL 542 Computational Thinking for Governance Analytics (4)** 
   - Introduction of data processing by Python, regression by R and other topics, such as agent-based model and optimization.
-- CS&SS Review of Mathematics for Social Scientists (1)
+- **CS&SS Review of Mathematics for Social Scientists (1)**
   - Review of basic math concepts, including calculus, linear algebra, probability and statistics. 
 
 ### 3rd, Sp2021
 
-- URBDP 507 Urban Planning Studio (5)
-- URBDP 561 Urban Economics and Public Policy (4)
-- BE 592 Research Tools in the Built Environment (1)
-- CET 599 Machine Learning for Civil Engineering (3)
+- **URBDP 507 Urban Planning Studio (5)**
+- **URBDP 561 Urban Economics and Public Policy (4)**
+- **BE 592 Research Tools in the Built Environment (1)**
+- **CET 599 Machine Learning for Civil Engineering (3)**
 
 ### 4th, Au2021
 
-- URBDP 566 Infrastructure Planning and Finance (4)
-- [URBDP 591 Research Design for Urban Science (3)](https://researchdesign.be.uw.edu/)
+- **URBDP 566 Infrastructure Planning and Finance (4)**
+- **[URBDP 591 Research Design for Urban Science (3)](https://researchdesign.be.uw.edu/)**
   - Brief introduction of new urban science and various modelling techniques for understanding the cities.
   - Understand how to do research design for urban science and go through the whole research process.
-- [CSE 583 Software Development for Data Scientists (4)](http://uwseds.github.io/syllabus.html)
+- **[CSE 583 Software Development for Data Scientists (4)](http://uwseds.github.io/syllabus.html)**
   - Knowledge about command line, version control, software design, debug, programming style, and Python.
   - We are making a web-based tool for checking the carbon emission of different flights. 
-- [CS&SS 567 Statistical Analysis of Social Networks (4)](https://thmccormick.github.io/teaching/)
+- **[CS&SS 567 Statistical Analysis of Social Networks (4)](https://thmccormick.github.io/teaching/)**
   - Concepts, descriptive methods and modelling techniques for analyzing the social networks. 
 
 ### 5th, W2022
 
-- [URBDP 592 Advanced Planning Theory (4)](https://home.foreveroverhead.cloud/udp592_syllabus.pdf)
-- [CS&SS 569 Data Visualizing and Modelling (4)](https://faculty.washington.edu/cadolph/?page=22)
-- CSE 414 Introduction To Database Systems (4)
-- URBDP 700 Thesis (3)
+- **[URBDP 592 Advanced Planning Theory (4)](https://home.foreveroverhead.cloud/udp592_syllabus.pdf)**
+- **[CS&SS 569 Data Visualizing and Modelling (4)](https://faculty.washington.edu/cadolph/?page=22)**
+- **CSE 414 Introduction To Database Systems (4)**
+- **URBDP 700 Thesis (3)**
 
 ### 6th, Sp2022
 
-- URBDP 580 Legal and Administrative Framework (3)
-- [URBDP 598 Institutional and Spatial Planning (3)](http://globalcourse.inplanning.eu/)
-- URBDP 700 Thesis (6)
+- **URBDP 580 Legal and Administrative Framework (3)**
+- **[URBDP 598 Institutional and Spatial Planning (3)](http://globalcourse.inplanning.eu/)**
+- **URBDP 700 Thesis (6)**
 
 ## Related Courses
 
@@ -118,4 +118,3 @@ Urban Informatics is an unofficial [specilization](https://urbdp.be.uw.edu/progr
 - [Harvard ECON 50 Big Data to Solve Economic and Social Problems](https://opportunityinsights.org/course/)
 
 - [MIT 18.06 Linear Algebra](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/resource-index/)
-
