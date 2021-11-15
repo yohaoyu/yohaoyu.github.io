@@ -110,11 +110,12 @@ Urban Informatics is an unofficial [specilization](https://urbdp.be.uw.edu/progr
 ### Resources from Other Institutions
 
 - [NYU CUSP GX 5003 Machine Learning for Cities](https://wp.nyu.edu/ml4c2020/)
-
 - [UCLA UP206A Introduction to GIS and Spatial Data Science](https://yohman.github.io/21W-UP206A/)
-
 - [MIT 11.541J Public Transportation Systems](https://ocw.mit.edu/courses/civil-and-environmental-engineering/1-258j-public-transportation-systems-spring-2017/index.htm)
-
 - [Harvard ECON 50 Big Data to Solve Economic and Social Problems](https://opportunityinsights.org/course/)
-
 - [MIT 18.06 Linear Algebra](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/resource-index/)
+
+
+
+Updated: 11/08/2021
+
