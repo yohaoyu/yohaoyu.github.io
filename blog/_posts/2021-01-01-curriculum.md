@@ -50,15 +50,15 @@ Urban Informatics is an unofficial [specialization](https://urbdp.be.uw.edu/prog
 
 - [URBDP 592 Advanced Planning Theory (4)](https://home.foreveroverhead.cloud/udp592_syllabus.pdf)
 - [CEWA599 Geospatial Data Analysis with Python (5)](https://github.com/UW-GDA/gda_course_2020) 
-- [GEOG 595 Digital Geo-Humanities (5)](https://github.com/jakobzhao/geog595)
-- URBDP 700 Thesis (3)
+- CSE 414 Introduction To Database Systems (4)
+- CHEM E 599  Current Topics in Data Science (1)
+- URBDP 700 Thesis (4)
 
 ### 6th, Sp2022
 
 - URBDP 580 Legal and Administrative Framework (3)
-- [URBDP 598 Institutional Design and Spatial Planning (3)](http://globalcourse.inplanning.eu/)
-- URBDP 700 Thesis (6)
-- CHEM E 599  Current Topics in Data Science (1)
+- URBDP 598 Climate Change Resolution (3)
+- URBDP 700 Thesis (5)
 
 ## Related Courses
 
@@ -68,13 +68,14 @@ Urban Informatics is an unofficial [specialization](https://urbdp.be.uw.edu/prog
 - URBDP 593 Interdisciplinary Urban Research Seminar (4)
 - URBDP 598 Technologies of cities (3)
 - URBDP 598 Urban Ecology (3)
-- URBDP 598 Climate Change Resolution (3)
 - ATM S 587 Fundamentals of Climate Change (3) 
 - PPM 504 Institutional Perspectives on Management (4)
 - PPM 506 Microeconomics for Policy Analysis (4) 
 - PPM 508 Public Policy Processes (4) 
 - PPM 510 Public Policy Analysis (4)
 - SMEA 521 Climate Change Governance (3)
+- [GEOG 595 Digital Geo-Humanities (5)](https://github.com/jakobzhao/geog595)
+- [URBDP 598 Institutional Design and Spatial Planning (3)](http://globalcourse.inplanning.eu/)
 
 ### Mathematics 
 
@@ -106,7 +107,6 @@ Urban Informatics is an unofficial [specialization](https://urbdp.be.uw.edu/prog
 - [CET 522 Transportation Data Management and Visualization (3)](https://zhiyongcui.com/CEE412_CET522/)
 - URBDP 522 Geospatial Analysis (5)  WIN
 - [CS&SS 569 Data Visualizing and Modelling (4)](https://faculty.washington.edu/cadolph/?page=22)
-- CSE 414 Introduction To Database Systems (4)
 
 ### Resources from Other Institutions
 
@@ -118,5 +118,5 @@ Urban Informatics is an unofficial [specialization](https://urbdp.be.uw.edu/prog
 
 
 
-Updated: 11/08/2021
+Updated: 11/27/2021
 
