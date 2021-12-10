@@ -115,6 +115,7 @@ Urban Informatics is an unofficial [specialization](https://urbdp.be.uw.edu/prog
 - [MIT 11.541J Public Transportation Systems](https://ocw.mit.edu/courses/civil-and-environmental-engineering/1-258j-public-transportation-systems-spring-2017/index.htm)
 - [Harvard ECON 50 Big Data to Solve Economic and Social Problems](https://opportunityinsights.org/course/)
 - [MIT 18.06 Linear Algebra](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/resource-index/)
+- [Aalto E1060 Spatial analytics](https://spatial-analytics.readthedocs.io/en/latest/)
 
 
 
