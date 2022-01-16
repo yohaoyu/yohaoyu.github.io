@@ -1,0 +1,7 @@
+experiences:
+
+- place: "University of Washington"
+  time: "2020 - now"
+  title: "Master Student"
+  subtitle: "Specialized in Urban Analystic"
+  category: "school" #work or school, will display on the two sides of timeline 

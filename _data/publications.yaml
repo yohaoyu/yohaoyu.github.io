@@ -1,0 +1,10 @@
+papers:
+
+  - #title: "The Structure of Toxic Conversations on Twitter"
+    #authors: "<b>Martin Saveski</b>, Brandon Roy, Deb Roy"
+    #venue: "WWW'21: The Web Conference 2021"
+    #paper_pdf: "/assets/publications/2021_dtox/paper.pdf"
+    #code: "https://github.com/msaveski/toxic_conversation_structure"
+    #data: "https://doi.org/10.7910/DVN/TRWPVB"
+    #video: "https://www.youtube.com/watch?v=JLkUgxH92pE"
+    #selected: y
