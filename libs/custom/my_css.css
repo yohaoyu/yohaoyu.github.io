@@ -1,11 +1,24 @@
 h4 {
   letter-spacing: .1rem; }
+.button {
+  /* display: inline-block;
+  height: 25px; */
+  padding: 0 10px;
+  /* font-weight: 100;
+  line-height: 25px;
+  text-transform: none;  */
+}
 .container {
   max-width: 800px; }
 .header {
   margin-top: 60px;
-  margin-bottom: 60px; 
+  margin-bottom: 60px;
   text-align: left; }
+.hidden {
+    display: none; }
+.unhidden {
+    display: table;
+    position:relative;}
 .main-description h1 {
   margin-bottom: 0px; }
 .main-description p {
@@ -16,6 +29,7 @@ h4 {
 .paper {
   margin-bottom: 20px }
 .paper .title {
+  font-size: 16px;
   /*text-transform: uppercase; */}
 .paper p {
   margin-bottom: 2px }
@@ -24,7 +38,7 @@ h4 {
 .paper .button {
   display: inline-block;
   height: 25px;
-  padding: 0 25px;
+  padding: 0 20px;
   font-weight: 100;
   line-height: 25px;
   text-transform: none; }
@@ -44,6 +58,7 @@ h4 {
   padding: 15px 0 40px 0;
   margin-bottom: 0;}
 .navbar {
+  text-align: center;
   display: none; }
 .title-subtitle h3 {
   margin-bottom: 0px; }
@@ -140,7 +155,7 @@ h4 {
     -webkit-filter: drop-shadow(0 0 6px rgba(0,0,0,.1));
        -moz-filter: drop-shadow(0 0 6px rgba(0,0,0,.1));
             filter: drop-shadow(0 0 6px rgba(0,0,0,.1)); }
-  .popover-item:first-child .popover-link:after, 
+  .popover-item:first-child .popover-link:after,
   .popover-item:first-child .popover-link:before {
     bottom: 100%;
     left: 50%;
@@ -191,3 +206,107 @@ h4 {
   .popover-item:first-child .popover-link:hover:after {
     border-bottom-color: #33C3F0; }
 }
+
+pre {
+  background-color: white;
+  color: #110000;
+  border: 3;
+  font-size:0.75em;
+  line-height:1.2em;
+  max-width: 800px;
+  whitewhite-space: pre-wrap;       /* css-3 */
+  whitewhite-space: -pre-wrap;      /* Opera 4-6 */
+  whitewhite-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5+ */
+  whitewhite-space: -moz-pre-wrap;  /* Older Versions of Mozilla */
+}
+
+.anchor{
+  display: block;
+  height: 5.5rem; /*same height as header*/
+  margin-top: -4.5rem; /*same height as header*/
+  visibility: hidden;
+}
+
+
+.clear {
+  clear:both;
+}
+
+/* From:
+https://gist.github.com/mistergraphx/a46c1f24a74dffa516bc#file-responsive-figure-figcaption-html */
+figure figcaption {
+  font-size: 10pt;
+  text-align: center;
+}
+
+figure.side-by-side {
+  display: table;
+}
+figure.side-by-side img, figure.side-by-side figcaption {
+  display: table-cell;
+  vertical-align: middle;
+}
+figure.side-by-side figcaption {
+  padding-left: .5em;
+  padding-right: .5em;
+  text-align: left;
+
+}
+
+
+/* figure {
+  display: table;
+}
+.right {
+    display: table;
+    /* position: relative; */
+    float: right;
+    /* width: 300px;
+    height: 300px;
+    margin: 25px 12px;
+    border-radius: 6px;
+}
+figure.right figcaption {
+  vertical-align: middle;
+  display: table-cell;
+  font-size: 10pt;
+    /* display: table-caption;
+    text-align: center;
+    /* border-radius: inherit;
+    background-color: #D66360;
+    opacity: 0;
+    transform: translateY(30%);
+    transition: all 0.6s ease 0s;
+}
+*/
+
+
+
+/*
+  --------------         SANSBOX
+  */
+
+/* .left figcaption {
+  text-align: center;
+  /* font-family:sans-serif;
+  font-weight:bold;
+  font-size:16px;
+  padding:10px;
+  display: table-cell;
+  vertical-align:middle;
+} */
+
+/* figure.right {
+   display:table;
+}
+figure figcaption.right {
+   display:table-cell;
+   vertical-align:middle;
+   width=10%;
+   font-size: 10pt;
+}
+figure img {
+   display:table-cell;
+   width=50%;
+} */
