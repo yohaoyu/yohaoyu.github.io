@@ -1,4 +1,29 @@
-url: "yohaoyu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "Haoyu Yue" # the name of your site, e.g. ACME Corp.
-description: "Urban Planning Student, University of Washington"
+title:               Haoyu Yue
+url:                 https://yohaoyu.github.io
+baseurl:             ""
+
+markdown:            kramdown
+highlighter:         rouge
+
+exclude:             ['*.sublime-*', 'README.md', 'LICENSE', 'Gemfile', 'Gemfile.lock', 'vendor/bundle']
+
+permalink:           pretty
+paginate:            5
+paginate_path:       /blog/:num
+
+blog:
+  truncated_preview: true
+
+sass:
+  sass_dir:          _sass
+  style:             :compressed
+
+author:
+  name:              Haoyu Yue
+  url:               yohaoyu.github.io
+  email:             yohaoyu@outlook.com
+
+plugins:
+  - jekyll-coffeescript
+  - jekyll-paginate
+  - jekyll-gist

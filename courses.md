@@ -1,4 +1,0 @@
----
-layout: courses
-title: "Courses"
----

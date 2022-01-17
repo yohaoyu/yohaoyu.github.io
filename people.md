@@ -1,4 +1,0 @@
----
-layout: people
-title: "People"
----
