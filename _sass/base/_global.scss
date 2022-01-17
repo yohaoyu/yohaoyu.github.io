@@ -12,7 +12,7 @@ html {
   font-size: $font-size;
   line-height: 1.5;
 
-  @media (max-width: 40em) {
+  @media (max-width: 60em) {
     font-size: $font-size-mobile;
   }
 }
@@ -40,7 +40,7 @@ a {
 footer {
     text-align: center;
     text-transform: lowercase;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 img {
