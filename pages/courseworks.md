@@ -4,61 +4,76 @@ title: "My Urban Informatics Curriculum at UW"
 author: "Haoyu"
 ---
 
-Urban Informatics is an unofficial [specialization](https://urbdp.be.uw.edu/programs/mup-graduate-degree/specializations/) in UW now (2021). Anyone who is willing to choose this area needs to submit the *Individualized Specialization Application* to get permission. I chose this path and here is the my curriculum for reference.
+Urban Informatics is an unofficial [specialization](https://urbdp.be.uw.edu/programs/mup-graduate-degree/specializations/) in UW. Anyone who is willing to choose this area needs to submit the *Individualized Specialization Application* to get permission. I chose this path and here is the my curriculum for reference.
 
-## Regular Schedule
+## Master of Urban Planning (Informatics)
 
-### 1st, Au2020
+### 1st, Autumn 2020
 
 - URBDP 500 Survey of Urban Planning (4)
-- URBDP 504 Intro to GIS (3)
+- URBDP 504 Intro to Geographic Information System (3)
 - URBDP 505 The Urban Form (4)
 - URBDP 520 Quantitative Methods in Urban Planning (5)
 
-### 2nd, W2021
+### 2nd, Winter 2021
 
 - URBDP 501 Comprehensive Planning and Implementation (4)
 - URBDP 506 Planning Studio Preparation (3)
 - URBDP 510 Theories Methodologies of Planning (4)
-  - Some methods for planning practice, such as economic base analysis, cohort component population projection, land capacity analysis.
-  - We generated an indicator system for evaluating the happiness level in cities during the COVID-19.
 - PUBPOL 542 Computational Thinking for Governance Analytics (4) 
-  - Introduction of data processing by Python, regression by R and other topics, such as agent-based model and optimization.
 - CS&SS Review of Mathematics for Social Scientists (1)
-  - Review of basic math concepts, including calculus, linear algebra, probability and statistics. 
 
-### 3rd, Sp2021
+### 3rd, Spring 2021
 
 - URBDP 507 Urban Planning Studio (5)
 - URBDP 561 Urban Economics and Public Policy (4)
 - BE 592 Research Tools in the Built Environment (1)
 - CET 599 Machine Learning for Civil Engineering (3)
 
-### 4th, Au2021
+### 4th, Autumn 2021
 
 - URBDP 566 Infrastructure Planning and Finance (4)
-- [URBDP 591 Research Design for Urban Science (3)](https://researchdesign.be.uw.edu/)
-  - Brief introduction of new urban science and various modelling techniques for understanding the cities.
-  - Understand how to do research design for urban science and go through the whole research process.
+- [URBDP 598 Research Design for Urban Science (3)](https://researchdesign.be.uw.edu/)
 - [CSE 583 Software Development for Data Scientists (4)](http://uwseds.github.io/syllabus.html)
-  - Knowledge about command line, version control, software design, debug, programming style, and Python.
-  - We are making a web-based tool for checking the carbon emission of different flights. 
 - [CS&SS 567 Statistical Analysis of Social Networks (4)](https://thmccormick.github.io/teaching/)
-  - Concepts, descriptive methods and modelling techniques for analyzing the social networks. 
 
-### 5th, W2022
+### 5th, Winter 2022
 
 - [URBDP 592 Advanced Planning Theory (4)](https://home.foreveroverhead.cloud/udp592_syllabus.pdf)
 - [CEWA599 Geospatial Data Analysis with Python (5)](https://github.com/UW-GDA/gda_course_2020) 
 - CSE 414 Introduction To Database Systems (4)
-- CHEM E 599  Current Topics in Data Science (1)
 - URBDP 700 Thesis (4)
 
-### 6th, Sp2022
+### 6th, Spring 2022
 
 - URBDP 580 Legal and Administrative Framework (3)
-- URBDP 598 Climate Change Resolution (3)
+- URBDP 598 Urban Climate Resolution (3)
+- [STAT 534 Statistical Computing (3)](https://sites.stat.washington.edu/mmp/courses/stat534/spring19/)
 - URBDP 700 Thesis (5)
+
+## Urban Design & Planning Ph.D.
+
+### 1st, Autumn 2022
+
+- [URBDP 591 Research Design for Urban Science (4)](https://researchdesign.be.uw.edu/)
+
+- STAT 512 Statistical Inference 1 (4)
+
+### 2nd, Winter 2023
+
+- STAT 512 Statistical Inference 2 (4)
+
+### 3rd, Spring 2023
+
+- URBDP 598 Technologies of Cities (3)
+
+### 4th, Autumn 2023
+
+- URBDP 593 Interdisciplinary Urban Research Seminar (4)
+
+
+
+
 
 ## Related Courses
 
@@ -77,11 +92,10 @@ Urban Informatics is an unofficial [specialization](https://urbdp.be.uw.edu/prog
 - [GEOG 595 Digital Geo-Humanities (5)](https://github.com/jakobzhao/geog595)
 - [URBDP 598 Institutional Design and Spatial Planning (3)](http://globalcourse.inplanning.eu/)
 
-### Mathematics 
+### Statistics
 
 - STAT 512 Statistical Inference 1 (4)
 - STAT 513 Statistical Inference 2 (4)
-- [STAT 534 Statistical Computing (4) SPR](https://sites.stat.washington.edu/mmp/courses/stat534/spring19/)
 - STAT 538 Statistical Learning: Modeling, Prediction, and Computing (3) WIN
 - CS&SS 504 Applied Regression (4)
 - [CS&SS 508 Intro to R for Social Science (1)](https://clanfear.github.io/CSSS508/)
@@ -106,7 +120,7 @@ Urban Informatics is an unofficial [specialization](https://urbdp.be.uw.edu/prog
 - [CHEM 599 Current Topics in Data Science (1)](https://escience.washington.edu/uw-data-science-seminar/)
 - [CET 522 Transportation Data Management and Visualization (3)](https://zhiyongcui.com/CEE412_CET522/)
 - URBDP 522 Geospatial Analysis (5)  WIN
-- [CS&SS 569 Data Visualizing and Modelling (4)](https://faculty.washington.edu/cadolph/?page=22)
+- [CS&SS 569 Data Visualizing and Modeling (4)](https://faculty.washington.edu/cadolph/?page=22)
 
 ### Resources from Other Institutions
 
@@ -117,7 +131,4 @@ Urban Informatics is an unofficial [specialization](https://urbdp.be.uw.edu/prog
 - [MIT 18.06 Linear Algebra](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/resource-index/)
 - [Aalto E1060 Spatial analytics](https://spatial-analytics.readthedocs.io/en/latest/)
 
-
-
 Updated: 11/27/2021
-
