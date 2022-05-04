@@ -10,125 +10,172 @@ Urban Informatics is an unofficial [specialization](https://urbdp.be.uw.edu/prog
 
 ### 1st, Autumn 2020
 
-- URBDP 500 Survey of Urban Planning (4)
-- URBDP 504 Intro to Geographic Information System (3)
-- URBDP 505 The Urban Form (4)
-- URBDP 520 Quantitative Methods in Urban Planning (5)
+URBDP 500 Survey of Urban Planning
+
+URBDP 504 Intro to Geographic Information System
+
+URBDP 505 The Urban Form
+
+URBDP 520 Quantitative Methods in Urban Planning
 
 ### 2nd, Winter 2021
 
-- URBDP 501 Comprehensive Planning and Implementation (4)
-- URBDP 506 Planning Studio Preparation (3)
-- URBDP 510 Theories Methodologies of Planning (4)
-- PUBPOL 542 Computational Thinking for Governance Analytics (4) 
-- CS&SS Review of Mathematics for Social Scientists (1)
+URBDP 501 Comprehensive Planning and Implementation
+
+URBDP 506 Planning Studio Preparation
+
+URBDP 510 Theories Methodologies of Planning
+
+PUBPOL 542 Computational Thinking for Governance Analytics 
+
+CS&SS Review of Mathematics for Social Scientists
 
 ### 3rd, Spring 2021
 
-- URBDP 507 Urban Planning Studio (5)
-- URBDP 561 Urban Economics and Public Policy (4)
-- BE 592 Research Tools in the Built Environment (1)
-- CET 599 Machine Learning for Civil Engineering (3)
+URBDP 507 Urban Planning Studio 
+
+URBDP 561 Urban Economics and Public Policy 
+
+BE 592 Research Tools in the Built Environment 
+
+CET 599 Machine Learning for Civil Engineering
 
 ### 4th, Autumn 2021
 
-- URBDP 566 Infrastructure Planning and Finance (4)
-- [URBDP 598 Research Design for Urban Science (3)](https://researchdesign.be.uw.edu/)
-- [CSE 583 Software Development for Data Scientists (4)](http://uwseds.github.io/syllabus.html)
-- [CS&SS 567 Statistical Analysis of Social Networks (4)](https://thmccormick.github.io/teaching/)
+URBDP 566 Infrastructure Planning and Finance
+
+[URBDP 598 Research Design for Urban Science](https://researchdesign.be.uw.edu/)
+
+[CSE 583 Software Development for Data Scientists](http://uwseds.github.io/syllabus.html)
+
+[CS&SS 567 Statistical Analysis of Social Networks](https://thmccormick.github.io/teaching/)
 
 ### 5th, Winter 2022
 
-- [URBDP 592 Advanced Planning Theory (4)](https://home.foreveroverhead.cloud/udp592_syllabus.pdf)
-- [CEWA599 Geospatial Data Analysis with Python (5)](https://github.com/UW-GDA/gda_course_2020) 
-- CSE 414 Introduction To Database Systems (4)
-- URBDP 700 Thesis (4)
+[URBDP 592 Advanced Planning Theory](https://home.foreveroverhead.cloud/udp592_syllabus.pdf)
+
+[CEWA599 Geospatial Data Analysis with Python](https://github.com/UW-GDA/gda_course_2020) 
+
+CSE 414 Introduction To Database Systems
+
+URBDP 700 Thesis
 
 ### 6th, Spring 2022
 
-- URBDP 580 Legal and Administrative Framework (3)
-- URBDP 598 Urban Climate Resolution (3)
-- [STAT 534 Statistical Computing (3)](https://sites.stat.washington.edu/mmp/courses/stat534/spring19/)
-- URBDP 700 Thesis (5)
+URBDP 580 Legal and Administrative Framework
+
+URBDP 598 Urban Climate Resolution
+
+[CS&SS 508 Intro to R for Social Science](https://clanfear.github.io/CSSS508/)
+
+URBDP 700 Thesis
 
 ## Urban Design & Planning Ph.D.
 
 ### 1st, Autumn 2022
 
-- [URBDP 591 Research Design for Urban Science (4)](https://researchdesign.be.uw.edu/)
+[URBDP 591 Advanced Research Design](https://researchdesign.be.uw.edu/)
 
-- STAT 512 Statistical Inference 1 (4)
+STAT 512 Statistical Inference 1
+
+PPM 506 Microeconomics for Policy Analysis
 
 ### 2nd, Winter 2023
 
-- STAT 512 Statistical Inference 2 (4)
+STAT 512 Statistical Inference 2
+
+PPM 504 Perspectives on Institutions
 
 ### 3rd, Spring 2023
 
-- URBDP 598 Technologies of Cities (3)
+URBDP 598 Technologies of Cities
+
+STAT 564 Bayesian Statistics for the Social Sciences
+
+[STAT 534 Statistical Computing](https://sites.stat.washington.edu/mmp/courses/stat534/spring19/)
 
 ### 4th, Autumn 2023
 
-- URBDP 593 Interdisciplinary Urban Research Seminar (4)
+URBDP 593 Interdisciplinary Urban Research Seminar
 
+[CSE 546 Machine Learning](https://courses.cs.washington.edu/courses/cse546/)
 
+PPM 508 Public Policy Processes
 
+## 6th, Spring 2024
 
+PPM 510 Public Policy Analysis
 
 ## Related Courses
 
 ### Cities and Planning
 
-- URBDP 519 Qualitative Research Methods (3)
-- URBDP 593 Interdisciplinary Urban Research Seminar (4)
-- URBDP 598 Technologies of cities (3)
-- URBDP 598 Urban Ecology (3)
-- ATM S 587 Fundamentals of Climate Change (3) 
-- PPM 504 Institutional Perspectives on Management (4)
-- PPM 506 Microeconomics for Policy Analysis (4) 
-- PPM 508 Public Policy Processes (4) 
-- PPM 510 Public Policy Analysis (4)
-- SMEA 521 Climate Change Governance (3)
-- [GEOG 595 Digital Geo-Humanities (5)](https://github.com/jakobzhao/geog595)
-- [URBDP 598 Institutional Design and Spatial Planning (3)](http://globalcourse.inplanning.eu/)
+URBDP 519 Qualitative Research Methods (3)
+
+URBDP 598 Urban Ecology (3)
+
+ATM S 587 Fundamentals of Climate Change (3) 
+
+SMEA 521 Climate Change Governance (3)
+
+[GEOG 595 Digital Geo-Humanities (5)](https://github.com/jakobzhao/geog595)
+
+[URBDP 598 Institutional Design and Spatial Planning (3)](http://globalcourse.inplanning.eu/)
 
 ### Statistics
 
-- STAT 512 Statistical Inference 1 (4)
-- STAT 513 Statistical Inference 2 (4)
-- STAT 538 Statistical Learning: Modeling, Prediction, and Computing (3) WIN
-- CS&SS 504 Applied Regression (4)
-- [CS&SS 508 Intro to R for Social Science (1)](https://clanfear.github.io/CSSS508/)
-- CS&SS 512 Time Series and Panel Data for the Social Sciences (4)
-- CS&SS 536 Analysis of Categorical and Count Data (3)
-- CS&SS 554 Statistical Methods for Spatial Data (3)
-- CS&SS 564 Bayesian Statistics for the Social Sciences (4)
-- CS&SS 566 Causal Modeling (4)
-- AA 510 Mathematical Foundations of Systems (4) AUT
-- [AMATH 563 Inferring Structure of Complex Systems (5)](https://canvas.uw.edu/courses/1448035)
-- FISH 556 Spatio-Temporal Models For Ecologists (5)
-- CSE 515 Statistical Methods in Computer Science (4) WIN
+STAT 538 Statistical Learning 
+
+CS&SS 504 Applied Regression (4)
+
+CS&SS 512 Time Series and Panel Data for the Social Sciences (4)
+
+CS&SS 536 Analysis of Categorical and Count Data (3)
+
+CS&SS 554 Statistical Methods for Spatial Data (3)
+
+CS&SS 566 Causal Modeling (4)
+
+AA 510 Mathematical Foundations of Systems (4) 
+
+[AMATH 563 Inferring Structure of Complex Systems (5)](https://canvas.uw.edu/courses/1448035)
+
+FISH 556 Spatio-Temporal Models For Ecologists (5)
+
+CSE 515 Statistical Methods in Computer Science (4) 
 
 ### Data Science
 
-- [CSE 373 Data Structures and Algorithms (4)](https://courses.cs.washington.edu/courses/cse373/20au/)
-- [CSE 512 Data Visualization (4)](https://courses.cs.washington.edu/courses/cse512/19sp/)
-- CSE 517 Natural Language Processing (4) WIN
-- [CSE 544 Principles of Database Management Systems (4)](http://courses.cs.washington.edu/courses/cse544/)
-- [CSE 546 Machine Learning (4)](https://courses.cs.washington.edu/courses/cse546/)
-- CSE 547 Machine Learning for Big Data (4) WIN
-- [CHEM 599 Current Topics in Data Science (1)](https://escience.washington.edu/uw-data-science-seminar/)
-- [CET 522 Transportation Data Management and Visualization (3)](https://zhiyongcui.com/CEE412_CET522/)
-- URBDP 522 Geospatial Analysis (5)  WIN
-- [CS&SS 569 Data Visualizing and Modeling (4)](https://faculty.washington.edu/cadolph/?page=22)
+[CSE 373 Data Structures and Algorithms (4)](https://courses.cs.washington.edu/courses/cse373/20au/)
+
+[CSE 512 Data Visualization (4)](https://courses.cs.washington.edu/courses/cse512/19sp/)
+
+CSE 517 Natural Language Processing (4) WIN
+
+[CSE 544 Principles of Database Management Systems (4)](http://courses.cs.washington.edu/courses/cse544/)
+
+CSE 547 Machine Learning for Big Data 
+
+[CHEM 599 Current Topics in Data Science](https://escience.washington.edu/uw-data-science-seminar/)
+
+[CET 522 Transportation Data Management and Visualization](https://zhiyongcui.com/CEE412_CET522/)
+
+[CS&SS 569 Data Visualizing and Modeling](https://faculty.washington.edu/cadolph/?page=22)
 
 ### Resources from Other Institutions
 
-- [NYU CUSP GX 5003 Machine Learning for Cities](https://wp.nyu.edu/ml4c2020/)
-- [UCLA UP206A Introduction to GIS and Spatial Data Science](https://yohman.github.io/21W-UP206A/)
-- [MIT 11.541J Public Transportation Systems](https://ocw.mit.edu/courses/civil-and-environmental-engineering/1-258j-public-transportation-systems-spring-2017/index.htm)
-- [Harvard ECON 50 Big Data to Solve Economic and Social Problems](https://opportunityinsights.org/course/)
-- [MIT 18.06 Linear Algebra](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/resource-index/)
-- [Aalto E1060 Spatial analytics](https://spatial-analytics.readthedocs.io/en/latest/)
+[NYU CUSP GX 5003 Machine Learning for Cities](https://wp.nyu.edu/ml4c2020/)
 
-Updated: 11/27/2021
+[UCLA UP206A Introduction to GIS and Spatial Data Science](https://yohman.github.io/21W-UP206A/)
+
+[MIT 11.541J Public Transportation Systems](https://ocw.mit.edu/courses/civil-and-environmental-engineering/1-258j-public-transportation-systems-spring-2017/index.htm)
+
+[Harvard ECON 50 Big Data to Solve Economic and Social Problems](https://opportunityinsights.org/course/)
+
+[MIT 18.06 Linear Algebra](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/resource-index/)
+
+[Aalto E1060 Spatial analytics](https://spatial-analytics.readthedocs.io/en/latest/)
+
+[Yale Applied Empirical Methods](https://github.com/paulgp/applied-methods-phd)
+
+Update on May 3, 2022
