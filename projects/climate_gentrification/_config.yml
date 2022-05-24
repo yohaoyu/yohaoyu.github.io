@@ -8,7 +8,7 @@ logo: logo.png
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: force
+  execute_notebooks: caches
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -21,7 +21,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://yohaoyu.github.io/projects/green_gentrification  # Online location of your book
+  url: https://yohaoyu.github.io/projects/climate_gentrification  # Online location of your book
   path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
