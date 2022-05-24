@@ -1,0 +1,11 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: 01-data-processing
+- file: 02-investment-distribution
+- file: 03-visualization-analysis
+- file: 04-gentrified
+- file: 05-regression
