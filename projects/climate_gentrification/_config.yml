@@ -1,14 +1,14 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Does Climate Investment Funding Intensify Green Infrastructure Gentrification in San Francisco-Oakland-Berkeley Bay Area?
+title: CCI&GG
 author: Haoyu Yue
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: caches
+  execute_notebooks: cache
 
 # Define the name of the latex output file for PDF builds
 latex:
