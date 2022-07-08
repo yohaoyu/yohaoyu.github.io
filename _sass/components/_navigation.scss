@@ -6,7 +6,7 @@
 .nav-main {
   font-size: $font-size; // override mobile media query
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   @media (max-width: 38em) {
     margin-bottom: 3rem;
