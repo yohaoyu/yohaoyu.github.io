@@ -1,13 +1,15 @@
 ---
+
 layout: post
 title: "Park Visiting Patterns in Washington State During the COVID-19 Pandemic"
 author: "Haoyu"
 tags: [COVID-19,travel pattern,Washington State]
 
 ---
-At the beginning of 2020, COVID-19 began to become pandemic all over the world. Governments proposed shelter in place orders to restrict social distance and the use of public space to prevent the spread of the virus. CDC proposed that during the pandemic urban green space, such as parks, are important to the mental and physical health of citizens. Although the orders restrict all people, such restrictions will have a severe impact on some socio-economic disadvantaged groups. So, I would like to explore the relationships between the distance of park visiting and socio-economic status before and during the pandemic. ArcMap, ArcCatalog, Excel, and R will be used. 
 
-## Data Description                             
+At the beginning of 2020, COVID-19 began to become pandemic all over the world. Governments proposed shelter in place orders to restrict social distance and the use of public spaces to prevent the spread of the virus. CDC proposed that during the pandemic urban green space, such as parks, are important to the mental and physical health of citizens. Although the orders restrict all people, such restrictions will have a severe impact on some socio-economic disadvantaged groups. So, I would like to explore the relationships between the distance between park visiting and socioeconomic status before and during the pandemic. ArcMap, ArcCatalog, Excel, and R will be used. 
+
+## Data Description
 
 * [**ALPACA Census Block Group (2018)**](https://geo.wa.gov/datasets/WSDOT::wsdot-alpaca-census-block-group-2018?geometry=-126.311%2C46.611%2C-118.609%2C47.916) (2020/2/19)
 
@@ -25,7 +27,7 @@ The boundary of King County, from King County Open GIS Data.
 
 The foot traffic counts for parks in King County, from SafeGraph, including park visiting counts recorded by census block groups in the last weeks of April 2019/2020. (Visitor_count = 4 means in this week, the number of visitors is less than 5.)
 
-## Methods and Process                     
+## Methods and Process
 
 ### Data Preparation
 
@@ -35,7 +37,7 @@ Use **Selection by Location** to select the King County data from *Census Block 
 
 #### (2)  Preparation for Next Step
 
-Use **Excel** to reorganize the data and make two versions, one is for R and regression, including all information, named *KC_2020_All**, KC_2019_All* respectively. Another is for ArcMap, only including the XYs of Parks and Census Block Groups, named *KC_2020, KC_2019* respectively.
+Use **Excel** to reorganize the data and make two versions, one for R and regression, including all information, named *KC_2020_All**, and KC_2019_All* respectively. Another is for ArcMap, only including the XYs of Parks and Census Block Groups, named *KC_2020, KC_2019* respectively.
 
 #### (3)  Import Data
 
@@ -43,7 +45,7 @@ Use **Excel** to reorganize the data and make two versions, one is for R and reg
 
 ### Network Analysis
 
-####  (4)  Network Dataset
+#### (4)  Network Dataset
 
 **Create** a new File Geodatabase Feature Dataset called *Road_2020*, then move *KC_streets*, *KC_2020* into the *Road_2020*. **Create** a new Network Dataset called *Road_ND_2020* in ArcMap.
 
@@ -51,7 +53,7 @@ Use **Excel** to reorganize the data and make two versions, one is for R and reg
 
 Active **Network Analyst** and then **Create Route** called *Routes_2020*. **Load location** *KC_2020* for *Stops* then click **Solve**.
 
-![routes_analysis](routes_analysis.png)
+![routes_analysis.png](https://raw.githubusercontent.com/yohaoyu/image_repo/main/2022/08/18-18-17-23-routes_analysis.png)
 
 #### (6)  Output
 
@@ -77,44 +79,42 @@ Use **XY to Line** to make a figure for presenting the park visiting pattern thi
 
 #### (10) Auto Get Distance
 
-Since I need to redo the whole process for 2019, I would like to make a *model* that can be used to analyze the distance of park visiting with input specific data. However, because some functions cannot be found in *ArcToolBox*, I can only make a simple one to import the data and make some preparations.
+Since I need to redo the whole process for 2019, I would like to make a *model* that can be used to analyze the distance of park visits with input-specific data. However, because some functions cannot be found in *ArcToolBox*, I can only make a simple one to import the data and make some preparations.
 
 #### (11) Redo All for 2019
 
 Use the data in 2019/4 to redo the analysis and then compare the results before and during the pandemic. 
 
-## Result         
+## Result
 
-### Visiting Pattern - 2019                         
+### Visiting Pattern - 2019
 
-![pattern_2019](pattern_2019.png)
+![pattern_2019.png](https://raw.githubusercontent.com/yohaoyu/image_repo/main/2022/08/18-18-17-41-pattern_2019.png)
 
-### Visiting Pattern - 2020 
+### Visiting Pattern - 2020
 
-![pattern_2020](pattern_2020.png)
+![pattern_2020.png](https://raw.githubusercontent.com/yohaoyu/image_repo/main/2022/08/18-18-17-51-pattern_2020.png)
 
 ### Regression Results - 2019
 
-|                          | **Est.** | **SD** | **Std. Error** | **T** | **P** |
-| ------------------------ | ------------ | ---------------- | -------------- | ----------- | ----------- |
-| **Percent of Non-White** | 560.5        | 0.047          | 360.6          | 1.554       | 0.1204      |
-| **Percent of Over 65**   | -2944        | -0.103          | 806.1          | -3.652      | 0.0003   |
-| **Percent of Poverty**   | -1576        | -0.084         | 576.6          | -2.734      | 0.0063    |
+|                          | **Est.** | **SD** | **Std. Error** | **T**  | **P**  |
+| ------------------------ | -------- | ------ | -------------- | ------ | ------ |
+| **Percent of Non-White** | 560.5    | 0.047  | 360.6          | 1.554  | 0.1204 |
+| **Percent of Over 65**   | -2944    | -0.103 | 806.1          | -3.652 | 0.0003 |
+| **Percent of Poverty**   | -1576    | -0.084 | 576.6          | -2.734 | 0.0063 |
 
 ### Regression Results - 2020
 
-|                           | **Est.** | **SD** | **Std. Error** | **T** | **P** |
-| ------------------------- | ------------ | ---------------- | -------------- | ----------- | ----------- |
-| **Percent  of Non-White** | -30.25       | -0.016         | 41.1          | -0.737     | 0.4615      |
-| **Percent of Over 65**    | -391.3       | -0.086         | 89.9           | -4.352      | 1.4e-05     |
-| **Percent of Poverty**    | -63.09       | -0.020         | 66.1          | -0.954     | 0.3398      |
+|                           | **Est.** | **SD** | **Std. Error** | **T**  | **P**   |
+| ------------------------- | -------- | ------ | -------------- | ------ | ------- |
+| **Percent  of Non-White** | -30.25   | -0.016 | 41.1           | -0.737 | 0.4615  |
+| **Percent of Over 65**    | -391.3   | -0.086 | 89.9           | -4.352 | 1.4e-05 |
+| **Percent of Poverty**    | -63.09   | -0.020 | 66.1           | -0.954 | 0.3398  |
 
 ## Discussion
 
-By summarizing the data, we can know that the number of parks visiting decreases from 59070 to 19073 (-68%). At the same time, I also found that the more people over 65 years old in the community, the more likely they are to visit the park in a shorter distance during the COVID-9. However, the impact of percent of poverty and percent of non-white on Park selection is still unclear, and more research is needed.
+By summarizing the data, we can know that the number of parks visiting decreased from 59070 to 19073 (-68%). At the same time, I also found that the more people over 65 years old in the community, the more likely they are to visit the park at a shorter distance during the COVID-9. However, the impact of percent of poverty and percent of non-white on Park selection is still unclear, and more research is needed.
 
-In the lab, there are many problems in operation, which need to be corrected or improved in the future. There are a lot of cross-county or even cross-state visiting activities, but I do not handle them well. There are different levels and conditions of streets, which should be treated differently, but it may be more reasonable to use Google Maps to plan the route in the future. In the regression model, due to the data, I only select the percent of non-white, percent of over 65, percent of poverty as independent variables. We can add more such as the education level, Internet access. The whole lab does not make full use of the count data between each line (census block groups - parks), so I do not maximize the use of data.
+In the lab, there are many problems in operation, which need to be corrected or improved in the future. There are a lot of cross-county or even cross-state visiting activities, but I do not handle them well. There are different levels and conditions of streets, which should be treated differently, but it may be more reasonable to use Google Maps to plan the route in the future. In the regression model, due to the data, I only select the percent of non-white, percent over 65, and percent of poverty as independent variables. We can add more such as the education level, and Internet access. The whole lab does not make full use of the count data between each line (census block groups - parks), so I do not maximize the use of data.
 
-The lab is an interesting try, not only using a lot of GIS functions but also self-taught other functions such as network analysis, combining regression analysis and R learned in URBDP 520 Quantitative Method. Although the result is not very perfect, and there are some imperfections in the process, but this is the meaning of the independent lab.
-
- 
+The lab is an interesting try, not only using a lot of GIS functions but also self-taught other functions such as network analysis, combining regression analysis and R learned in URBDP 520 Quantitative Method. Although the result is not very perfect, and there are some imperfections in the process, this is the meaning of the independent lab.
