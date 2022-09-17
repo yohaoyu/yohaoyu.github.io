@@ -4,8 +4,4 @@ title: "Undergraduate Life"
 author: "Haoyu"
 ---
 
-
-
-
-
 ### 
