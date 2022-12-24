@@ -1,22 +1,25 @@
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5">
+<meta charset="utf-8">
 
-  <title>
-    {% if page.title == "Home" %}
-      {{ page.title }} &vert; {{ site.title }}
-    {% else %}
-      {{ page.title }} &vert; {{ site.title }}
-    {% endif %}
-  </title>
+{% include seo.html %}
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic|Source+Code+Pro:400,700" type="text/css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" type="text/css">
+{% unless site.atom_feed.hide %}
+  <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+{% endunless %}
 
-  <link rel="icon" type="image/png" sizes="192x192" href="{{ site.baseurl }}/assets/favicon.png">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
-  <link rel="apple-touch-icon-precomposed" sizes="192x192" href="{{ site.baseurl }}/assets/apple-touch-icon.png">
-  
-  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/assets/atom.xml">
-</head>
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+{% if site.head_scripts %}
+  {% for script in site.head_scripts %}
+    <script src="{{ script | relative_url }}"></script>
+  {% endfor %}
+{% endif %}

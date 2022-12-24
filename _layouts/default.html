@@ -1,46 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+---
 
-  {% include head.html %}
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
 
-  <body>
-    <nav class="nav-main">
-      <ul>        
-        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/">Home</a></li>
-        <!--<li class="logo"><a class="hvr-ripple-out" href="{{ site.baseurl }}/">C</a></li> -->
-        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/#bio">Bio</a></li>
-        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/#coursework">Coursework</a></li>
-        <!--<li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/#observer">Observer</a></li>
-        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/#publication">Publication</a></li> 
-        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/blog">Blog</a></li> 
-        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/assets/cv_web.pdf">CV</a></li>--> 
-      </ul>       
-    </nav>
-        
-    
-    <div class="container content">
-      <main>
-        {{ content }}
-      </main>
-    
-      <footer class="footer">
-        <small>
-            <span class="copyright"><i class="fa fa-copyright"></i> 2019-<time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}</span> &middot;
-            <span>Powered by <a href="http://jekyllrb.com/">Jekyll</a></span>
-        </small>
-        <div class="ftr-links">
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+    {% include_cached skip-links.html %}
+    {% include_cached masthead.html %}
 
+    <div class="initial-content">
+      {{ content }}
+    </div>
 
-​          
-          <a href="https://github.com/yohaoyu"><i class="fa fa-github"></i></a>
-          <a href="mailto:yohaoyu@uw.edu"><i class="fa fa-envelope"></i></a>
-          <a href="https://calendly.com/yohaoyu"><i class="fa fa-calendar"></i></a>
-          <a href="https://twitter.com/HaoyuAtCities"><i class="fa fa-twitter"></i></a>
+    {% if site.search == true %}
+      <div class="search-content">
+        {% include_cached search/search_form.html %}
+      </div>
+    {% endif %}
 
-          
-        </div>
+    <div id="footer" class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include_cached footer.html %}
       </footer>
     </div>
+
+    {% include scripts.html %}
 
   </body>
 </html>
