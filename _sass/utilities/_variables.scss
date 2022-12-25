@@ -1,0 +1,40 @@
+/**
+  * _variables.scss
+  * Contains SCSS variables used in this website's stylesheet.
+  */
+
+// Globals
+$font-stack: 'Source Sans Pro', sans-serif;
+$font-size: 14px;
+$font-size-mobile: 14px;
+
+$code-font-stack: 'Source Code Pro', monospace;
+
+// Body
+$body-text-color: #2e2e2e;
+$body-background-color: #ffffff;
+$body-top-border-color: #ffffff00;
+$body-top-border-width: 0px;
+
+// Links
+$link-color: #00499c;
+
+// Navigation
+$nav-bottom-border-color: #c0c0c0;
+$nav-bottom-border-width: 1px;
+
+$nav-link-color: #2e2e2e;
+$nav-link-padding-y: 0.5rem;
+$nav-link-padding-x: 0.5rem;
+$nav-link-underline-color: #126add85;
+
+$nav-icon-color: #ffffff;
+$nav-icon-background-color: #0A3b76;
+
+// Blog post headings and page titles
+$post-title-color: #000000;
+$post-date-color: #9a9a9a;
+
+// Message box
+$message-color: #717171;
+$message-background-color: #f9f9f9;
