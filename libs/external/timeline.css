@@ -49,7 +49,7 @@
 
 .direction-r {
   position: relative;
-  width: 700px;
+  width: 640px;
   float: right;
 }
 
@@ -181,7 +181,7 @@
 
   .direction-r {
     position: relative;
-    width: 290px;
+    width: 580px;
     float: right;
   }
 }
@@ -200,7 +200,7 @@
 
   .direction-r {
     position: relative;
-    width: 280px;
+    width: 560px;
     float: right;
   }
 }
