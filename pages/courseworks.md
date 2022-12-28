@@ -42,12 +42,12 @@ subtitle: The Combination of Planning, Policy, Climate and Data Science Resource
 - STAT 504 Applied Regression
 - STAT 512/513 Statistical Inference
 - STAT 534 Statistical Computing
+- STAT 535 Machine Learning
 - STAT 536 Analysis of Categorical and Count Data
 - STAT 566 Causal Modeling
 - G H 538 Qualitative Research Design and Methods
 - CSE 512 Data Visualization
 - CSE 517 Natural Language Processing
-- CSE 546 Machine Learning
 - CET 599 Machine Learning for Civil Engineering
 - [CS&SS 567 Statistical Analysis of Social Networks](https://thmccormick.github.io/teaching/)
 - [CSE 583 Software Development for Data Scientists](http://uwseds.github.io/syllabus.html)
