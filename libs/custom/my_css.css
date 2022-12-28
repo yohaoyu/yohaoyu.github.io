@@ -7,11 +7,12 @@ h4 {
   margin-bottom: 60px; 
   text-align: left; }
 .main-description h1 {
+  font-size: 18px;
   margin-bottom: 0px; }
 .main-description p {
   margin-bottom: 0px; }
 .main-description .fa {
-  font-size: 18px;
+  font-size: 22px;
   margin-top: 5px; }
 .paper {
   margin-bottom: 20px }
