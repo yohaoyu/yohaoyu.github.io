@@ -10,7 +10,7 @@
 
 .timeline:before {
   position: absolute;
-  left: 5%;
+  left: 10%;
   top: 0;
   content: ' ';
   display: block;
@@ -49,7 +49,7 @@
 
 .direction-r {
   position: relative;
-  width: 640px;
+  width: 740px;
   float: right;
 }
 
