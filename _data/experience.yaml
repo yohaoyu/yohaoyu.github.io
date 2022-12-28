@@ -1,0 +1,30 @@
+experiences:
+
+- place: "University of Washington"
+  time: "2022 - Now"
+  title: "Ph.D. Student in Urban Design and Planning"
+  subtitle: "Urban Infrastructure Lab"
+  category: "school"
+
+- place: "University of Washington"
+  time: "2020 - 2022"
+  title: "Master of Urban Planning Student"
+  subtitle: "Specialized in Urban Informatics"
+  category: "school"
+
+- place: "Urban China Magazine"
+  time: "2021 - 2022"
+  title: "Oversea City Observer"
+  category: "work"
+
+- place: "Shenzhen Urban Planning & Land Resource Research Center"
+  time: "Jun-Aug 2020"
+  title: "Land Use Policy Planner, Intern"
+  subtitle: "Department of Land Policy"
+  category: "work"
+
+- place: "Central South University"
+  time: "2015 - 2020"
+  title: "Undergraduate Student"
+  subtitle: "Urban and Rural Planning"
+  category: "school"
