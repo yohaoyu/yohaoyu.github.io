@@ -1,10 +1,10 @@
 ---
 layout: project
-title: Full Coursework List
-subtitle: The Combination of Planning, Policy, Climate and Data Science Resources at UW.
+title: Full Graduate Coursework List
+subtitle: The Combination of Planning, Policy, Climate and Data Science Course Resources at the University of Washington.
 ---
 
-### Urban Design and Planning
+##### Urban Design and Planning
 
 - URBDP 500 Survey of Urban Planning
 - URBDP 501 Comprehensive Planning and Implementation
@@ -21,20 +21,20 @@ subtitle: The Combination of Planning, Policy, Climate and Data Science Resource
 - URBDP 598 Technologies of Cities
 - GEOG 595 Digital GeoHumanities
 
-### Public Policy & Institutions
+##### Public Policy & Institutions
 
 - PPM 504 Perspectives on Institutions
 - PPM 506 Microeconomics for Policy Analysis
 - PPM 508 Public Policy Processes
 - PPM 510 Public Policy Analysis
 
-### Climate Change
+##### Climate Change
 
 - ATM S 587 Fundamentals of Climate Change
 - G H 518 Understanding and Managing the Health Risks of Climate Change
 - FIN 579 Climate Change and Capital Market
 
-### Statistics and Data Science
+##### Statistics and Data Science
 
 - URBDP 520 Quantitative Methods in Urban Planning
 - PUBPOL 542 Computational Thinking for Governance Analytics
