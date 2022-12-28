@@ -221,11 +221,11 @@
     float: none;
     width: 100%;
 
-    text-align: center;
+    text-align: left;
   }
 
   .flag-wrapper {
-    text-align: center;
+    text-align: left;
   }
 
   .flag {
@@ -237,7 +237,7 @@
   .direction-r .flag:before {
     position: absolute;
     top: -30px;
-    left: 50%;
+    left: 0%;
     content: ' ';
     display: block;
     width: 12px;
@@ -253,7 +253,7 @@
   .direction-r .flag:after {
     content: "";
     position: absolute;
-    left: 50%;
+    left: 0%;
     top: -8px;
     height: 0;
     width: 0;
