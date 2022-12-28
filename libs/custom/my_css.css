@@ -7,8 +7,9 @@ h4 {
   margin-bottom: 60px; 
   text-align: left; }
 .main-description h1 {
-  font-size: 36px;
-  margin-bottom: 0px; }
+  font-size: 40px;
+  letter-spacing: .2rem;
+  margin-bottom: 1px; }
 .main-description p {
   margin-bottom: 0px; }
 .main-description .fa {
