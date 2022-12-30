@@ -1,19 +1,13 @@
 experiences:
 
 - place: "University of Washington"
-  time: "2022 - Now"
-  title: "Ph.D. Student in Urban Design and Planning"
+  time: "2020 - Now"
+  title: "MS/Ph.D. Student in Urban Design and Planning"
   subtitle: "Urban Infrastructure Lab"
   category: "school"
-
-- place: "University of Washington"
-  time: "2020 - 2022"
-  title: "Master of Urban Planning Student"
-  subtitle: "Specialized in Urban Informatics"
-  category: "work"
 
 - place: "Central South University"
   time: "2015 - 2020"
   title: "Undergraduate Student"
   subtitle: "Urban and Rural Planning"
-  category: "school"
+  category: "work"
