@@ -17,8 +17,8 @@ subtitle: The Combination of Planning, Policy, Climate and Data Science Course R
 - URBDP 580 Legal and Administrative Framework
 - [URBDP 592 Advanced Planning Theory](https://home.foreveroverhead.cloud/udp592_syllabus.pdf)
 - URBDP 593 Interdisciplinary Urban Research Seminar
-- URBDP 598 Urban Climate Resolution
-- URBDP 598 Technologies of Cities
+- URBDP 598 Urban Climate Solution 
+- URBDP 598 Technologies of Cities [*future*]
 - GEOG 595 Digital GeoHumanities
 
 ##### Public Policy & Institutions
