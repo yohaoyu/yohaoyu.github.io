@@ -12,7 +12,7 @@ Provides an overview of different data collection methods, basic statistical tec
 
 ##### Course Schedule
 
-<table border="1"> 
+<table> 
     <tr> 
         <td><b>Date</b></td> 
         <td><b>Topic</b></td> 
