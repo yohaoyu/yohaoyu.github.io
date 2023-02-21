@@ -85,16 +85,28 @@
       </div>
     </section>
 
+
     <div class="navbar-spacer"></div>
     <nav class="navbar">
       <div class="container">
         <ul class="navbar-list">
           <li class="navbar-item"><a class="navbar-link" href={{ "/index.html" | prepend: site.baseurl }}>Haoyu's Homepage</a></li>
-          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#publications" | prepend: site.baseurl }}>Publications</a></li>
+          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#teaching" | prepend: site.baseurl }}>Teaching</a></li>
           <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#projects" | prepend: site.baseurl }}>Projects</a></li>
         </ul>
       </div>
     </nav>
+
+    <div class="docs-section">
+      {% if page.subtitle == "" or page.subtitle == nil %}
+        <h3>{{ page.title }}</h3>
+      {% else %}
+        <div class="title-subtitle">
+          <h3>{{ page.title }}</h3>
+          <h5>{{ page.subtitle }}</h5>
+        </div>
+      {% endif %}
+    </div>
 
     {{ content}}
 
@@ -127,7 +139,9 @@
     </div>
 
   </div>
+  <p>
 
+  </p>
   <!-- Google Analytics -->
   {% include google_analytics.html %}
 
