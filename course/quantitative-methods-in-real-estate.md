@@ -18,39 +18,13 @@ Provides an overview of different data collection methods, basic statistical tec
         <td><b>Topic</b></td> 
         <td><b>Reading</b></td> 
         <td><b>Notes</b></td> 
-        <td><b>Assignments</td> 
+        <td><b>Assignments</b></td> 
     </tr> 
     <tr> 
         <td>10/01</td> 
         <td>Why statistics? <br/>Course introduction <br/>Real estate data</td> 
-        <td> </td> 
+        <td>Applied Quantitative Analysis for Real Estate, Chapter 1,2 </td> 
         <td> </td> 
         <td>HW 1 release</td> 
     </tr> 
 </table>
-
-
-
-
-
-| Date | Topic                                                          | Reading | Assignment   |
-| ---- | -------------------------------------------------------------- | ------- | ------------ |
-|      | Why statistics?<br/>Course introduction<br/>Real estate data |         | HW 1 release |
-|      | Data structure<br/>Summarizing Data                           |         |              |
-|      |                                                                |         |              |
-|      |                                                                |         |              |
-|      |                                                                |         |              |
-|      |                                                                |         |              |
-|      |                                                                |         |              |
-|      |                                                                |         |              |
-|      |                                                                |         |              |
-|      |                                                                |         |              |
-|      |                                                                |         |              |
-|      |                                                                |         |              |
-|      |                                                                |         |              |
-|      |                                                                |         |              |
-|      |                                                                |         |              |
-|      |                                                                |         |              |
-|      |                                                                |         |              |
-|      |                                                                |         |              |
-|      |                                                                |         |              |
