@@ -10,6 +10,8 @@ Provides an overview of different data collection methods, basic statistical tec
 
 
 
+##### Course Schedule
+
 | Date | Topic                                                          | Reading | Assignment   |
 | ---- | -------------------------------------------------------------- | ------- | ------------ |
 |      | Why statistics?<br/>Course introduction<br/>Real estate data |         | HW 1 release |
