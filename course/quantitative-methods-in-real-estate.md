@@ -30,7 +30,7 @@ Provides an overview of different data collection methods, basic statistical tec
 </table>
 
 
-```{r setup, include=FALSE}
+```r
 library(knitr)
 opts_chunk$set(message=FALSE, collapse=TRUE,fig.align='center',tidy=TRUE, tidy.opts=list(blank=TRUE, width.cutoff=70,strip.white=TRUE), warning=FALSE,cache=FALSE)
 ```
@@ -52,7 +52,7 @@ library(INLA)
 library(sf)
 ```
 
-In area $i$, let $Y_i$ and $E_i$ represent the disease count and expected count.An initial summary is the Standardized Morbidity Ratio (SMR), which for area $i$ is
+In area $i$, let $$Y_i$$ and $E_i$ represent the disease count and expected count.An initial summary is the Standardized Morbidity Ratio (SMR), which for area $i$ is
 for $i=1,\dots,56$. We also have an area-based covariate $X_i$ (proportion in agriculture, fishing and farming) in each areas. The following is taken from Section 6.2 of Moraga (2020).
 
 We form a data frame ``scotdata`` containing key variables, and add the SMRs.
