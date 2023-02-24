@@ -4,10 +4,6 @@ title: Graduate Coursework List
 subtitle: The Combination of Planning, Policy, and Data Science Course Resources at the University of Washington.
 ---
 
-
-$$ \nabla_\boldsymbol{x} J(\boldsymbol{x}) $$
-
-
 ##### Urban Design and Planning
 
 - URBDP 501 Comprehensive Planning and Implementation
