@@ -3,7 +3,7 @@ layout: project
 title: Climate Change Foundation Wiki
 ---
 
-## Climate Change Foundation
+
 ![Recent Monthly Mean CO2 at Mauna Loa Observatory](https://gml.noaa.gov/webdata/ccgg/trends/co2_trend_mlo.png)
 
 ### Weather vs Climate
