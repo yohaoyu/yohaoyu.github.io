@@ -9,7 +9,7 @@ title: Climate Change Foundation Wiki
 ### Weather vs Climate
 
 - What Factors Influence Climate?
-	-   Sunshine
+	-   **Sunshine**
 	-   Topography/mountains
 	-   Proximity to oceans and large lakes
 	-   Ocean currents
@@ -22,7 +22,7 @@ title: Climate Change Foundation Wiki
 ### Carbon Dioxide
 
 - Greenhouse gases slow heat loss to space, and make the earth 58 F (32 C) warmer
-- Earth is warmed about 1.2 C (2.2 F) in the last 170 years
+- Earth is warmed about _1.2 C (2.2 F)_ in the last 170 years
     -  Warming has happened almost everywhere. Northern high latitudes have warmed the most. Land has warmed more than ocean.
 
 
