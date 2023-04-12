@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Footprints
+layout: project
+title: Climate Change Foundation Wiki
 ---
 
 ## Climate Change Foundation
