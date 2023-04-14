@@ -1,5 +1,5 @@
 ---
-layout: course
+layout: clean
 title: Climate Change Foundation Wiki
 ---
 
