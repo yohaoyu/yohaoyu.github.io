@@ -1,0 +1,85 @@
+---
+layout: clean
+title: Injustice Behind the Green
+subtitle: A Visualization Investigation of California Climate Initiative Program
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>TEST</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://d3js.org/colorbrewer.v1.min.js"></script>
+  <style>
+    .states {
+      fill: #ccc;
+      stroke: #190e0e;
+      stroke-width: 1px;
+    }
+  </style>
+</head>
+<body>
+  <div id="basic-info">
+    Haoyu Yue, Interdisciplinary PhD in Urban Design and Planning, University of Washington<br>
+    <a href="mailto:yohaoyu@uw.edu">yohaoyu [AT] washington.edu</a><br>
+    Final Project for <a href="https://courses.cs.washington.edu/courses/cse512/23sp/index.html">CSE 512 Data Visualization</a>, Spring 2023 
+    <br>
+    <br>
+    <i>I wish to develop a dashboard for myself, even the decision-makers, 
+      to discover the money flow behind climate investment. In terms of visualization techniques, 
+      I may try my best to use D3.js to create the dashboard. Also, I wish to make it based on my personal website. </i>
+  </div>
+  <br>
+  <div class="docs-section" id="basic-info">
+    <h3>Introduction</h3>
+    <p>
+    California Climate Initiative Fund (CCIF), generated from the largest carbon market in the United 
+    States - California Cap-and-Trade, are supporting a series of programs and projects statewide to reduce 
+    greenhouse gas emissions and deliver other economic, environmental, and public health benefits for all. </p>
+
+    <b>Here we will have a dashboard for user to explore some statistics and projects.</b>
+  </div>
+
+
+  <div class="docs-section" id="pollution">
+    <h3>Pollution and Investment</h3>
+    <p>
+      Different from equity planning with the core goal to achieve social equity, the process of carbon 
+      trade-investment, however, focuses on equity from a reparative view. One of the most important legal 
+      foundations of carbon trade is that the credits paid by polluting installations for carbon credits are 
+      used to correct the negative externalities caused by pollution. The negative externality has the 
+      greatest impact on the surrounding communities of polluting installations spatially and should 
+      receive more "compensation". 
+    </p>
+    <b>There will be a parallel coordinates plot with climate risk index, pollution index, 
+      and climate investment intensity in each community. This plot can select same community with following one plot.</b>
+    <br>
+    <img src="assets/2.jpeg" alt="Flowers in Chania" style="width:100%;">
+  </div>
+
+  <div class="docs-section" id="mismatch">
+    <h3>Socioeconomic Spatial Mismatch</h3>
+    <P>
+      Construct the spatial mismatch index based on different combination of socioeconomic variables.
+    </P>
+    <b>There will be an interative map to show the different spatial mismatch index.
+      I wish the user can control which socioeconomic variables they wish to use for the index. 
+      This plot can select same community with last one.
+    </b>
+    <img src="assets/3.jpeg" alt="Flowers in Chania" style="width:100%;">
+    
+  </div>
+
+  <div class="docs-section" id="notes">
+    <h3>References</h3>
+    <p>California Climate Investment Project Dataset (CCIP) from the Government of California
+      (spatial data: https://webmaps.arb.ca.gov/ccimap). </p>
+    <p>American Community Survey (ACS) 5- year Estimate released in 2015 and 2021 
+      (www.census.gov/programs-surveys/acs)</p>
+    <p>National Risk Index (2021, https://hazards.fema.gov/nri/data-resources).</p>
+    
+  </div>
+</body>
+</html>
+
