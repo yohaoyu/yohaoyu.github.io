@@ -36,50 +36,58 @@ subtitle: A Visualization Investigation of California Climate Initiative Program
   <br>
   <div class="docs-section" id="basic-info">
     <h3>Introduction</h3>
-    <p>
+
     California Climate Initiative Fund (CCIF), generated from the largest carbon market in the United 
     States - California Cap-and-Trade, are supporting a series of programs and projects statewide to reduce 
-    greenhouse gas emissions and deliver other economic, environmental, and public health benefits for all. </p>
-
-    <b>Here we will have a dashboard for user to explore some statistics and projects.</b>
+    greenhouse gas emissions and deliver other economic, environmental, and public health benefits for all.
   </div>
 
 
   <div class="docs-section" id="pollution">
     <h3>Pollution and Investment</h3>
-    <p>
+
       Different from equity planning with the core goal to achieve social equity, the process of carbon 
       trade-investment, however, focuses on equity from a reparative view. One of the most important legal 
       foundations of carbon trade is that the credits paid by polluting installations for carbon credits are 
       used to correct the negative externalities caused by pollution. The negative externality has the 
       greatest impact on the surrounding communities of polluting installations spatially and should 
       receive more "compensation". 
-    </p>
-    <b>There will be a parallel coordinates plot with climate risk index, pollution index, 
-      and climate investment intensity in each community. This plot can select same community with following one plot.</b>
-    <br>
+
   </div>
 
-
-  <div id="observablehq-viewof-keyz-de47995a"></div>
-  <div id="observablehq-legend-de47995a"></div>
-  <div id="observablehq-viewof-selection-de47995a"></div>
-  <p>Credit: <a href="https://observablehq.com/d/6052874dace4761d@349">Brushable Parallel Coordinates by Urbanization </a></p>
+  <div id="observablehq-viewof-keyz-0a7d8c8c"></div>
+  <div id="observablehq-viewof-selection-0a7d8c8c"></div>
+  <div id="observablehq-legend-0a7d8c8c"></div>
+  <br>
+  <p>With the change of selection in previous graph, here is the change of racial demographics:</p>
+  <div id="observablehq-racial-0a7d8c8c"></div>
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
   <script type="module">
   import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-  import define from "https://api.observablehq.com/d/6052874dace4761d@349.js?v=3";
+  import define from "https://api.observablehq.com/d/6052874dace4761d@693.js?v=3";
   new Runtime().module(define, name => {
-    if (name === "viewof keyz") return new Inspector(document.querySelector("#observablehq-viewof-keyz-de47995a"));
-    if (name === "legend") return new Inspector(document.querySelector("#observablehq-legend-de47995a"));
-    if (name === "viewof selection") return new Inspector(document.querySelector("#observablehq-viewof-selection-de47995a"));
-    return ["z"].includes(name);
+    if (name === "viewof keyz") return new Inspector(document.querySelector("#observablehq-viewof-keyz-0a7d8c8c"));
+    if (name === "viewof selection") return new Inspector(document.querySelector("#observablehq-viewof-selection-0a7d8c8c"));
+    if (name === "legend") return new Inspector(document.querySelector("#observablehq-legend-0a7d8c8c"));
+    if (name === "racial") return new Inspector(document.querySelector("#observablehq-racial-0a7d8c8c"));
+    return ["z","white","aapi","african","hisp","others","data_gu"].includes(name);
   });
   </script>
-
-  <svg id="figure"> </svg>
-
+  <p>
+  Based on the visualization, our initial findings suggest that communities with high climate scores 
+  do not necessarily receive higher climate investments from California Climate Funding. However, 
+  it appears that communities burdened with heavy pollution receive higher investment, although more 
+  accurate statistical results are needed for conclusive evidence.
+  </p>
+  <p>
+  Furthermore, after incorporating racial demographics information, we observe that different racial 
+  groups bear varying environmental burdens, particularly the Hispanic community. Additionally, 
+  the allocation of climate investments seems to benefit minority communities in their efforts to 
+  build resilience.
+  </p>
+  <br>
+  <!--
   <div class="docs-section" id="mismatch">
     <h3>Socioeconomic Spatial Mismatch</h3>
     <P>
@@ -89,8 +97,9 @@ subtitle: A Visualization Investigation of California Climate Initiative Program
       I wish the user can control which socioeconomic variables they wish to use for the index. 
       This plot can select same community with last one.
     </b>
-    
+
   </div>
+  -->
 
 
 
