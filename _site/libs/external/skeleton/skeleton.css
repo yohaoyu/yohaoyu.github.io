@@ -121,9 +121,9 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
 body {
-  font-size: 1.4em; /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: 1.65;
-  font-weight: 350;
+  font-size: 1.55em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.55;
+  font-weight: 380;
   font-family: "Raleway",Palatino,Optima, sans-serif,"HelveticaNeue", "Helvetica Neue", Helvetica;
   /* font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   color: #222; }
@@ -153,7 +153,8 @@ h6 { font-size: 2.0rem; line-height: 1.6;  letter-spacing: 0; }
 }
 
 p {
-  margin-top: 0; }
+  margin-top: 0; 
+  margin-bottom: 0}
 
 
 /* Links
@@ -302,7 +303,7 @@ ol ul {
   margin: 1.5rem 0 1.5rem 3rem;
   font-size: 90%; }
 li {
-  margin-bottom: 1rem; }
+  margin-bottom: 0.5rem; }
 
 
 /* Code
@@ -351,7 +352,8 @@ blockquote,
 dl,
 figure,
 table,
-p,
+p {
+  margin-bottom: 2rem; }
 ul,
 ol,
 form {

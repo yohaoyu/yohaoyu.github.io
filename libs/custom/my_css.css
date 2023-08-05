@@ -1,20 +1,21 @@
 h4 {
   letter-spacing: .1rem; }
 .container {
-  max-width: 800px; }
+  max-width: 780px; }
 .header {
-  margin-top: 60px;
-  margin-bottom: 60px; 
+  margin-top: 45px;
+  margin-bottom: 45px; 
   text-align: left; }
 .main-description h1 {
-  font-size: 40px;
+  font-size: 35px;
   letter-spacing: .1rem;
-  margin-bottom: 1px; }
+  margin-bottom: 4px; }
 .main-description p {
+  font-size: 16px;
   margin-bottom: 0px; }
 .main-description .fa {
   font-size: 22px;
-  margin-top: 5px; }
+  margin-top: 8px; }
 .paper {
   margin-bottom: 20px }
 .paper .title {
@@ -37,7 +38,7 @@ h4 {
   font-weight: 600; }
 .docs-section {
   border-top: 1px solid #eee;
-  padding: 3rem 0;
+  padding: 2rem 0;
   margin-bottom: 0;}
 .footer {
   text-align: center;
