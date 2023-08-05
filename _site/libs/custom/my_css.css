@@ -9,7 +9,8 @@ h4 {
 .main-description h1 {
   font-size: 35px;
   letter-spacing: .1rem;
-  margin-bottom: 4px; }
+  margin-bottom: 4px; 
+  margin-top: 8px}
 .main-description p {
   font-size: 16px;
   margin-bottom: 0px; }
