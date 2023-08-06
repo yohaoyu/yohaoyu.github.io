@@ -1,7 +1,16 @@
 projects:
-  - title: "Detecting Network Effects"
-    subtitle: "Randomizing Over Randomized Experiments"
-    thumbnail: "assets/projects/2016_network-ab/thumbnail.jpg"
-    url: "projects/2016_network-ab-testing.html"
+  - title: "Injustice Behind the Green"
+    subtitle: "An Investigation of Climate Investment Mismatch"
+    thumbnail: "assets/projects/2023-climate-investment-mismatch/coverpage.png"
+    url: ""
     selected: y
-
+  - title: "Keeping it on the Tracks"
+    subtitle: "High-speed Rail Success and Lession Learned"
+    thumbnail: "assets/projects/2023-high-speed-rail-success/coverpage.png"
+    url: ""
+    selected: y
+  - title: "Vulnerability in the Pandemic"
+    subtitle: "Social Vulnerability & Resillence during COVID 19"
+    thumbnail: "assets/projects/2022-resillience-in-pandemic/coverpage.png"
+    url: ""
+    selected: y
