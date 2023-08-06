@@ -123,8 +123,8 @@ html {
 body {
   font-size: 1.55em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.55;
-  font-weight: 380;
-  font-family: "Raleway",Palatino,Optima, sans-serif,"HelveticaNeue", "Helvetica Neue", Helvetica;
+  font-weight: 100;
+  font-family: Optima, Palatino, "Raleway", sans-serif,"HelveticaNeue", "Helvetica Neue", Helvetica;
   /* font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   color: #222; }
 
