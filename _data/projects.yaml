@@ -1,16 +1,16 @@
 projects:
   - title: "Injustice Behind the Green"
     subtitle: "An Investigation of Climate Investment Mismatch"
-    thumbnail: "assets/projects/2023-climate-investment-mismatch/coverpage.png"
+    thumbnail: "assets/projects/2023-climate-investment-mismatch/thumbnail.png"
     url: ""
     selected: y
   - title: "Keeping it on the Tracks"
     subtitle: "High-speed Rail Success and Lession Learned"
-    thumbnail: "assets/projects/2023-high-speed-rail-success/coverpage.png"
+    thumbnail: "assets/projects/2023-high-speed-rail-success/thumbnail.png"
     url: ""
     selected: y
   - title: "Vulnerability in the Pandemic"
     subtitle: "Social Vulnerability & Resillence during COVID 19"
-    thumbnail: "assets/projects/2022-resillience-in-pandemic/coverpage.png"
+    thumbnail: "assets/projects/2022-resillience-in-pandemic/thumbnail.png"
     url: ""
     selected: y
