@@ -7,8 +7,14 @@ h4 {
   margin-bottom: 45px; 
   text-align: left; }
 .main-description h1 {
-  font-size: 35px;
+  font-size: 30px;
   letter-spacing: .1rem;
+  margin-bottom: 4px; 
+  margin-top: 8px}
+.main-description h2 {
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
   margin-bottom: 4px; 
   margin-top: 8px}
 .main-description p {
@@ -61,7 +67,7 @@ h4 {
   margin-bottom: 25px;
 }
 .project-image-container {
-  border: 0.1px solid rgba(0,0,0,0.2);
+  border: 0.5px solid rgba(0,0,0,0.2);
   padding: 7px 4px 0px 4px;
   transition: 0.3s;
   filter: grayscale(30%) opacity(0.9);

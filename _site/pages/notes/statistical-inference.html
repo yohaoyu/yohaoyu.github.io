@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Probability and Mathematical Statistics | HAOYU YUE</title>
+  <meta name="description" content="Haoyu Yue">
+  <meta name="author" content="Haoyu Yue">
+  <meta property="og:title" content="Haoyu Yue" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://yohaoyu.github.io" />
+  <meta property="og:site_name" content="Haoyu Yue" />
+  <link rel="canonical" href="http://yohaoyu.github.io" />
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href=/libs/external/skeleton/normalize.css>
+  <link rel="stylesheet" href=/libs/external/skeleton/skeleton.css>
+  <link rel="stylesheet" href=/libs/custom/my_css.css>
+
+  <!-- JQuery
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src=/libs/external/jquery-3.1.1.min.js></script>
+
+  <!-- Font-Awesome
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href=/libs/external/font-awesome-4.7.0/css/font-awesome.min.css>
+
+  <!-- Academicons
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href=/libs/external/academicons-1.8.6/css/academicons.min.css>
+
+  <!-- Skeleton tabs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href=/libs/external/skeleton_tabs/skeleton-tabs.css>
+  <script src=/libs/external/skeleton_tabs/skeleton-tabs.js></script>
+
+  <!-- Timeline
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href=/libs/external/timeline.css>
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!--<link rel="stylesheet" href=/libs/external/github-prettify-theme.css>-->
+  <script src=/libs/custom/my_js.js></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href=/libs/icon.png>
+  <link rel="shortcut icon" type="image/png" href=/libs/icon.png>
+
+  <!-- Latex
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+
+    <div class="navbar-spacer"></div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href=/index.html>Haoyu's Homepage</a></li>
+          <li class="navbar-item"><a class="navbar-link" href=/pages/note>All Notes</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="docs-section">
+      
+        <div class="title-subtitle">
+          <h2>Probability and Mathematical Statistics</h2>
+          <h5>Selected Notes from STAT 504 + CSE 546, University of Washington</h5>
+        </div>
+      
+      
+    </div>
+    <h2 id="probability-and-statistics">Probability and Statistics</h2>
+
+<h3 id="probability-spaces">Probability spaces</h3>
+
+<ul>
+  <li>Probability space: \((\Omega, S, P)\)
+    <ul>
+      <li>Non-negativity: \(\forall A \in S, P(A) \leq 0\), where \(P(A)\) is ﬁnite and real.</li>
+      <li>Unitarity: \(P(\Omega) = 1\)</li>
+      <li>Countable additivity: if \(A_1,A_2,A_3,... \in S\) are pairwise disjoint, and \(P(A_{1}\cup ...) = P(A_1)+ ... = \sum\limits P(A_i)\)</li>
+    </ul>
+  </li>
+  <li>measurement space: \((\Omega, S)\)</li>
+  <li>sample space: \(\Omega\)</li>
+  <li>
+    <p>event space: \(S\),  \(\sigma\)-algebra/field</p>
+
+    <ul>
+      <li>
+\[S\neq \emptyset\]
+      </li>
+      <li>if \(A\in S\), then \(A^{C}\in S\)</li>
+      <li>if \(A_{1}, A_{2}...\in S\), then \(A_{1}\cup A_{2}...\in S\)</li>
+    </ul>
+  </li>
+  <li>
+    <p>probability measure: \(P:S\rightarrow R\), assigns a probability (just like a funcion \(P\)) to every event in the event space.</p>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Bayes’ rules: $$P(B)=\frac{P(B</td>
+          <td>A)P(A)}{P(B)}$$</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ul>
+      <li>Another form (related to law of total probablity):</li>
+      <li>
+\[P(A_i|B)=\frac{P(B|A_i)P(A_i)}{\sum ^k _{j=1} P(B|A_j)P(A_j)}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Joint and Conditional Probabilities</p>
+
+    <ul>
+      <li>For \(A,B \in S\), the joint probability of A and B is \(P(A \cap B)\).</li>
+      <li>
+\[P(A\cup B)=P(A)+P(B)-P(A\cap B)\]
+      </li>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>Conditional probablity of \(A\) <em>given</em> \(B\): $$P(A</td>
+              <td>B)=\frac{P(A\cap B)}{P(B)}$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Independent: $$P[A</td>
+          <td>B]=P[A]\ and \ P[A</td>
+          <td>B]=P[A</td>
+          <td>B^c]$$ if they are independent.</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><strong>Partition</strong>: If \(A_1 ,A_2 ,... \in S\) are nonempty and pairwise disjoint, and  \(\Omega = A_{1 }\cup A_{2}\cup...\), then \({ A_{1},A_{2},A_{3},...}\) is a partition of \(\Omega\).</li>
+</ul>
+
+<h3 id="random-variables">Random Variables</h3>
+
+<ul>
+  <li>
+    <p>A <strong>random variable is a function</strong> \(X:\Omega \rightarrow R\) such that, \(\forall r\in R, \{a\in \Omega :X(a)\leq r\}\in S\)</p>
+
+    <ul>
+      <li>takes on a real value that is determined by a <em>random generative process</em></li>
+      <li>Thus, it is often remarked that, technically, a random variable is neither random nor a variable, as it is merely a <em>function</em>.</li>
+      <li>uppercase letters to denote random variables and lowercase letters to denote generic outcome</li>
+    </ul>
+  </li>
+  <li>
+    <p>Function of a Random Variable</p>
+
+    <ul>
+      <li>Deﬁnition: Let \(g : U → R\) be a function, where \(X(\Omega) ⊆ U ⊆ R\). Then, if \(g◦X:→R\) is a random variable, we say that \(g\) is a function of \(X\), and write \(g(X)\) to denote the random variable \(g◦X\).</li>
+      <li>\(g◦X\)![[Pasted image 20230107213144.png]]</li>
+      <li>Eg: \(A=\{ω∈: X(ω) = 1\}=\{X=1\}\), which means \(A\) is the event that \(X\) takes on the value of one</li>
+    </ul>
+  </li>
+  <li>
+    <p>Operator on a Random Variable</p>
+
+    <ul>
+      <li>Deﬁnition: An <strong>operator</strong> \(A\) on a random variable maps the function \(X(·)\) to a real number, denoted by \(A [ X ]\).</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="transformation">Transformation</h2>
+
+<h2 id="expectation">Expectation</h2>
+
+<h2 id="conditional-expectation">Conditional Expectation</h2>
+
+<h3 id="review-of-probability-theory">Review of probability theory</h3>
+
+<ul>
+  <li>
+    <ul>
+      <li></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="univariate-distribution">Univariate distribution</h4>
+
+<h5 id="discretecontinous-random-variables">Discrete/Continous Random Variables</h5>
+
+<ul>
+  <li>
+\[X\sim P(x)\]
+  </li>
+  <li>
+    <p>Probability Mass Function (PMF)/Probability Density Function (PDF)</p>
+  </li>
+  <li>
+    <p>Cumulative Distribution Functions (CDF)</p>
+  </li>
+  <li>
+    <p>For Continous Random Variables, event probability: \(\forall x \in R,P [ X = x ] = 0\).</p>
+  </li>
+  <li>
+    <p>Any <strong>association</strong> is represented by the distribution</p>
+
+    <h5 id="support">Support</h5>
+  </li>
+  <li>
+    <p>The set of values at which the PMF or PDF of a random variable is positive is called its <em>support</em>.</p>
+  </li>
+  <li>
+    <p>For a random variable X with PMF/PDF \(f\), the support of \(X\) is \(Supp [ X ] = { x \in R : f(x) &gt; 0 }\).</p>
+
+    <ul>
+      <li>
+        <p>The notion of the support of a random variable will be particularly important in Section 2.2.3, when we deﬁne conditional expectations, and in Part III, in which assumptions about support will comprise key elements of our approach to identiﬁcation.</p>
+
+        <h5 id="expectation-first-linear-regression">Expectation (first linear regression)</h5>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Two different forms for discrect and continous R.V.</p>
+
+    <ul>
+      <li>Expected Value and Expectation of a Function (below) are different
+        <ul>
+          <li>
+\[E(g(X))=\sum\limits_xg(x)f(x)\mbox{ or }\int^\infty_{-\infty}g(x)f(x)dx\]
+          </li>
+        </ul>
+      </li>
+      <li>\(E(X)\) is the best predictors when we use MSE.</li>
+    </ul>
+  </li>
+  <li>
+    <p>If \(Y=g(X)\), \(E(Y)=\sum\limits g(X)P(X)\)</p>
+  </li>
+  <li>
+    <p>\(E[a+bX]=a+bE[X]\) (Expected value of linear functions)</p>
+  </li>
+  <li>
+    <p>Variance and standard deviatation: \(\sigma^2=Var[X]\)</p>
+
+    <ul>
+      <li>higher varience means higher unpredictbility</li>
+      <li>
+\[Var(X)=E(X^2)-E(X)^2\]
+      </li>
+      <li>Variance of a linear function: \(Var(a+bX)= b^2Var(X)\)</li>
+    </ul>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>\(SD(X)=\sqrt{Var(X)}\) , $$SD(a+bX)=</td>
+          <td>b</td>
+          <td>\cdot SD(X)$$</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h5 id="best-predictor">Best predictor</h5>
+  </li>
+  <li>
+    <p>We need to define what is the best when we talk about</p>
+  </li>
+  <li>
+    <p><strong>Loss function</strong> is used to present</p>
+
+    <ul>
+      <li>Squared loss: \(L(x,c)=(x-c)^2\)</li>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>Absoluate value loss: $$L(x,c)=</td>
+              <td>x-c</td>
+              <td>^2$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Mean square error</p>
+
+    <ul>
+      <li>\(MSE(c) = E[(x-c)^2]\), where \(c\) is the predictors</li>
+      <li>decomposition of MSE: \(E[(x-c)^2]=Var(X)+(E(X)-c)^2\)
+        <ul>
+          <li>\(Var(X)\): minimal error and we cannot aviod</li>
+          <li>We can know from here that the best predictor under MSE is \(c=E(X)\).</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Mean decomposition</p>
+
+    <ul>
+      <li>
+\[X=\mu +\epsilon\]
+        <ul>
+          <li>\(\mu=E[X]\) , \(\epsilon\) is error/deviation from the mean</li>
+          <li>
+\[E(\epsilon)=0, Var(\epsilon)=Var(X)\]
+          </li>
+        </ul>
+      </li>
+      <li>We decomposite a \(X\) to two parts, one we can get from the data (\(\mu\)) and one we cannot predict (\(\epsilon\)). These are properties of the error/NOT assumption.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="bivariate-random-variables">Bivariate random variables</h4>
+
+<ul>
+  <li>
+    <p>Basic concepts of bivariate distribution</p>
+
+    <ul>
+      <li>
+        <p>joint distribution</p>
+      </li>
+      <li>
+        <p>conditional distribution</p>
+
+        <ul>
+          <li>conditional expectatioin function: <strong>regression functions</strong></li>
+          <li>best linear predictors <strong>(OLS)</strong></li>
+        </ul>
+      </li>
+      <li>
+        <p>property of error terms</p>
+      </li>
+      <li>
+        <p>ANOVA (analysis of variance)</p>
+
+        <h5 id="joint-distribution">Joint distribution</h5>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>\(y\) is the variable we are interested in predicting (response, outcomes, etc.)</p>
+  </li>
+  <li>
+    <p>\(x\) is the features, independent variables</p>
+  </li>
+  <li>
+    <p>Key object:  <strong>joint distribution</strong></p>
+
+    <ul>
+      <li>
+        <p>CDF: \(P(Y\leq y, X\leq x) =F(x,y)\)</p>
+      </li>
+      <li>
+        <p>PDF/PMF are different</p>
+      </li>
+      <li>
+        <p>Joint distribution tells us <strong>everything</strong> about the association of \(X\) and \(Y\).</p>
+
+        <h5 id="conditional-distribution">Conditional distribution</h5>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Usually, if interested in predicting, explain \(Y\) as a function of \(X\), and we will use the <strong>conditional distribution</strong> $$Y</td>
+          <td>X$$.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ul>
+      <li>This conditional distribution is just a univariate distribution and we can use the previous techniques.</li>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>$$p(Y</td>
+              <td>X)=\frac{p(Y,X)}{p(X)}\(, and little\)p$$ here represent both PMF and PDF.</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Conditional variance $$Var[y</td>
+          <td>x]=E[(y-E(y</td>
+          <td>x))^2</td>
+          <td>X=x]$$</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>You can treat any function \(X\) as constant when conditional on \(X\).</p>
+
+    <ul>
+      <li>
+\[E[g(x)y+h(x)|X=x]=g(x)E(Y|X=x)+h(x)\]
+
+        <h5 id="conditional-expectation-function">Conditional expectation function</h5>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>For discrete random variables X and Y with joint PMF f, the conditional expectation of Y given X = x is: $$E [ Y</td>
+          <td>X = x ] = \sum\limits yf_{Y</td>
+          <td>X}(y</td>
+          <td>x),\forall x \in Supp [ X ]$$</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>For jointly continuous random variables X and Y with joint PDF f, the conditional expectation of Y given X = x is: $$E [ Y</td>
+          <td>X = x ] = \int ^\infty_\infty yf_{Y</td>
+          <td>X}(y</td>
+          <td>x)dy,\forall x\in Supp [ X ]$$</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>Conditional Expectation of a Function of Random Variables</p>
+
+    <ul>
+      <li>similar to function of expectations</li>
+    </ul>
+  </li>
+  <li>
+    <p>Conditional Variance</p>
+
+    <ul>
+      <li>
+\[V [ Y | X = x ] = E Y − E [ Y | X = x ] )^2X = x ,\forall x \in Supp [ X ]\]
+      </li>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>Alternative Formula: $$E [ Y^{2}</td>
+              <td>X = x ] - E [ Y</td>
+              <td>X = x ]^2$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><u>Conditional Expectation Function</u> (CEF)</p>
+
+    <ul>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>For random variables X and Y with joint PMF/PDF f, the conditional expectation function of Y given X = x is: $$G_Y(x) = E [ Y</td>
+              <td>X = x ], \forall x \in Supp [ X ]$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>We will generally write $$E [ Y</td>
+              <td>X = x ]\(to denote the CEF rather than\)G_Y(x)$$</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>
+        <p>Law of Iterated Expectations: the most important one in applied regression</p>
+
+        <ul>
+          <li>
+\[E [ Y ] = E [ E [ Y | X ] ]\]
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>Law of Total Variance</p>
+
+        <ul>
+          <li>
+\[V [ Y ] = E [ V [ Y | X ] ] + V [ E [ Y | X ] ]\]
+          </li>
+        </ul>
+      </li>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>Properties of Deviations from the CEF: Let X and Y be random variables and let $$ε = Y − E [ Y</td>
+              <td>X ]$$. Then: (the proof process in P74 of <a href="zotero://select/items/@aronowFoundationsAgnosticStatistics2019">Peter M. Aronow, Benjamin T. Miller, 2019</a>)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <ul>
+          <li>
+\[E [ ε | X ] =E [ ε ] = 0\]
+          </li>
+          <li>
+            <p>If \(g\) is a function of \(X\), then \(Cov [ g(X),ε ] = 0\)</p>
+          </li>
+          <li>
+\[V [ ε | X ] = V [ Y | X\]
+          </li>
+          <li>
+\[V [ ε ] = E [ V [ Y | X ] ]\]
+
+            <h5 id="corvariance-and-correlation">Corvariance and Correlation</h5>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Covariance</p>
+
+    <ul>
+      <li>\(Cov [ X,Y ] = E(X - E [ X ] )( Y - E [ Y ] )=E [ XY ] - E [ X ] E [ Y ]\), \(\mbox{Cov}(X,Y)\in[-1,1]\)</li>
+      <li>Measure how \(X\) and \(Y\) covary or vary together.
+        <ul>
+          <li>When \(\mbox{Cov}(X,Y)&gt;0\), \(X\) and \(Y\) are in the same direction; and when \(\mbox{Cov}(X,Y)&lt;0\), \(X\) and \(Y\) are in different directions.</li>
+          <li>\(\mbox{Cov}(X,Y)=1/-1\) if \(X\) can be perfectly predict <strong>linear</strong> by \(Y\) or vice verse.</li>
+        </ul>
+      </li>
+      <li>Variance Rule of Covariance: \(V [ X + Y ] = V [ X ] + 2Cov [ X,Y ] + V [ Y ]\)</li>
+      <li>Some Properties of Covariance
+        <ul>
+          <li>
+\[Cov [ X,X ] = V [ X ]\]
+            <ul>
+              <li>Variance is effectively a special case of covariance</li>
+            </ul>
+          </li>
+          <li>
+\[\forall a,b,c,d \in R,Cov [ aX + c,bY + d ] = abCov [ X,Y ]\]
+          </li>
+          <li>
+\[Cov [ X + W,Y + Z ] = Cov [ X,Y ] + Cov [ X,Z ] + Cov [ W,Y ] +Cov [ W,Z ]\]
+          </li>
+          <li>
+\[\mbox{Cov}(X,Y)=\frac{\mbox{Cov}(Y,X)}{SD(X)SD(Y)}\]
+          </li>
+          <li>\(\mbox{Cov}(X,Y)=\mbox{Cov}(Y,X)\) if it’s symmetric.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Correlation</p>
+
+    <ul>
+      <li>
+\[\rho[X,Y]=\frac{Cov[X,Y]}{\sigma[X]\sigma[Y]}\]
+      </li>
+      <li>
+        <p>Even if two random variables are not exactly linearly dependent, they can be more or less nearly so.</p>
+      </li>
+      <li>
+\[\rho [ X,Y ] = 1/-1\leftrightarrow \exists a,b \in R \mbox{ with } b &gt; 0 \mbox{ such that }Y = a +/- bX\]
+      </li>
+      <li>
+        <p>Properties of Correlation</p>
+
+        <ul>
+          <li>
+\[\rho [ X,Y ] = \rho [ Y,X ]\]
+          </li>
+          <li>
+            <p>\(ρ [ aX + c,bY + d ] = ρ [ X,Y ]\) when a and b with same sign</p>
+          </li>
+          <li>
+            <p>\(ρ [ aX + c,bY + d ] = -ρ [ X,Y ]\) when a and b with different sign</p>
+          </li>
+          <li>
+            <p>\(\rho(X,Y) = 0\) does <strong>not</strong> generally imply \(X \bot Y\)</p>
+
+            <h5 id="anova">ANOVA</h5>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+\[Var(Y)=Var[E(Y|X)]+E[Var(Y|X)]\]
+  </li>
+  <li>
+    <p>Nonparameteric \(R^2\) (Pearson correlation ratio)</p>
+
+    <ul>
+      <li>Percentage of variation of \(Y\) explained by \(X\)</li>
+      <li>
+\[\eta^{2}_{y \sim x}=\frac{Var[E(Y|X)]}{Var(Y)}=1-\frac{Var(\epsilon)}{Var(y)}\in[0,1]\]
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><span style="background:#fff88f">updating all notes below</span></p>
+
+
+    <div class="footer">
+      <div class="row">
+        <div class="four columns">
+          HAOYU YUE
+        </div>
+        <div class="four columns">
+          yohaoyu [AT] washington.edu
+        </div>
+        <div class="four columns">
+          <span onclick="window.open('https://twitter.com/HaoyuAtCities')" style="cursor: pointer">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </span>
+          <span onclick="window.open('https://www.linkedin.com/in/yohaoyu')" style="cursor: pointer">
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          </span>
+          <span onclick="window.open('https://github.com/yohaoyu')" style="cursor: pointer">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </span>
+          <span onclick="window.open('https://calendly.com/yohaoyu')" style="cursor: pointer">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+          </span>
+          <!--<span onclick="window.open('https://scholar.google.com/citations?user=jfr_teoAAAAJ&hl=zh-CN')" style="cursor: pointer">
+            <i class="ai ai-google-scholar ai-lg" aria-hidden="true">
+          </span></i>-->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  <!-- do not remove -->
+  <span id="62cd7b7da1aff3196fdc26b60e396df9"></span>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

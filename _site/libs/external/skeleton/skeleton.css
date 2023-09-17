@@ -124,7 +124,7 @@ body {
   font-size: 1.55em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.55;
   font-weight: 100;
-  font-family: Optima, Palatino, "Raleway", sans-serif,"HelveticaNeue", "Helvetica Neue", Helvetica;
+  font-family: Optima, Palatino,"Microsoft Yahei","Raleway", sans-serif,"HelveticaNeue", "Helvetica Neue", Helvetica;
   /* font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   color: #222; }
 
@@ -132,7 +132,7 @@ body {
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
+  margin-top: 0rem;
   margin-bottom: 2rem;
   font-weight: 300; }
 h1 { font-size: 3.0rem; line-height: 1.2;  letter-spacing: -.08rem;font-weight: 150}
@@ -300,7 +300,7 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
+  margin: 0.45rem 0 0.45rem 3rem;
   font-size: 90%; }
 li {
   margin-bottom: 0.45rem; }

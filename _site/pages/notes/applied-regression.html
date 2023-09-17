@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Applied Linear Regression | HAOYU YUE</title>
+  <meta name="description" content="Haoyu Yue">
+  <meta name="author" content="Haoyu Yue">
+  <meta property="og:title" content="Haoyu Yue" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://yohaoyu.github.io" />
+  <meta property="og:site_name" content="Haoyu Yue" />
+  <link rel="canonical" href="http://yohaoyu.github.io" />
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href=/libs/external/skeleton/normalize.css>
+  <link rel="stylesheet" href=/libs/external/skeleton/skeleton.css>
+  <link rel="stylesheet" href=/libs/custom/my_css.css>
+
+  <!-- JQuery
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src=/libs/external/jquery-3.1.1.min.js></script>
+
+  <!-- Font-Awesome
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href=/libs/external/font-awesome-4.7.0/css/font-awesome.min.css>
+
+  <!-- Academicons
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href=/libs/external/academicons-1.8.6/css/academicons.min.css>
+
+  <!-- Skeleton tabs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href=/libs/external/skeleton_tabs/skeleton-tabs.css>
+  <script src=/libs/external/skeleton_tabs/skeleton-tabs.js></script>
+
+  <!-- Timeline
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href=/libs/external/timeline.css>
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!--<link rel="stylesheet" href=/libs/external/github-prettify-theme.css>-->
+  <script src=/libs/custom/my_js.js></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href=/libs/icon.png>
+  <link rel="shortcut icon" type="image/png" href=/libs/icon.png>
+
+  <!-- Latex
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+
+    <div class="navbar-spacer"></div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href=/index.html>Haoyu's Homepage</a></li>
+          <li class="navbar-item"><a class="navbar-link" href=/pages/note>All Notes</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="docs-section">
+      
+        <div class="title-subtitle">
+          <h2>Applied Linear Regression</h2>
+          <h5>Selected Notes from STAT 504 + CSE 546, University of Washington</h5>
+        </div>
+      
+      
+    </div>
+    <h3 class="no_toc" id="table-of-contents">Table of Contents</h3>
+<ul id="markdown-toc">
+  <li><a href="#conditional-expectation-function" id="markdown-toc-conditional-expectation-function">Conditional Expectation Function</a></li>
+  <li><a href="#linear-regression" id="markdown-toc-linear-regression">Linear Regression</a></li>
+  <li><a href="#independence-mean-independence-uncorrelatedness" id="markdown-toc-independence-mean-independence-uncorrelatedness">Independence, Mean independence, Uncorrelatedness</a></li>
+  <li><a href="#finite-samples" id="markdown-toc-finite-samples">Finite Samples</a></li>
+  <li><a href="#causal-inference" id="markdown-toc-causal-inference">Causal inference</a></li>
+  <li><a href="#penalized-regression" id="markdown-toc-penalized-regression">Penalized Regression</a></li>
+</ul>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>This note is mainly built on STAT 504 about linear regression from a <strong>nonparametric approach/population first approach</strong>, which means we will define interested parameter as operations rather than assuming that these distributions can be fully characterized by a distribution function with a ﬁnite number of parameters. Hence, we are going to <em>empirical distribution</em> to describe the sample and <em>population joint distribution</em> for the associational concepts in the population level. I also include some materials from machine learning practical side (CSE 546), such as Bias-Variance Tradeoff and Cross-Validation.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Tranditional Approach Examples</th>
+      <th style="text-align: left">Nonparametric Approach</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Sample average</td>
+      <td style="text-align: left">Statistical functional of the empirical distribution</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Population mean</td>
+      <td style="text-align: left">Statistical functional of the population joint distribution</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For prerequite knowledge on probability and linear algebra, please refer to sepreate pages. For some topics highly related to linear regerssion, please refer to: casual inference using linear regression.</p>
+
+<h3 id="conditional-expectation-function">Conditional Expectation Function</h3>
+
+<h3 id="linear-regression">Linear Regression</h3>
+
+<h4 id="best-mse-predictors">Best MSE predictors</h4>
+
+<ul>
+  <li>\(E[Y\vert X]\) is the best MSE predictor of \(Y\) by using \(X\).</li>
+  <li>
+    <p>\(E[Y\vert X]=\mbox{argmin}_{f}E[(y-f(x))^2]\), all possible functions of \(X\) we can choose which can get the minimal loss from our loss function (MSE).</p>
+  </li>
+  <li>\(E[(y-f(x))^2\vert X=x]=Var(y\vert X=x)+(E[y\vert X=x]-f(x))^2\) and the solution is \(f(x)=E[Y\vert X=x]\).</li>
+</ul>
+
+<h5 id="cef-decomposition-property-for-all-cefs">CEF decomposition property (for all CEFs)</h5>
+
+<ul>
+  <li>
+    <p>For any R.V. \(Y,X\), we have \(Y=\mu(X)+\epsilon\), where \(\mu(X)=E[Y\vert X]\) and \(\epsilon\) is unknown (with <u>some properties</u>, not assumptions)</p>
+
+    <ul>
+      <li>\(E(\epsilon\vert X)=0\), \(E(\epsilon)=E[E(\epsilon\vert X)]=0\)</li>
+      <li>\(Var(\epsilon\vert X)=Var(Y\vert X)=E(\epsilon^2\vert X)-E(\epsilon\vert X)^2\), \(Var(\epsilon)=E[Var(Y\vert X)]\)</li>
+      <li>\(E[h(X)\epsilon]=0\) for any function \(h(x)\), which means \(\epsilon\) is not correlated with any function of \(X\)</li>
+    </ul>
+  </li>
+  <li>
+    <p>So \(Y\) can be decomposed to two parts:  \(E[Y\vert X]\), a part can be explained by \(X\), and a <u>residual</u> that is uncorrelated with any function of \(X\).</p>
+  </li>
+</ul>
+
+<h5 id="anova-theorem-law-of-total-variance">ANOVA theorem (law of total variance)</h5>
+
+<ul>
+  <li>
+\[Var(Y)=Var[E(Y\vert X)+\epsilon]=Var[E(Y\vert X)]+E[Var(Y\vert X)]\]
+
+    <ul>
+      <li>Note: \(Cov[E(Y\vert X),\epsilon]=0\)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="best-linear-predictors">Best linear predictors</h4>
+
+<ul>
+  <li>
+    <p>In general, the CEF maybe too ambitious, or for other reasons, we may need to provide a simple summary of the relationship of \(Y\vert X\)</p>
+  </li>
+  <li>
+    <p>Linear regression (OLS) is the best linear approximation to conditional expectation function (CEF) in terms of MSE</p>
+  </li>
+  <li>
+    <p>We may want to restrict the class of \(f\) belongs to the form: \(f(x)=\alpha+\beta x\)</p>
+
+    <ul>
+      <li>
+        <p>OLS linear regression is the best linear predictor of \(Y\)</p>
+      </li>
+      <li>
+        <p>\(BLP(Y\vert X) = \alpha+\beta x\), where:</p>
+
+        <ul>
+          <li>
+\[\alpha=E(Y)-\beta E(X)\]
+          </li>
+          <li>
+\[\beta=\frac{Cov(Y,X)}{Var(X)}\]
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="linear-decomposition-principle">Linear decomposition principle</h5>
+
+<ul>
+  <li>
+\[Y=a+bX+e\]
+
+    <ul>
+      <li>where \(E[e]=0\), \(E[Xe] = 0\) and \(Cov(x,e)=0\)</li>
+    </ul>
+  </li>
+  <li>
+    <p>Linear ANOVA</p>
+
+    <ul>
+      <li>
+\[Var(Y)=Var(a+bX)+Var(e)=b^2Var(X)+Var(e)\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Linear \(R^2\) / coefficient of determination</p>
+
+    <ul>
+      <li>
+\[R^2_{y\sim x}=\frac{Var(a+bX)}{Var(Y)}=1-\frac{Var(\epsilon)}{Var(Y)}=Cor(X,Y)^2\]
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="cef-and-lr">CEF and LR</h5>
+
+<ul>
+  <li>
+    <p>Linear regression is the best linear approximation of the CEF (\(E[Y\vert X]\))</p>
+
+    <ul>
+      <li>
+\[BLP(Y\vert X)=argmin E[(E(Y\vert X)-f(X))^2]\]
+        <ul>
+          <li>
+\[\alpha^*=E(E(Y\vert X))-\beta E(X)\]
+          </li>
+          <li>
+\[\beta^*=\frac{Cov(E[Y\vert X]+\epsilon,X)}{Var(X)}\]
+          </li>
+        </ul>
+      </li>
+      <li>we can estimate BLP based on aggregated data</li>
+    </ul>
+  </li>
+  <li>
+    <p>If the CEF is linear, then LR is the CEF</p>
+
+    <ul>
+      <li>
+\[E[Y\vert X]=a+bX, a= E[Y]-bE[X]\]
+      </li>
+      <li>
+\[Cov(Y,X)=Cov[a+bX+\epsilon]=bVar[X]\]
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="further-decomposition-of-cef-and-lr">Further decomposition of CEF and LR</h4>
+
+<ul>
+  <li>
+    <p>![[Pasted image 20230206181101.png\vert 350]]</p>
+  </li>
+  <li>
+\[e:=Y-\alpha-\beta Y=U+\epsilon\]
+  </li>
+  <li>
+\[\epsilon := Y-E[Y\vert X]\]
+
+    <ul>
+      <li>irreducible error or noise in a sense that we cannot prevent this error</li>
+    </ul>
+  </li>
+  <li>
+\[U=E[Y\vert X]-\alpha-\beta Y\]
+
+    <ul>
+      <li>non-linearity error or approximation error and in theory we can minimize</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="special-cases-of-regression">Special cases of regression</h4>
+
+<h5 id="binary-x-and-y">Binary X and Y</h5>
+
+<ul>
+  <li>
+    <p>True CEF is linear: \(E[Y\vert X]=\alpha+\beta X\)</p>
+
+    <ul>
+      <li>\(\alpha:=E[Y\vert X=0]\) and \(\beta:=E[Y\vert X=1]-E[Y\vert X=0]\)</li>
+      <li>\(\beta\) here means the change of \(E[Y\vert X]\) due to the existence of \(X\).</li>
+    </ul>
+  </li>
+  <li>
+    <p>\(Var(Y\vert X)\) is not constant</p>
+
+    <ul>
+      <li>
+\[Var[Y\vert X]=P(Y=1\vert X)[1-P(Y=1\vert X)]\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>We can generalize it to multiple categorical variablaes which is [[#Saturated regression]].</p>
+  </li>
+  <li>
+    <p>However, to make <strong>predictions</strong> (in finite sample estimate), that’s a different story.</p>
+  </li>
+</ul>
+
+<h5 id="bivariate-gaussian">Bivariate Gaussian</h5>
+
+<ul>
+  <li>
+    <p>The bivariate normal distribution is fullly described by \(\mu\) and \(\Sigma\). Also, the maginal and conditional distribution are normal.</p>
+
+\[\left(
+\begin{matrix} 
+X \\ Y
+\end{matrix}
+\right)
+\sim N(\mu,\Sigma), \mbox{where }\mu =
+\left(
+\begin{matrix} 
+\mu_x\\\mu_y
+\end{matrix}
+\right)
+\mbox{ and }
+\Sigma=
+\left(
+\begin{matrix} 
+\sigma_x^2 &amp; \sigma_{xy} \\
+\sigma_{xy} &amp; \sigma_y^2
+\end{matrix}
+\right)\]
+  </li>
+  <li>
+\[Y\vert X \sim N(\alpha+\beta X,\sigma^2)\]
+
+    <ul>
+      <li>\(\alpha=\mu_y-\beta\mu_x\), \(\beta=\frac{\sigma_{xy}}{\sigma_x^2}\), \(\sigma=\sigma_y^2-\beta^2\sigma^2_x\)</li>
+      <li>These results tells us that we have <strong>linear</strong> CEF, constant conditional variance and normally distributed error terms. (no need to proof this)</li>
+    </ul>
+  </li>
+  <li>
+\[E[Y\vert X]=\alpha+\beta X\]
+
+    <ul>
+      <li>
+\[\beta = E[Y\vert X=x_0+1]-E[Y\vert X=x_0]=\frac{\partial E[Y\vert X=x]}{\partial x}\vert _{X=x}:=Q\]
+      </li>
+      <li>
+        <p>\(Q\) is the change in one unit of \(X\) leads to the change in conditional expectation of \(Y\).</p>
+      </li>
+      <li>
+        <p>The value of \(Q\) does not depend on \(X_n\).</p>
+
+        <ul>
+          <li>But \(Q\) is not always equal to \(\beta\), only equal when CEF is linear</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="multivariate-regression">Multivariate Regression</h4>
+
+<h5 id="theory">Theory</h5>
+
+<ul>
+  <li>
+\[LR(Y_i\vert X_i)=X_i^T\beta\]
+
+    <ul>
+      <li>
+\[\beta=E[X_iX_i^T]^{-1}E[X_iY_i]\]
+        <ul>
+          <li>why we get this result? \(\frac{\partial L}{\partial \beta}=0\)</li>
+        </ul>
+      </li>
+      <li>where \(X=[1,X_{1i},X_{2i}...,X_{pi}]^T\), \(\beta=[\beta_o,\beta_1,\beta_2,...,\beta_p]^T\)</li>
+    </ul>
+  </li>
+  <li>
+    <p>CEF is the best predictor of Y using X</p>
+
+    <ul>
+      <li>
+\[E[Y_i\vert X_i]=argmin_{f}E[(Y_i-f(X_i))^2]\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>CEF decomposition</p>
+
+    <ul>
+      <li>
+\[Y_i=E[Y_i\vert X_i]+\epsilon_i\]
+        <ul>
+          <li>\(E(\epsilon_i\vert X_i)=0\), \(E(\epsilon_i)=E[E(\epsilon_i\vert X_i)]=0\)</li>
+          <li>\(Var(\epsilon_i\vert X_i)=Var(Y_i\vert X_i)\), \(Var(\epsilon_i)=E[Var(Y_i\vert X_i)]\)</li>
+          <li>\(E[h(X_i)\epsilon_i]=0\) for all \(h\)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Multivariate BLP</p>
+
+    <ul>
+      <li>
+\[\beta_{OLS}=argmin_\beta E[(Y_i-X)i^T\beta)^2]=E[X_iX_i^T]^{-1}E[X_iY_i]\]
+      </li>
+      <li>Decomposition
+        <ul>
+          <li>
+\[Y=X_i^T\beta+e_i\]
+          </li>
+          <li>where \(E[X_ie_i]=0\) (vector)
+            <ul>
+              <li>\(e_i\) is uncorrelated with \(X\) or any linear function of \(X\)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>If the CEF is linear then it equal to BLP = LR</p>
+
+    <ul>
+      <li>\(E[Y\vert X]=X^T\beta\) then \(\beta=E[XX^T]^{-1}E[xy]\)</li>
+    </ul>
+  </li>
+  <li>
+    <p>BLP is also the best linear approximation of the CEF</p>
+
+    <ul>
+      <li>
+\[\beta^*=argminE[(E[Y\vert X]-X^T\beta)^2]=E[XX^T]^{-1}E[xy]=\beta_{OLS}\]
+
+        <ul>
+          <li>the trick used in this proof: \(E[XE(Y\vert X)]=E[E(XY\vert X)]=E[XY]\)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="special-case-saturated-regression">Special case: Saturated regression</h5>
+
+<ul>
+  <li>
+    <p>Suppose we have: \(Y\) (income, continuous), \(X_1\) (PhD/MS graduation, 1/0), \(X_2\) (other covariates, 1/0), dummy variables</p>
+
+    <ul>
+      <li>how many potential values CEF have? 4. So we can perfectly fit the function using 4 parameters</li>
+    </ul>
+  </li>
+  <li>
+\[E[Y\vert X_1,X_2]=\beta_0+\beta_1X_1+\beta_2X_2+\beta_{12}X_1X_2=X^T\beta\]
+
+    <ul>
+      <li>using matrix, we can write down \(\overrightarrow{X}\) and \(\overrightarrow{\beta}\)</li>
+    </ul>
+  </li>
+  <li>
+    <p>We can get the solutions for \(\beta\)</p>
+  </li>
+  <li><strong>NOT</strong> assumption at all here but a property of dummy variables</li>
+</ul>
+
+<h5 id="special-case-polynomial-regression">Special case: Polynomial Regression</h5>
+
+<ul>
+  <li>
+\[E[Y\vert X_1,X_2]=\beta_0+\beta_1X_1+\beta_2X_2+\beta_{3}X_1^2+\beta_{4}X_2^2+\beta_{5}X_1X_2\]
+
+    <ul>
+      <li>Using matrix, we can write down \(\overrightarrow{X}\) and \(\overrightarrow{\beta}\)</li>
+    </ul>
+  </li>
+  <li>
+\[E[Y\vert X]=X^T\beta=BLP(Y\vert X)\]
+
+    <ul>
+      <li>we can fit the polynomials using OLS by simply transforming the variables.</li>
+      <li>in theory, we can appxroximate any CEF in a <span style="background:#fff88f">bounded domain to arbritory precision</span>. ?</li>
+      <li>with finite data (samples), we need to pay attention to <u>overfitting</u> issue.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Marginal effects (how much \(y\) will change if we change \(x\)) -》将带次方的换成平均变化</p>
+
+    <ul>
+      <li>
+\[E[\frac{\partial E[Y\vert X_{1i},X_{2i}]}{\partial X_{1i}}]=E[\beta_1+2\beta_3X_{1i}+\beta_{5}X_{2i}]\]
+      </li>
+    </ul>
+  </li>
+  <li>
+\[x^*=argmax_xE[Y_i\vert X_i=x]=-\frac{\beta_{1}}{2\beta_{2}}\]
+
+    <ul>
+      <li>find the max value of \(Y\)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="fwl-theorem-regression-anatomy">FWL Theorem (Regression anatomy)</h4>
+
+<ul>
+  <li>
+    <p>Let \(BLP(Y_i\vert X_i)=\beta_0+\beta_1X_{1i}+\beta_2X_{2i}+,...,+\beta_pX_{pi}\):</p>
+
+    <ul>
+      <li>
+\[\beta_k=\frac{Cov(Y_i,\tilde X_{ki})}{Var(\tilde X_{ki})}=\frac{Cov(\tilde Y_i,\tilde X_{ki})}{Var(\tilde X_{ki})}\]
+      </li>
+      <li>where \(\tilde X_{ki}=X_{ki}-BLP(X_{ki}\vert X_{(-k)i})=X_{ki}^{\bot X_{(-k)i}}\) and \(\tilde Y_{i}=Y_{i}-BLP(Y_{i}\vert X_{(-k)i})\)</li>
+      <li>\(X_{(-k)i}\) is all other variables other than \(X_k\)</li>
+      <li>Explaination
+        <ul>
+          <li>\(\tilde X_{ki}\) is the <strong>residual</strong> of the regression of \(X_k\) on all other \(X\), 使用除\(X_k\)之外的所有\(X_{-k}\)去解释\(X_k\)</li>
+          <li>\(\tilde Y_{i}\) is the <strong>residual</strong> of the regression of \(Y\) on all other \(X\), 使用除\(X_k\)之外的所有\(X_{-k}\)去解释\(Y\)</li>
+          <li>We usually call this operation <strong>partialling out</strong></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><span style="background:#fff88f">Notation</span>: \(X^{\bot Z}=X-BLP(X\vert Z)\)</p>
+  </li>
+</ul>
+
+<p>\(\)\beta_k=\frac{Cov(Y_i^{\bot X_{(-k)i}},X_{ki}^{\bot X_{(-k)i}})}{Var(X_{ki}^{\bot X_{(-k)i}})}\(\)</p>
+
+<ul>
+  <li>
+    <p>Properties</p>
+
+    <ul>
+      <li>
+        <p>linear operator: \(V=X+W\Rightarrow V^{\bot Z}=X^{\bot Z}+W^{\bot Z}\)</p>
+      </li>
+      <li>
+\[Z^{\bot Z}=0\]
+      </li>
+      <li>\(e^{\bot Z}=0\), \(e\) is the original residual from regression</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="omitted-variable-bias">Omitted Variable Bias</h4>
+
+<ul>
+  <li>
+    <p>Let \(Y_i=\tau D_i +X_i^T\beta+\gamma Z_i+e_i\), and we omit the variable \(Z\), then: \(Y_i=\tau_rD_i+X_i^T\beta_r+e_{ri}\)
+\(\)\tau_r=\tau+\gamma \delta \mbox{,  where }\delta=\frac{Cov(D_i^{\bot X_i},Z_i^{\bot X_i})}{Var(D_i^{\bot X_i})}\(\)</p>
+  </li>
+  <li>
+    <p>Explanation:</p>
+
+    <ul>
+      <li>
+        <p>\(\gamma\): the real predective impact of omitted variable \(Z\) on \(Y\)</p>
+      </li>
+      <li>
+        <p>\(\delta\): imbalance of \(Z\) among levels of \(D\) (not sure what this mean)</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="partial-r2">Partial \(R^2\)</h4>
+
+<ul>
+  <li>
+    <p>how much prediction power a random variable \(Z\) has in explaining variation of \(Y\) after taking into account what is already explained by other covariates \(D\) and \(X\).
+\(\)R^2<em>{Y\sim Z\vert D,X}:=\frac{R^2</em>{Y\sim Z+D+X}-R^2<em>{Y\sim D+X}}{1-R^2</em>{Y\sim D+X}}\(\)</p>
+  </li>
+  <li>
+    <p>Note: \(R^2_{Y\sim X}=\frac{Var(a+bX)}{Var(Y)}\)</p>
+  </li>
+  <li>
+    <p>Properties of the Partial \(R^2\)</p>
+
+    <ul>
+      <li>
+\[0\leq R^2_{Y\sim Z\vert D,X}\leq 1\]
+      </li>
+      <li>
+\[R^2_{Y\sim Z\vert D,X}=1-\frac{Var(Y^{\bot Z,D,X})}{Var(Y^{\bot D,X})}=Cor^2(Y^{\bot Z,D,X},Z^{\bot D,X})=R^2_{Z\sim Y\vert D,X}\]
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="omitted-variable-bias-z-with-partial-r2-parametrization">Omitted variable bias (\(Z\)) with partial \(R^2\) parametrization</h5>
+
+<ul>
+  <li>
+    <p>\(Bias=\tau_r-\tau=\delta\gamma\), which is the coefficient difference of \(D\), then:
+\(\)Bias^2=(\gamma\delta)^2=\frac{R^2<em>{Y\sim Z\vert D,X}\times R^2</em>{D\sim Z\vert X}}{1-R^2_{D\sim Z\vert X}}\times\frac{Var(Y^{\bot D,X})}{Var(D^{\bot X})}\(\)</p>
+  </li>
+  <li>
+    <p>Explaination:</p>
+
+    <ul>
+      <li>The first part is the component of the bias that depends on \(Z\); tells us how \(Z\) changes our regression coefficient of \(D\). <span style="background:#fff88f">(The part of bias depends on Z.)</span></li>
+      <li>The second is the residual variation of \(Y\) after accounting for \(D\) and\(X\), <em>divided</em> by residual variation of \(D\) after accounting for \(X\). <span style="background:#fff88f">(This part is not related to Z.)</span></li>
+    </ul>
+  </li>
+  <li>
+    <p>Application</p>
+
+    <ul>
+      <li>Use this to bound the maximum change you would see in a regression coefficient due to the inclusion/omission of Z.</li>
+      <li>Because we only need to observe two values about \(Z\): \(R^2_{Y\sim Z\vert D,X}\) and \(R^2_{D\sim Z\vert X}\).</li>
+    </ul>
+  </li>
+  <li>
+    <p>How about mutliple unobserved variables? \(Z=[Z_1,Z_2,...,Z_p]^T\)</p>
+  </li>
+</ul>
+
+<p>\(\)Bias^2\leq \frac{R^2<em>{Y\sim Z\vert D,X}\times R^2</em>{D\sim Z\vert X}}{1-R^2_{D\sim Z\vert X}}\times\frac{Var(Y^{\bot D,X})}{Var(D^{\bot X})}\(\)</p>
+
+<h3 id="independence-mean-independence-uncorrelatedness">Independence, Mean independence, Uncorrelatedness</h3>
+
+<ul>
+  <li>
+    <p>Independence  \(X\bot Y\Leftrightarrow Y\bot X\)</p>
+
+    <ul>
+      <li>\(P(Y,X)=P(X)P(Y)\)  or \(P(Y\vert X)=0, \forall X,Y\)</li>
+      <li>Learning about X does not change \(P(Y)\) and vice verse, but independent does not mean no causal relationships</li>
+    </ul>
+  </li>
+  <li>
+    <p>Mean Independence</p>
+
+    <ul>
+      <li>Y is mean independent of X if \(E[Y\vert X]=E[Y]\)</li>
+      <li>This is NOT symmetric!</li>
+    </ul>
+  </li>
+  <li>
+    <p>Uncorrelatedness</p>
+
+    <ul>
+      <li>
+\[Cov(X,Y)=0\]
+      </li>
+      <li>This is symmetric and \(BLP(Y\vert X)\) and \(BLP(X\vert Y)\) are constant</li>
+    </ul>
+  </li>
+  <li>
+    <p>Independence \(\Rightarrow\) Mean Independence \(\Rightarrow\) Uncorrelatedness</p>
+  </li>
+  <li>
+    <p>\(e=Y-BLP(Y\vert X)\) \(\Rightarrow\) e is <strong>uncorrelated</strong> with linear function of X</p>
+  </li>
+  <li>
+    <p>\(\epsilon=Y-E[Y\vert X]\) \(\Rightarrow\)  is mean independence of X</p>
+  </li>
+  <li>
+    <p>Implications</p>
+
+    <ul>
+      <li>
+\[Y\bot X\Rightarrow E[Y\vert X]=E[Y]\Rightarrow Cov(Y,X)=0\Rightarrow BLP(Y\vert X)=\alpha\]
+      </li>
+      <li>
+        <p>If we say \(e:=Y=X\beta, E[e\vert X]=0\): it’s an assumption (implying that the CEF is linear)</p>
+      </li>
+      <li>If we say \(Y=f(X)+\epsilon, \epsilon \bot X\): it’s an <span style="background:#fff88f">assumption</span>?</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="finite-samples">Finite Samples</h3>
+
+<ul>
+  <li>
+    <p>In reality, we just have a sample from the distribution not the whole population.</p>
+  </li>
+  <li>
+    <p>To connect the samples with the population/distribition, we need assumptions.</p>
+
+    <ul>
+      <li>
+        <p>All samples are independent and identifcally distributed samples from \(P(y,x)\). (IID)</p>
+      </li>
+      <li>
+        <p>The notion of IID: independent, identical distributed</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="estimation">Estimation</h4>
+
+<ul>
+  <li>
+    <p>Suppose we have \((Y_i,X_i)\sim^{iid} P(Y_i,X_i), 1\leq i\leq N\)  AND suppose we do not want to more assumption about \(P(Y,X)\)</p>
+  </li>
+  <li>
+    <p>How would you like to estimate the \(BLP(Y\vert X)\)?</p>
+
+    <ul>
+      <li>
+\[\hat{BLP}(Y\vert X)=\hat\alpha+\hat\beta X\]
+      </li>
+      <li>\(\hat Y=E_n[Y]\) emprical version, same opreation but the ture empiral distribution</li>
+      <li>\(\hat Var(X) =E_n[(X_i-E_N(X_i))^2]\) sample / emprical version</li>
+      <li>\(E_n[g(x_i)]=\frac1n\sum_ig(x_i)\) emprical version (\(P_n\) is the same thing for some books)</li>
+    </ul>
+  </li>
+  <li>
+    <p>For multiple regression</p>
+
+    <ul>
+      <li>
+\[\beta=E[XX^T]^{-1}E[XY]\]
+
+        <ul>
+          <li>
+            <p>\(\hat\beta=E_n[X_iX_i^T]^{-1}E_n[X_{i}Y]=(\frac1n\sum_iX_iX_i^T)^{-1}(\frac1n\sum_ix_iy_i)\) (\((X^TX)^{-1}(X^Ty)\) formula we always see in other books or previous classes)</p>
+
+            <ul>
+              <li>
+\[X_i=[1,x_{i1},...,x_{in}]^T\]
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>we can rewrite \(\hat e_i =y_i-x_i^T\hat\beta\)</p>
+
+            <ul>
+              <li>and all other proofs stay and just change the symbol</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="plug-in-principle">Plug-in Principle</h4>
+
+<ul>
+  <li>
+    <p>Target parameters: \(Q=f(P)\) a function of the distribution of our variable</p>
+
+    <ul>
+      <li>e.g. \(Q=E[\partial E[Y_i\vert X_i]/\partial x_i]\)</li>
+    </ul>
+  </li>
+  <li>
+    <p>Estimate: \(\hat Q=f(P_m)\), \(P_m\) is the empirical distribution</p>
+
+    <ul>
+      <li>sample analog of the population solution</li>
+      <li>
+\[\hat\beta =E_n[X_iX_i^T]^{-1}E[X_iY_i]=[\frac1n\sum X_iX_i^T]^{-1}[\frac1n\sum X_iY_i]=(X^TX)^{-1}(X^TY)\]
+        <ul>
+          <li>the last one is the traditional textbook formula</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Another way to see the OLS estimates</p>
+
+    <ul>
+      <li>Population version: \(\beta_{OLS}=argmin E[(y_i-X_i^T\beta)^2]\)</li>
+      <li>Sample version: \(\hat\beta_{OLS}=argmin E[(y_i-X_i^T\beta)^2]\)</li>
+    </ul>
+  </li>
+  <li>
+    <p>In general, all properties we derived for the population OLS/BLP will also valid in the sample case. So we get immediately from everything we have done so far.</p>
+  </li>
+  <li>
+    <p>Don’t conflict the sample quantities with the population quantities.</p>
+
+    <ul>
+      <li>\(\hat e_i\neq e_i\), \(\hat \beta_{OLS}\neq \beta_{OLS}\)</li>
+      <li>\(\hat \beta_{OLS}\) is an estimator and a random variable; \(\beta_{OLS}\) is fixed and a property of population</li>
+      <li>we call the distribution of \(\hat \beta_{OLS}\) as <span style="background:#fff88f">sampling distribution</span></li>
+    </ul>
+  </li>
+  <li>
+    <p>We may ask some questions about the estimator:</p>
+
+    <ul>
+      <li>
+        <p>does it coverage to the true with the sample size grows? (consistence)</p>
+
+        <ul>
+          <li>
+\[\hat\beta_n\rightarrow \beta, n\rightarrow \infty\]
+          </li>
+          <li>In general, plug-in estimators are consistant.</li>
+          <li>\(\hat \theta_n\) is consistent for \(\theta\) if: \(\lim_{n\rightarrow\infty} P(\vert \theta_n-\theta\vert \leq\epsilon)=0, \forall \epsilon\leq 0\)</li>
+        </ul>
+      </li>
+      <li>
+        <p>\(Q_n\) average, does it get the correct answer? (unbiasness)</p>
+
+        <ul>
+          <li>
+\[E[\hat\beta_n]=\beta\]
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>how variable is our estimator? (sampling variability)</p>
+
+        <ul>
+          <li>
+            <p>\(Var(\hat\beta_n)\), we want this to decrease as a function of \(n\)</p>
+
+            <h5 id="bias">Bias</h5>
+
+            <p>Let’s think about an estimator \(\hat\theta_n\) for some parameter \(\theta\)</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Bias \(\hat\theta_n\) with \(\theta\): \(Bias[\hat\theta_n,\theta]=E[\hat\theta_n]-\theta\)</p>
+
+    <ul>
+      <li>If bias = 0, and we call it is unbiased.</li>
+      <li>\(\hat\beta_{OLS}\) is unbiased, <u>NOT</u> in general, for \(\hat\beta_{OLS}=E[X_iX_i^T]^{-1}E[X_iY_i]\)
+        <ul>
+          <li>Proof: \(\hat\beta_{OLS}=\beta+[\frac1n\sum X_iX_i^T]^{-1}[\frac1n\sum X_ie_i]\)</li>
+          <li>
+\[E[\hat\beta_{OLS}\vert X]=\beta+[\frac1n\sum X_iX_i^T]^{-1}[\frac1n\sum X_iE[e_i\vert x_i]]\]
+            <ul>
+              <li>\(E[e_i\vert x_i]]\) is not 0 in general, so our \(\hat\beta_{OLS}\) is <u>biased in general</u>.</li>
+              <li>But if \(E[y_i\vert x_i]]=X_i^T\beta\) (ths CEF is linear), then \(E[e_i\vert x_i]]=0\), and <span style="background:#ff4d4f">TWO (un)conditional unbiasness</span></li>
+              <li>Unbiasness used to receive a lot of attention, but it’s not so important nowadays. Most estimators will be biased.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Sampling variance of \(\hat \theta_n\)</p>
+
+    <ul>
+      <li>\(Var(\hat \theta_n)\): variance of the sampling distribution</li>
+    </ul>
+  </li>
+  <li>
+    <p>Standard error</p>
+
+    <ul>
+      <li>\(SE[\hat \theta_n]:=SD[\hat \theta_n]\) (standard devidiation of the sampling distribution)
+        <ul>
+          <li>Standard error is for the <strong>population</strong>, also called unbiased standard error</li>
+        </ul>
+      </li>
+      <li>important because we need to evluate the quality of estimator</li>
+    </ul>
+  </li>
+  <li>
+    <p>MSE decomposition</p>
+
+    <ul>
+      <li>
+\[MSE(\hat \theta_n,\theta)=E[(\hat \theta_n-\theta)^2]=Var(\hat \theta_n)+(E[\hat \theta_n]-\theta)^2\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>An estimator is anampyidly normal if</p>
+
+    <ul>
+      <li>
+\[\frac{\hat \theta_n-\theta}{SE}\rightarrow^d N(0,1)\]
+      </li>
+      <li>if an estimator is ama normal, we can use this fact to make approximate inference</li>
+      <li>
+\[P(\frac{\vert \hat \theta_n-\theta\vert }{se}\leq Z_\alpha)=0.95\]
+        <ul>
+          <li>just use the <font color="#ff0000">tail</font> of the standard normal distribution</li>
+        </ul>
+      </li>
+      <li>
+\[P(\hat \theta_n-se*Z_{\alpha/2}\leq \theta\leq \theta_n+ se * Z_{\alpha/2})=0.95\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>confidence interval</p>
+
+    <ul>
+      <li>A confidence interval for a parameter is an intervla in proof:
+        <ul>
+          <li>
+\[P(\theta\in C_n)\leq1-\alpha, \forall \theta\]
+            <ul>
+              <li>\theta is fixed and C_n is random</li>
+            </ul>
+          </li>
+          <li>\((1-\alpha)\%\) of the sampling XXX, \(\theta\) will be with in \(C_n\)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="nonparametric-bootstrap">Nonparametric bootstrap</h4>
+
+<ul>
+  <li>
+\[V_i\sim^{iid} P\]
+  </li>
+  <li>We can define the empircal distribution P_n as a distribution that assigns probability for all point V_i</li>
+  <li>\(F_n\Rightarrow\) emprical CDF, \(F\Rightarrow\) ture CDF
+    <ul>
+      <li>it can be shown that with the larger sample size, \(F_n\rightarrow F\)</li>
+    </ul>
+  </li>
+  <li>bootstrap
+    <ul>
+      <li>the idea of bootstrap is that: if the \(F_n\) is closed to \(P\), then I can approximate the sampling distribution of my estimator \(\theta_n\) empircal distribution as the ture distribution, and resample from it</li>
+      <li>algoriltm
+        <ul>
+          <li>n is the sample size</li>
+          <li>B is the number of Boostrap sample</li>
+          <li>for i in B:
+            <ul>
+              <li>sample n observations (each one is row) with replacement from ture data</li>
+              <li>compute our statistics in the sample data (\(\theta_j^n\))</li>
+            </ul>
+          </li>
+          <li>That gvie us the bootstrap sample \(\hat\theta^*=[\tilde\theta_1,...,\tilde\theta_B]\)
+            <ul>
+              <li>This is an approximation of true sampling distribution of \(\hat\theta\)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>two simple ways
+        <ul>
+          <li>one: the normal approximation interval
+            <ul>
+              <li>
+\[\hat se_{boot}=SD(\hat\theta^*)\]
+              </li>
+              <li>
+\[\hat\theta_n\pm \hat se_{boot}\times Z_{\alpha/2}\]
+              </li>
+            </ul>
+          </li>
+          <li>two: \(C_n=[\hat\theta_{\alpha/2},\hat\theta_{1-\alpha/2}]\) 
+R doc</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Feb 13</p>
+
+<ul>
+  <li>
+    <p>Plan</p>
+
+    <ul>
+      <li>traditional classical linear regression model
+        <ul>
+          <li>exact distribution for the estimators: t distribution with n-p degree of freedom</li>
+        </ul>
+      </li>
+      <li>robost standard errors
+        <ul>
+          <li>asymptotic analysis: asymptotic normal; we will the variance-covariance matrix \(\hat\beta_n\)
+            <ul>
+              <li>The law of large number</li>
+              <li>CLT</li>
+              <li>shetccy theoem</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Classical linear regression model</p>
+  </li>
+  <li>
+\[Y_i\vert X_i \sim ^{iid} N(\mu_0,\sigma^2)\]
+
+    <ul>
+      <li>
+\[\mu_o=X_i^T\beta\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Assumptions:</p>
+
+    <ul>
+      <li>\(\mu_o=E[Y_o\vert X_i]=X_i^T\beta\), linearity of the CEF
+        <ul>
+          <li>this give us unbiasness</li>
+        </ul>
+      </li>
+      <li>
+\[Var(Y_i\vert X_i)=\sigma^2=E[e_i^2]\]
+        <ul>
+          <li>give us a simple analytical formula for the variance of \(\hat\beta_n\)</li>
+          <li>
+\[Var(\hat\beta_n\vert X)=\frac{\sigma^2}{n}[\frac1n\sum_iX_iX_i^T]^{-1}=\sigma^2(X^TX)^{-1}\]
+            <ul>
+              <li>disganal of this matrix give us the true variances for the elements of \(\hat\beta_n\), the square root is the standard errors</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>\(e_i\sim_{iid} N(0,\sigma^2)\) normally distributed
+        <ul>
+          <li>
+\[\hat\beta\vert X\sim N(\beta,\frac{\sigma^2}{n}[\frac1n\sum_iX_iX_i^T]^{-1})\]
+          </li>
+          <li>
+\[\frac{\hat\beta_k-\beta_k}{SE(\hat\beta_k)}\sim N(0,1)\]
+            <ul>
+              <li>we need to estimate \(\sigma^2\), \(\hat\sigma^2=\frac{\hat e^T \hat e}{n-1}\)
+                <ul>
+                  <li>n-1, degree of freedom (DF)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Our esitmated variance-covariance matrix \(\hat\beta_n\)</p>
+
+    <ul>
+      <li>
+\[\hat\sigma^2(X^TX)^{-1}\]
+      </li>
+      <li>\(\frac{\hat\beta_k-\beta_k}{\hat{SE}(\hat\beta_k)}\sim t(n-p)\)  student t distribution with (n-p) degree of freedom</li>
+    </ul>
+  </li>
+  <li>
+    <font color="#ff0000">consistant intervals using t distribution </font>
+  </li>
+  <li>
+    <p>for a fixed P, \(n\rightarrow\infty\) this convenge to standard normal distribution</p>
+  </li>
+  <li>
+    <p>There’re many strong linearity assunptions</p>
+
+    <ul>
+      <li>linear of CEF</li>
+      <li>consistant variance</li>
+      <li>Gaussian error</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Feb 15</p>
+
+<ul>
+  <li>
+    <p>robost standard errors</p>
+  </li>
+  <li>
+\[\hat\beta_{OLS}=\beta+[\frac1n\sum X_iX_i^T]^{-1}[\frac1n\sum X_ie_i]\]
+  </li>
+  <li>
+    <p>As we have seen, plug-in estimators all (in general) consistent and ansmphoroly</p>
+  </li>
+  <li>
+    <p>We saw how to use the nonparameteric to compute standard errors and estimate confidence intervals without »&gt; tthe variance of \(\hat\beta_n\) explicitly.</p>
+  </li>
+  <li>
+    <p>But now we derive a closed form expainsion for the congmptoties »&gt; of \(\hat\beta_n\).</p>
+  </li>
+  <li>
+    <p>law of large numbers</p>
+
+    <ul>
+      <li>empricial moments converge to population moments
+        <ul>
+          <li>
+\[E_n[X_i]\rightarrow^P E[X_i]\]
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>central limit theorm</li>
+</ul>
+
+<p>![[Pasted image 20230215144827.png]]
+![[Pasted image 20230215222256.png]]
+![[Pasted image 20230215222334.png]]</p>
+
+<h3 id="causal-inference">Causal inference</h3>
+
+<ul>
+  <li>I want to estimate the causal effect of \(D\) on \(Y\)</li>
+  <li>How do I explain this question mathmatically?
+    <ul>
+      <li>\(E[Y\vert D=1]-E[Y\vert D=0]\)  (all obeserved of \(Y\)) Can this be seen as causal effect? No.</li>
+      <li>We need to define a new object for causal quantilities
+        <ul>
+          <li>for causal inference, we need the concept of a causal model
+            <ul>
+              <li><span style="background:#fff88f">conceptuals outcome</span> »»</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Potential outcomes
+    <ul>
+      <li>\(Y(1)\): mortality (outcome) if we <u>force</u> the person to take the drug (treatment)</li>
+      <li>\(Y(0)\): mortality (outcome) if we <u>force</u> the person to now take the drug (treatment)</li>
+      <li>
+\[\tau_i=Y_o(1)-Y_i(o)\]
+      </li>
+      <li>
+\[E[\tau_i]=E[Y_o(1)]-E[Y_i(o)]=E[Y_i(1)]-E[Y_i(o)]\]
+        <ul>
+          <li>\(E[Y_i(1)]\) the average of Y if we intervine</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Suppose we have data on \(P(Y_i,X_0,D_i)\)
+    <ul>
+      <li>we have no data on \(Y_0(1)\) and \(Y_0(0)\)
+        <ul>
+          <li>to connect the observed data to the conceptual (potential outcome) we need assumptions (causal assumptions)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Consistence
+    <ul>
+      <li>
+\[D_i=d \Rightarrow Y_i=Y_i(d)\]
+      </li>
+      <li>for binary treatment \(Y_i=D_iY_i(1)+(1-D_0)Y_i(0)\)</li>
+    </ul>
+  </li>
+  <li>Conditional ignordilion (of the trearment assignment)
+    <ul>
+      <li>suppose D_i is randomized
+        <ul>
+          <li>
+\[D_o \bot Y_i(1),Y_i(0),X_i\]
+          </li>
+          <li>with this, we can already prove that randomlizetion »&gt; ATE</li>
+          <li>
+\[ATE=E[Y(1)]-E[Y(0)]=E[Y(1)\vert D=1]-E[Y(0)\vert D=0]=E[Y\vert D=1]-E[Y\vert D=0]\]
+          </li>
+        </ul>
+      </li>
+      <li>with a binary treatment, this can be »&gt; with a regression coef</li>
+      <li>
+\[\frac{Cov(Y,D)}{Var(D)}=ATE\]
+      </li>
+    </ul>
+  </li>
+  <li>Unconfoundence/Conditional ignordilion
+    <ul>
+      <li>\(Y(1),Y(0)\bot D\vert X\)  (assume no obsersed compound for now)</li>
+      <li>the treatment is not confounded with the outcome once we »&gt;</li>
+      <li>the treatment is an of random conditional on X
+        <ul>
+          <li>which X should include in my regression such that conditional ignordilion holds?</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>This is suffcient to identitfy (explain our causal effect in terms of the observed data) the ATE</li>
+  <li>\(ATE=E[Y(1)]-E[Y(0)]=E[E(Y_i\vert D_o=d,X_i)-E(Y_0\vert D_i=0,X_i)]\) statistical estimation</li>
+  <li>How to estimate ATE? Plug-in: \(\hat{ATE}=\frac1n\sum_i[\hat E(Y_i\vert D_o=d,X_i)-\hat E(Y_0\vert D_i=0,X_i)]\)
+    <ul>
+      <li>\(\hat E(Y_0\vert D_i=0,X_i)\) fitted regression model</li>
+      <li>Just use the nonparameteric bootstrap</li>
+    </ul>
+  </li>
+  <li>When does regression coef reflect ture ATE?
+    <ul>
+      <li>suppose \(E(Y_0\vert D_i,X_i)=\tau D_i+X_o^T\beta\)</li>
+      <li>consistency + Unconfoundence</li>
+      <li>Then: \(ATE=\tau\)</li>
+      <li>But we do not need commit the lineaity
+        <ul>
+          <li>
+\[E[Y\vert D,X]=\beta_0+\beta_1DX+\beta_3X\]
+          </li>
+          <li>\(ATE=\beta_1+\beta_2E[X]\)  not a single regression coef but we know how to estimate this <span style="background:#fff88f">MIDTERM</span></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>![[Pasted image 20230217145734.png]]</p>
+
+<p>Feb 23</p>
+
+<ul>
+  <li>
+    <p>regression and causal inference</p>
+
+    <ul>
+      <li>structual models and causal diagrams</li>
+      <li>good and bad controls (based on the empircal domain knowledge)</li>
+    </ul>
+  </li>
+  <li>
+    <p>Review</p>
+
+    <ul>
+      <li>query / causal estimator: for example: ATE (one estimator)</li>
+      <li>causal assumptions:
+        <ul>
+          <li>consistency</li>
+          <li>conditianal ingoreabiliy / unconfoundment</li>
+        </ul>
+      </li>
+      <li>identification</li>
+      <li>inference
+        <ul>
+          <li>point estimation: plug-in estimation</li>
+          <li>non-parameteric booststrap</li>
+          <li>other ways</li>
+        </ul>
+      </li>
+      <li>what about the ATE is equal to the regression coef?
+        <ul>
+          <li>if the CEF is linear on \(D_i, X_i\)</li>
+        </ul>
+      </li>
+      <li>when should we expect conditional ignoreablity to hold on confound
+        <ul>
+          <li>or which variables should I include in the regression equation</li>
+          <li>to answer this question, we need structual models and causal diagrams</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Structual causal models (SCM)</p>
+
+    <ul>
+      <li>\(X\) socio-economics factors, \(D\) drug, \(Y\) mortality</li>
+      <li>\(X\leftarrow f_x(U_x)\) huge complicated function</li>
+      <li>\(D\leftarrow f_D(X,U_D)\);</li>
+      <li>\(y\leftarrow f_y(D,X,U_y)\), \(Y=(X,D,y)\) endogamous variable</li>
+      <li>\(U=(U_x,U_D,U_y)\) exogenous variables</li>
+      <li>\(F=\{f_x,f_D,f_y\}\): structual equations, potential outcome variables</li>
+    </ul>
+  </li>
+  <li>
+    <p>\(U\sim P(U)\), joint distribution of the exogenous variables</p>
+
+    <ul>
+      <li>
+\[P(U)=P(U_x)*P(U_D)*P(U_y)\]
+
+        <ul>
+          <li>this is a strong assumption</li>
+        </ul>
+      </li>
+      <li>
+        <p>Causal diagrams</p>
+
+        <ul>
+          <li>all models we study here are <strong>no circles</strong></li>
+          <li>direct aegclic graph</li>
+          <li>usually we will omit exogenous variable from ture diagrams</li>
+          <li>moreover, if a latent variables exists more than one Structual model, or if the  exogenous variable are not independent, then we will express this iwth dashed
+            <ul>
+              <li>\(X\leftarrow f_x(U_x)\) huge complicated function</li>
+              <li>\(D\leftarrow f_D(X,U_X)\);</li>
+              <li>\(y\leftarrow f_y(D,X,U_y)\), \(Y=(X,D,y)\) endogamous variable</li>
+              <li>figrue 2 in the notes
+                <ul>
+                  <li>we can partalliy spliting a structual model using a causal diagrams</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>how can defind causal effects</p>
+  </li>
+  <li>
+    <p>we can define causal effects as expicfic thern as the model</p>
+
+    <ul>
+      <li>modify the machinism of \(M\)</li>
+      <li>For example, \(do (D=d)\)
+        <ul>
+          <li>replace the machinism \(D\leftarrow f_D(X,U_D)\) with \(D\leftarrow d\)</li>
+          <li>figure 3</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>![[IMG_0040.png]]</p>
+
+<p>![[IMG_0041.png]]</p>
+
+<p>Feb 27</p>
+
+<ul>
+  <li>common mistakes in midterm
+    <ul>
+      <li>boostrap: resampling with the full dataset: n is the row number of  your dataset</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="good-and-bad-controls">Good and bad controls</h4>
+
+<ul>
+  <li>the problem we want to solve: given the observation data \(D_v\) and a causal diagram \(G\), can we identify the ATE via regression adjustment?
+    <ul>
+      <li>if X is a valid adjustment set, then the \(ATE  = E[E[Y\vert D=1,X]-E[Y\vert D=0,X]]\) or \(Y(d)\bot D\vert X\) (unconfounded)</li>
+      <li>example: suppose we have the DAG: ![[Pasted image 20230227145411.png\vert 200]]</li>
+      <li>suppose the SE are linear
+        <ul>
+          <li>
+\[D=\lambda_{XD}X+u_D\]
+          </li>
+          <li>
+\[Y=\lambda_{Dy}D+\lambda_{xy}X+u_y\]
+          </li>
+          <li>X, U_D, U_y are indenpdent</li>
+        </ul>
+      </li>
+      <li>What’s the ATE
+        <ul>
+          <li>
+\[ATE=\lambda_{Dy}\]
+          </li>
+          <li>relation with OLS</li>
+          <li>y ~ D![[Pasted image 20230227150301.png]]</li>
+          <li>adjusting for X will block the non-causal path</li>
+          <li>y ~ D+X</li>
+          <li>![[Pasted image 20230227150727.png]]</li>
+        </ul>
+      </li>
+      <li>Now, lets understand in general how these two things work?
+        <ul>
+          <li>which path is causal/non-causal</li>
+          <li>when the path closed or opened?</li>
+          <li>there are 3 building blocks/pattern
+            <ul>
+              <li>mediators (chain): D -&gt; X -&gt; Y, x mediate the effect of D on Y
+                <ul>
+                  <li>a causal path. by default, it is opened</li>
+                  <li>conditioning on X block this flow</li>
+                </ul>
+              </li>
+              <li>common causes (confounders) /form
+                <ul>
+                  <li>![[Pasted image 20230227151528.png\vert 200]]</li>
+                  <li>non-causal between D and Y (asscoation). by default, its closed</li>
+                  <li>conditioning on will block the flow</li>
+                </ul>
+              </li>
+              <li>common effect (collides)
+                <ul>
+                  <li>![[Pasted image 20230227152125.png\vert 200]]</li>
+                  <li>a common effect does not induce association between its causes</li>
+                  <li>conditioning on the X, <strong>open</strong> this no-causal flow association</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Mar 1</p>
+
+<ul>
+  <li>Crash course about good and bad control</li>
+</ul>
+
+<h3 id="penalized-regression">Penalized Regression</h3>
+
+<ul>
+  <li>
+    <p>We used to assume that our sample size n » p (number of feature), but the high-dimensional regressors are common nowadays due to rich features and non-linear models</p>
+  </li>
+  <li>
+    <p>Whenever p/n is not small, tranditional inference can break down and we can overfit; if p » n, we cannot even fit on OLS model.</p>
+  </li>
+  <li>
+    <p>To this seeting, in-sample awareness of goodness of fit (\(R^2\), MSE) may be too optimistics</p>
+  </li>
+  <li>
+    <p>There are ways to account for this outfitting by comparing the goodness of fit matirx, such as the adjusted \(R^2\).</p>
+  </li>
+  <li>
+    <p>In machine learning, a simple and effective way to deal with the overfitting issues:</p>
+
+    <ul>
+      <li>Two goal: getting a accurate methods of model estimation + avoid overfitting</li>
+    </ul>
+  </li>
+  <li>
+    <p>Sample splitting (still need IID data):</p>
+
+    <ul>
+      <li>Trainning and validation (before model selection)</li>
+      <li>Test data (model performance)</li>
+      <li>How can we select the best model for prediction from a set of candidate models?
+        <ul>
+          <li>Cross-validation, the most popular approach now</li>
+          <li>K-fold cross-validation
+            <ul>
+              <li>mimic predictions out of samples</li>
+              <li><u>Example</u>: suppose \(E[Y\vert X]=g(x)\) and we suppose it is non-linear</li>
+              <li>We could use polynomial to approximate:
+                <ol>
+                  <li>Define a matrix of performance (\(R^2\), MSE)</li>
+                  <li>Split all dafta into \(k\) folders (usually 5 or 10)</li>
+                  <li>For each folder \(f_j\):
+                    <ol>
+                      <li>Fit the models using all data except fold \(f_j\)</li>
+                      <li>Use fold \(f_j\) to predict and compute the performance matrix</li>
+                      <li>Compute the average of the performance matrix</li>
+                    </ol>
+                  </li>
+                  <li>Select the model with better average of the performance matrix</li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Let \(Y_i=E[Y\vert X_i]+\epsilon_i=g(X_i)+\epsilon_i\)</p>
+
+    <ul>
+      <li>\(\hat{g}(X_i)\) is a prediction function tarined on IID smaple \(P(X,Y)\)</li>
+      <li>Now consider an assume observation \(y,x\sim P(X,Y)\), which are independent from existing data</li>
+      <li>
+\[E[(y^{NEW}-\hat g(X^{NEW}))^2\vert X^{NEW}=x^{new}]\]
+      </li>
+      <li><u>Bias-variance tarde-off</u>
+        <ul>
+          <li>We maybe able to get better out of sample performance by introducing a <u>little</u> bias if the compensiton by XXX the variance.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Therefore, we are going to add a penalized term:</p>
+
+    <ul>
+      <li>
+        <p>h0 penality: \(\beta H_0\) = # of non zero ceof. — subset regression</p>
+      </li>
+      <li>
+        <p>h1 penality: \(\beta H_1\) = \(\sum_j \vert \beta_j\vert\)   — Lasso</p>
+      </li>
+      <li>
+        <p>h2 penality: \(\beta H_2\) = \(\sum_j \beta_j^2\)     — Ridge</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="lasso-regression">Lasso regression</h4>
+
+<p>\(\)argmin_{\beta\in R^P}\frac1n \sum_i (Y_i-X_i^T\beta)^2+\lambda\sum^p_{j=1}\vert \beta_j\vert \(\)</p>
+
+<p>The general matrix format solution:</p>
+
+<p>The lasso penality will shriinke some coeffcientts to zero</p>
+
+<h4 id="ridge-regression">Ridge regression</h4>
+
+<p>\(\)argmin_{\beta\in R^P}\frac1n\sum_i(Y_i-X_i^T\beta)^2+\lambda\sum^p_{j=1}\beta^2_j\(\)</p>
+
+<ul>
+  <li>
+    <p>\(\lambda\) fixed penlity</p>
+  </li>
+  <li>
+    <p>\(\sum^p_{j=1}\beta^2_j\) the measurement of model complexity</p>
+  </li>
+  <li>
+    <p>The general matrix format solution:</p>
+  </li>
+  <li>
+    <p>for the penlity, it treats all coeffcients the same; so we need to standardize all covariates</p>
+  </li>
+  <li>
+    <p>In general, which one is best, lasso or ridge?</p>
+
+    <ul>
+      <li>It depends on the sample data generation process</li>
+    </ul>
+  </li>
+  <li>
+    <p>We can use lasso and ridge to fit non-linear models.</p>
+  </li>
+</ul>
+
+<p>Go back to causal inference</p>
+
+
+    <div class="footer">
+      <div class="row">
+        <div class="four columns">
+          HAOYU YUE
+        </div>
+        <div class="four columns">
+          yohaoyu [AT] washington.edu
+        </div>
+        <div class="four columns">
+          <span onclick="window.open('https://twitter.com/HaoyuAtCities')" style="cursor: pointer">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </span>
+          <span onclick="window.open('https://www.linkedin.com/in/yohaoyu')" style="cursor: pointer">
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          </span>
+          <span onclick="window.open('https://github.com/yohaoyu')" style="cursor: pointer">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </span>
+          <span onclick="window.open('https://calendly.com/yohaoyu')" style="cursor: pointer">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+          </span>
+          <!--<span onclick="window.open('https://scholar.google.com/citations?user=jfr_teoAAAAJ&hl=zh-CN')" style="cursor: pointer">
+            <i class="ai ai-google-scholar ai-lg" aria-hidden="true">
+          </span></i>-->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  <!-- do not remove -->
+  <span id="62cd7b7da1aff3196fdc26b60e396df9"></span>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

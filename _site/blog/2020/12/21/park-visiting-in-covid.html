@@ -1,0 +1,187 @@
+<p>At the beginning of 2020, COVID-19 began to become pandemic all over the world. Governments proposed shelter in place orders to restrict social distance and the use of public spaces to prevent the spread of the virus. CDC proposed that during the pandemic urban green space, such as parks, are important to the mental and physical health of citizens. Although the orders restrict all people, such restrictions will have a severe impact on some socio-economic disadvantaged groups. So, I would like to explore the relationships between the distance between park visiting and socioeconomic status before and during the pandemic. ArcMap, ArcCatalog, Excel, and R will be used.</p>
+
+<!--more-->
+
+<h2 id="data-description">Data Description</h2>
+
+<ul>
+  <li><a href="https://geo.wa.gov/datasets/WSDOT::wsdot-alpaca-census-block-group-2018?geometry=-126.311%2C46.611%2C-118.609%2C47.916"><strong>ALPACA Census Block Group (2018)</strong></a> (2020/2/19)</li>
+</ul>
+
+<p>US Census 5-year American Community Survey, from Washington State Geospatial Data Portal, including much socio-economic information in Washington State by block group level.</p>
+
+<ul>
+  <li><a href="https://gis-kingcounty.opendata.arcgis.com/datasets/street-address-st-address-line"><strong>Street Address</strong></a> (2020/10/21)</li>
+</ul>
+
+<p>All streets in King County, from King County Open GIS Data, including the mid-points of street parcels, the types of streets, etc.</p>
+
+<ul>
+  <li><a href="https://gis-kingcounty.opendata.arcgis.com/datasets/king-county-political-boundary-no-waterbodies-kingco-area"><strong>King County Political Boundary</strong></a> (2018/12/4)</li>
+</ul>
+
+<p>The boundary of King County, from King County Open GIS Data.</p>
+
+<ul>
+  <li><a href="https://www.safegraph.com/weekly-foot-traffic-patterns"><strong>Park visitors and Blocks</strong></a> (2020/6)</li>
+</ul>
+
+<p>The foot traffic counts for parks in King County, from SafeGraph, including park visiting counts recorded by census block groups in the last weeks of April 2019/2020. (Visitor_count = 4 means in this week, the number of visitors is less than 5.)</p>
+
+<h2 id="methods-and-process">Methods and Process</h2>
+
+<h3 id="data-preparation">Data Preparation</h3>
+
+<h4 id="1--king-county-only">(1)  King County Only</h4>
+
+<p>Use <strong>Selection by Location</strong> to select the King County data from <em>Census Block Group</em> by <em>the boundary of King County</em>. Use <strong>Excel</strong> to select the park data within King County from <em>Park visitors and Blocks</em>.</p>
+
+<h4 id="2--preparation-for-next-step">(2)  Preparation for Next Step</h4>
+
+<p>Use <strong>Excel</strong> to reorganize the data and make two versions, one for R and regression, including all information, named <em>KC_2020_All**, and KC_2019_All</em> respectively. Another is for ArcMap, only including the XYs of Parks and Census Block Groups, named <em>KC_2020, KC_2019</em> respectively.</p>
+
+<h4 id="3--import-data">(3)  Import Data</h4>
+
+<p><strong>Import</strong> <em>Street Address</em> named <em>KC_Streets</em>, Census Block Group (2018) named <em>KC_Census</em>. <strong>Import</strong> <em>KC_2020</em>, and <em>KC_2019</em>. By the way, <strong>import</strong> above all into a geodatabase called <em>OD.gdb</em>, Meanwhile, remove other useless data from ArcMap.</p>
+
+<h3 id="network-analysis">Network Analysis</h3>
+
+<h4 id="4--network-dataset">(4)  Network Dataset</h4>
+
+<p><strong>Create</strong> a new File Geodatabase Feature Dataset called <em>Road_2020</em>, then move <em>KC_streets</em>, <em>KC_2020</em> into the <em>Road_2020</em>. <strong>Create</strong> a new Network Dataset called <em>Road_ND_2020</em> in ArcMap.</p>
+
+<h4 id="5--routes-analysis">(5)  Routes Analysis</h4>
+
+<p>Active <strong>Network Analyst</strong> and then <strong>Create Route</strong> called <em>Routes_2020</em>. <strong>Load location</strong> <em>KC_2020</em> for <em>Stops</em> then click <strong>Solve</strong>.</p>
+
+<p><img src="https://raw.githubusercontent.com/yohaoyu/image_repo/main/2022/08/18-18-17-23-routes_analysis.png" alt="routes_analysis.png" /></p>
+
+<h4 id="6--output">(6)  Output</h4>
+
+<p>After the analysis, use <strong>Spatial Join</strong> to give <em>GEOID</em> to the result. Then use <strong>Table To Excel</strong> to output the results <em>Routes_2020_Output</em> as an Excel file.</p>
+
+<h3 id="regression">Regression</h3>
+
+<h4 id="7--vlookup">(7)  Vlookup</h4>
+
+<p>Use <strong>Vlookup</strong> in Excel to connect the <em>Routes_2020_Output</em> and <em>KC_2020_All.</em> Because the range of <em>Routes_2020_Output</em> is limited to King County, only 2610 pairs can be found. Then <strong>Save as</strong> <em>KC_2020_all.csv</em>.</p>
+
+<h4 id="8--correlations-and-multiple-regression-in-r">(8)  Correlations and Multiple Regression in R</h4>
+
+<p><strong>Import</strong> the <em>KC_2020_all.csv</em>. <strong>Identify</strong> and <strong>remove</strong> influential data points and NA values. <strong>Calculate</strong> the correlation coefficients and <strong>build</strong> the regression model (Distance ~ Percent of Non-White + Percent of Over 65 + Percent of Poverty).</p>
+
+<h3 id="visualization">Visualization</h3>
+
+<h4 id="9-park-visiting-pattern">(9) Park Visiting Pattern</h4>
+
+<p>Use <strong>XY to Line</strong> to make a figure for presenting the park visiting pattern this week. Data <em>KC_2020_All</em> will be used.</p>
+
+<h3 id="model-building">Model Building</h3>
+
+<h4 id="10-auto-get-distance">(10) Auto Get Distance</h4>
+
+<p>Since I need to redo the whole process for 2019, I would like to make a <em>model</em> that can be used to analyze the distance of park visits with input-specific data. However, because some functions cannot be found in <em>ArcToolBox</em>, I can only make a simple one to import the data and make some preparations.</p>
+
+<h4 id="11-redo-all-for-2019">(11) Redo All for 2019</h4>
+
+<p>Use the data in 2019/4 to redo the analysis and then compare the results before and during the pandemic.</p>
+
+<h2 id="result">Result</h2>
+
+<h3 id="visiting-pattern---2019">Visiting Pattern - 2019</h3>
+
+<p><img src="https://raw.githubusercontent.com/yohaoyu/image_repo/main/2022/08/18-18-17-41-pattern_2019.png" alt="pattern_2019.png" /></p>
+
+<h3 id="visiting-pattern---2020">Visiting Pattern - 2020</h3>
+
+<p><img src="https://raw.githubusercontent.com/yohaoyu/image_repo/main/2022/08/18-18-17-51-pattern_2020.png" alt="pattern_2020.png" /></p>
+
+<h3 id="regression-results---2019">Regression Results - 2019</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th><strong>Est.</strong></th>
+      <th><strong>SD</strong></th>
+      <th><strong>Std. Error</strong></th>
+      <th><strong>T</strong></th>
+      <th><strong>P</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Percent of Non-White</strong></td>
+      <td>560.5</td>
+      <td>0.047</td>
+      <td>360.6</td>
+      <td>1.554</td>
+      <td>0.1204</td>
+    </tr>
+    <tr>
+      <td><strong>Percent of Over 65</strong></td>
+      <td>-2944</td>
+      <td>-0.103</td>
+      <td>806.1</td>
+      <td>-3.652</td>
+      <td>0.0003</td>
+    </tr>
+    <tr>
+      <td><strong>Percent of Poverty</strong></td>
+      <td>-1576</td>
+      <td>-0.084</td>
+      <td>576.6</td>
+      <td>-2.734</td>
+      <td>0.0063</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="regression-results---2020">Regression Results - 2020</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th><strong>Est.</strong></th>
+      <th><strong>SD</strong></th>
+      <th><strong>Std. Error</strong></th>
+      <th><strong>T</strong></th>
+      <th><strong>P</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Percent  of Non-White</strong></td>
+      <td>-30.25</td>
+      <td>-0.016</td>
+      <td>41.1</td>
+      <td>-0.737</td>
+      <td>0.4615</td>
+    </tr>
+    <tr>
+      <td><strong>Percent of Over 65</strong></td>
+      <td>-391.3</td>
+      <td>-0.086</td>
+      <td>89.9</td>
+      <td>-4.352</td>
+      <td>1.4e-05</td>
+    </tr>
+    <tr>
+      <td><strong>Percent of Poverty</strong></td>
+      <td>-63.09</td>
+      <td>-0.020</td>
+      <td>66.1</td>
+      <td>-0.954</td>
+      <td>0.3398</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="discussion">Discussion</h2>
+
+<p>By summarizing the data, we can know that the number of parks visiting decreased from 59070 to 19073 (-68%). At the same time, I also found that the more people over 65 years old in the community, the more likely they are to visit the park at a shorter distance during the COVID-9. However, the impact of percent of poverty and percent of non-white on Park selection is still unclear, and more research is needed.</p>
+
+<p>In the lab, there are many problems in operation, which need to be corrected or improved in the future. There are a lot of cross-county or even cross-state visiting activities, but I do not handle them well. There are different levels and conditions of streets, which should be treated differently, but it may be more reasonable to use Google Maps to plan the route in the future. In the regression model, due to the data, I only select the percent of non-white, percent over 65, and percent of poverty as independent variables. We can add more such as the education level, and Internet access. The whole lab does not make full use of the count data between each line (census block groups - parks), so I do not maximize the use of data.</p>
+
+<p>The lab is an interesting try, not only using a lot of GIS functions but also self-taught other functions such as network analysis, combining regression analysis and R learned in URBDP 520 Quantitative Method. Although the result is not very perfect, and there are some imperfections in the process, this is the meaning of the independent lab.</p>

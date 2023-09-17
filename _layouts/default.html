@@ -75,8 +75,9 @@
         <div class="three columns">
           <a href="{{ site.baseurl }}/"><img class="u-max-full-width" src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}'></a>
         </div>
-        <div class="nine columns main-description">
-            <h1>{{ site.data.main_info.name }}</h1>
+        <div class="nine columns main-description">  
+            <h2 style="display: inline-block; font-family: 'WenQuanYi Zen Hei', 'serif'"  > <span>岳皓宇</span></h2>
+            <h1 style="display: inline-block" > | {{ site.data.main_info.name }}</h1> 
             <p>{{ site.data.main_info.title }}</p>
             <p>{{ site.data.main_info.email }}</p>
             <p>
@@ -111,8 +112,8 @@
           <li class="navbar-item"><a class="navbar-link" href={{ "/index.html" | prepend: site.baseurl }}>Home</a></li>
           <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#bio" | prepend: site.baseurl }}>Bio</a></li>
           <!--<li class="navbar-item"><a class="navbar-link" href={{ "/index.html#publications" | prepend: site.baseurl }}>Publications</a></li>-->
-          <!--<li class="navbar-item"><a class="navbar-link" href={{ "/index.html#projects" | prepend: site.baseurl }}>Projects</a></li>-->
           <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#news" | prepend: site.baseurl }}>News</a></li>
+          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#projects" | prepend: site.baseurl }}>Projects</a></li>
           <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#resume" | prepend: site.baseurl }}>Vita</a></li>
         </ul>
       </div>
