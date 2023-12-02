@@ -3,24 +3,14 @@ layout: course
 title: Real Estate Data Analytics and Visualization
 subtitle: Real Estate 519, Autumn Quarter 2024, University of Washington
 ---
+### Navigation
+{:.no_toc}
 - TOC 
 {:toc}
-#### Introduction
+### Introduction
 
 
-#### Schedule
-
-##### Week 1
-##### Week 2
-##### Week 3
-##### Week 4
-10/02
-
-
-
-
-
-
+### Schedule
 
 | Date  | Topic                            | Reading          | Assignment           |
 | ----- | -------------------------------- | ---------------- | -------------------- |
@@ -28,3 +18,5 @@ subtitle: Real Estate 519, Autumn Quarter 2024, University of Washington
 | 10/14 |                                  |                  |                      |
 | 10/18 |                                  | National Holiday |                      |
 | 10/20 |                                  |                  |                      |
+
+### Assignments

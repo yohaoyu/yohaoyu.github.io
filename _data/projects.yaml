@@ -10,7 +10,26 @@ projects:
     url: ""
     selected: y
   - title: "Vulnerability in the Pandemic"
-    subtitle: "Social Vulnerability & Resillence during COVID 19"
+    subtitle: "Social Vulnerability & Resillence during COVID-19"
     thumbnail: "assets/projects/2022-resillience-in-pandemic/thumbnail.png"
     url: ""
     selected: y
+
+  - title: "Happiness During the COVID-19"
+    subtitle: "An Exploration of Global Happiness Index"
+    thumbnail: "assets/projects/2020-happiness/thumbnail.png"
+    url: ""
+    selected: N
+  - title: "Academy Urbanism"
+    subtitle: "Urban Renewal for Yuelu, a 1000-year Chinese Academy"
+    thumbnail: "assets/projects/2019-academy/thumbnail.png"
+    url: ""
+    selected: N
+  - title: "Traceability"
+    subtitle: "Historical Building Models for Central South University"
+    thumbnail: "assets/projects/2019-traceability/thumbnail.png"
+    url: ""
+    selected: N
+
+
+    

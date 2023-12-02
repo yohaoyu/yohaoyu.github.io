@@ -1,7 +1,7 @@
 
 ul.tab-nav {
     list-style: none;
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid #ececec;
     padding-left: 5px;
 }
 
@@ -10,7 +10,7 @@ ul.tab-nav li {
 }
 
 ul.tab-nav li .button {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;

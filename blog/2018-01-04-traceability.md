@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: "Traceability of Central South University"
 author: "Haoyu"
 tags: [project,models]
