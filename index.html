@@ -141,13 +141,13 @@ title: Home
 <div class="docs-section" id="projects">
   <h3>Projects</h3>
 
-<ul class="tab-nav">
+<!-- <ul class="tab-nav">
     <li><div class="button active" data-ref="#projects-selected">Selected</div></li>
     <li><div class="button" data-ref="#projects-all">All</div></li>
   </ul> 
 
   <div class="tab-content">
-    <div class="tab-pane active" id="projects-selected">
+    <div class="tab-pane active" id="projects-selected">-->
       {% assign selected_projects = site.data.projects.projects | where: "selected", "y" %}
       {% for project in selected_projects %}
         {% assign index_modulo = forloop.index0 | modulo:3 %}
@@ -178,7 +178,7 @@ title: Home
       {% endfor %}
     </div> 
 
-    <div class="tab-pane" id="projects-all">
+   <!-- <div class="tab-pane" id="projects-all">
       {% for project in site.data.projects.projects %}
         {% assign index_modulo = forloop.index0 | modulo:3 %}
         {% if index_modulo == 0 %}
@@ -208,7 +208,7 @@ title: Home
       {% endfor %}
     </div>
   </div>
-</div>
+</div>-->
 
 
 
