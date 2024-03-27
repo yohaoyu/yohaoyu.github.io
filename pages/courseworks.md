@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Graduate Coursework List
-subtitle: The Combination of Urban Planning, Policy, Climate, Energy, Data Science, and AI + Soceity Course Resources at the University of Washington.
+subtitle: The Combination of Urban Planning, Policy, Climate, Energy, Data Science, and AI + Society Course at the University of Washington.
 ---
 
 #### Planning, Policy, and Institutions
@@ -14,7 +14,7 @@ subtitle: The Combination of Urban Planning, Policy, Climate, Energy, Data Scien
 - PPM 506 Microeconomics for Policy Analysis 
 - PPM 508 Public Policy Processes 
 - PPM 510 Public Policy Analysis 
-- PPM 514 Organizations, Management and Theory
+- PPM 514 Organizations, Management, and Theory
 - R E 550 Real Estate Development
 
 #### Energy, Climate, and Infrastructure
@@ -35,11 +35,12 @@ subtitle: The Combination of Urban Planning, Policy, Climate, Energy, Data Scien
 - CS&SS 510 Maximum Likelihood Methods for the Social Sciences 
 - CS&SS 512 Time Series and Panel Data for the Social Sciences
 - [CS&SS 567 Statistical Analysis of Social Networks](https://thmccormick.github.io/teaching/)
+- CS&SS 568 Game Theory For Social Scientists
 - STAT 504 Applied Regression
 - STAT 512/513 Statistical Inference
 - STAT 534 Statistical Computing
+- STAT 535 Statistical Learning
 - STAT 536 Analysis of Categorical and Count Data
-- STAT 538 Statistical Learning
 - STAT 554 Statistical Methods for Spatial Data
 - STAT 560 Hierarchical Modeling for the Social Sciences
 - STAT 564 Bayesian Statistics for the Social Science
@@ -49,13 +50,13 @@ subtitle: The Combination of Urban Planning, Policy, Climate, Energy, Data Scien
 
 - CSE 414 Database Systems
 - CSE 512 Data Visualization
-- CSE 517 Natural Language Processing
+- [CSE 517 Natural Language Processing (Large Language Models)](https://safe-fernleaf-26d.notion.site/Winter-24-CSE-447-517-Natural-Language-Processing-4142333a001143d2be5ecff1a535c4ab)
 - CSE 542 Reinforcement Learning
 - CSE 546 Machine Learning
 - CSE 547 Machine Learning for Big Data
 - CSE 573 Artificial Intelligence 
-- CSE 580 Computing for Social Good 
-- CSE 582 Ethics in Artificial Intelligence 
+- CSE 576 Computer Vision
+- CSE 578 Convex Optimization
 - [CSE 583 Software Development for Data Scientists](http://uwseds.github.io/syllabus.html)
 - [CSE 599 AI vs IA](https://courses.cs.washington.edu/courses/cse599h/23wi/) 
 - CSE 599 Deep Learning
@@ -64,9 +65,16 @@ subtitle: The Combination of Urban Planning, Policy, Climate, Energy, Data Scien
 - CSE 599 Explainable AI
 - CET 599 Machine Learning for Civil Engineering
 - [CEWA 567 Geospatial Data Analysis with Python](https://github.com/UW-GDA/gda_course_2020)
+
+#### AI and Society 
+
+- CSE 580 Computing for Social Good 
+- CSE 582 Ethics in Artificial Intelligence 
 - GEOG 521 Critical Geographic Information System
-- R E 519 Real Estate Data Analysis and Visualization
-- INSC 572 Qualitative Methods in Information Science
+- PUBPOL 583 Science, Technology, and Public Policy 
+- PUBPOL 585 Topics In Science, Technology, And Public Policy
+- PUBPOL 586 Technology, Law, and Policy
+- STSS 591 Science, Technology & Society Studies in Action
 
 #### Master of Urban Planning at UW (Urban Analytics Track)
 
@@ -78,6 +86,7 @@ Currently, *Urban Analytics* or similar data science directions are not formal s
 - URBDP 520 Quantitative Methods in Urban Design and Planning 4 (*Waive if you have a good statistics foundation before*)
 - URBDP 527 History, Ethics, Form, and Theory 4
 - **CSE 583 Software Development for Data Scientists 4**
+- **STAT 509 Introduction to Mathematical Statistics 4**
 
 ##### First Year: Winter
 
@@ -85,26 +94,25 @@ Currently, *Urban Analytics* or similar data science directions are not formal s
 - URBDP 506 Planning Studio Prep 3
 - URBDP 528 History, Ethics, Form, and Theory 4
 - URBDP 573 Digital Design Practicum 4 (*Waive if you have a design background before*)
+- **CSE 414 Database Systems 4**
 
 ##### First Year: Spring
 
 - URBDP 507 Urban Planning Studio 5
-- URBDP 580 Legal and Administrative Framework for Planning 3
 - **CSE 512 Data Visualization 4**
+- **URBDP 522 Urban and Regional Geospatial Analysis 4** *OR* **CEWA567 Geospatial Data Analysis with Python 4**
 
 ##### Second Year: Autumn
 
 - URBDP 598 Research Design for Urban Science 4
-- **STAT 509 Introduction to Mathematical Statistics 4**
-- **CSE 414 Introduction To Database Systems 4**
+- **CSE 546 Machine Learning 4**
 
 ##### Second Year: Winter
 
 - URBDP 700 Master’s Thesis on Urban Analytics 4
-- **CSE 546 Machine Learning 4**
-- **STAT 504 Applied Regression 4**
+- **CSE 517 Natural Language Processing 4** *OR* **CSE 493G1 Deep Learning 4**
 
 ##### Second Year: Spring
 
 - URBDP 700 Master’s Thesis on Urban Analytics 5
-- **URBDP 522 Urban and Regional Geospatial Analysis** *OR* **CEWA567 Geospatial Data Analysis with Python 4**
+- URBDP 580 Legal and Administrative Framework for Planning 3
