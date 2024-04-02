@@ -123,8 +123,8 @@ html {
 body {
   font-size: 1.6em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.7;
-  font-weight: 500;
-  font-family:   "Optima",'Rubik', "Open Sans", sans-serif, Cairo, "Helvetica Neue", BlinkMacSystemFont,  "Palatino" ,"Microsoft Yahei","Raleway", Helvetica;
+  font-weight: 400;
+  font-family:   "Open Sans","Optima",'Rubik',  sans-serif, Cairo, "Helvetica Neue", BlinkMacSystemFont,  "Palatino" ,"Microsoft Yahei","Raleway", Helvetica;
   /* font-family: ,system-ui, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   color: #4e4e4e; }
 
