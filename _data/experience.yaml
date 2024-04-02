@@ -6,8 +6,20 @@ experiences:
   subtitle: "Urban Infrastructure Lab"
   category: "school"
 
+- place: "Microsoft Research"
+  time: "2024 - Now"
+  title: "AI & Society Reseach Fellow"
+  subtitle: "Renewable Energy, AI and Communities"
+  category: "work"
+
+- place: "Shenzhen Planning Research Center"
+  time: "2020"
+  title: "Land Use and Redevelopment Intern"
+  subtitle: "Shenzhen Urban Planning & Land Resource Research Center"
+  category: "work"
+
 - place: "Central South University"
   time: "2015 - 2020"
   title: " Undergraduate Student"
   subtitle: "Urban and Rural Planning"
-  category: "work"
+  category: "school"

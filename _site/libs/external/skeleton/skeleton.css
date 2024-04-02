@@ -51,7 +51,7 @@
 /* For devices larger than 550px */
 @media (min-width: 550px) {
   .container {
-    width: 80%; }
+    width: 85%; }
   .column,
   .columns {
     margin-left: 4%; }
@@ -121,12 +121,12 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
 body {
-  font-size: 1.55em; /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: 1.55;
-  font-weight: 100;
-  font-family: Optima, Palatino,"Microsoft Yahei","Raleway", sans-serif,"HelveticaNeue", "Helvetica Neue", Helvetica;
-  /* font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  color: #222; }
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.8;
+  font-weight: 400;
+  font-family:   'Rubik', "Open Sans", sans-serif, Cairo, "Helvetica Neue", BlinkMacSystemFont, "Optima", "Palatino" ,"Microsoft Yahei","Raleway", Helvetica;
+  /* font-family: ,system-ui, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  color: #4e4e4e; }
 
 
 /* Typography
@@ -134,20 +134,20 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0rem;
   margin-bottom: 2rem;
-  font-weight: 300; }
-h1 { font-size: 3.0rem; line-height: 1.2;  letter-spacing: -.08rem;font-weight: 150}
-h2 { font-size: 3.6rem; line-height: 1.2; letter-spacing: -.08rem; }
-h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.06rem; }
-h4 { font-size: 2.4rem; line-height: 1.2; letter-spacing: -.1rem;}
-h5 { font-size: 2.2rem; line-height: 1.2;  letter-spacing: -.02rem; }
+  font-weight: 400; }
+h1 { font-size: 3.0rem; line-height: 1.2;  letter-spacing: -.0rem;font-weight: 150}
+h2 { font-size: 3.6rem; line-height: 1.2; letter-spacing: -.0rem; }
+h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.0rem; }
+h4 { font-size: 2.4rem; line-height: 1.2; letter-spacing: -0rem;}
+h5 { font-size: 2.2rem; line-height: 1.2;  letter-spacing: -.0rem; }
 h6 { font-size: 2.0rem; line-height: 1.6;  letter-spacing: 0; }
 
 /* Larger than phablet */
 @media (min-width: 550px) {
-  h1 { font-size: 3.8rem; font-weight: 200; letter-spacing: -.1rem;}
+  h1 { font-size: 3.8rem; font-weight: 200; letter-spacing: -0rem;}
   h2 { font-size: 3.2rem; }
-  h3 { font-size: 2.8rem; }
-  h4 { font-size: 2.4rem; font-weight: 100; letter-spacing: -.1rem;}
+  h3 { font-size: 2.7rem; }
+  h4 { font-size: 2.4rem; font-weight: 100; letter-spacing: -.0rem;}
   h5 { font-size: 2.0rem; }
   h6 { font-size: 1.2rem; }
 }
@@ -160,9 +160,11 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #4b2e83; }
+  color: #4b2e83; 
+  text-decoration: none;}
 a:hover {
-  color: #4b2e83; }
+  color: #4b2e83; 
+  text-decoration: none;}
 
 
 /* Buttons
