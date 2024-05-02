@@ -122,10 +122,10 @@ html {
   font-size: 62.5%; }
 body {
   font-size: 1.6em; /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: 1.6;
+  line-height: 1.5;
   font-weight: 400;
   letter-spacing: -.01rem;
-  font-family:  "Optima", "Roboto Slab", "Open Sans",  "Helvetica Neue",  "Palatino" ,"Microsoft Yahei", Helvetica, "Raleway" ;
+  font-family:  "Optima", 'Linux Biolinum', "Roboto Slab", "Open Sans",  "Helvetica Neue",  "Palatino" ,"Microsoft Yahei", Helvetica, "Raleway" ;
   /* font-family: ,system-ui, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   color: #373737; }
 
