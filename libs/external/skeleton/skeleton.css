@@ -122,7 +122,7 @@ html {
   font-size: 62.5%; }
 body {
   font-size: 1.6em; /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: 1.5;
+  line-height: 1.55;
   font-weight: 400;
   letter-spacing: -.01rem;
   font-family:  "Optima", 'Linux Biolinum', "Roboto Slab", "Open Sans",  "Helvetica Neue",  "Palatino" ,"Microsoft Yahei", Helvetica, "Raleway" ;
@@ -162,10 +162,10 @@ p {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
   color: #4b2e83; 
-  text-decoration: none;}
+  text-decoration: underline;}
 a:hover {
   color: #4b2e83; 
-  text-decoration: none;}
+  text-decoration: underline;}
 
 
 /* Buttons
