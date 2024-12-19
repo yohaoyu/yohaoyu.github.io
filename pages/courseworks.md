@@ -4,6 +4,18 @@ title: Graduate Coursework List
 subtitle: The Combination of Urban Planning, Policy, Climate, Energy, Data Science, and AI + Society Course at the University of Washington.
 ---
 
+We suggest, as doctoral students, taking whatever courses you are interested in with an objective beyond GPA. Ultimately, your time in graduate school will be assessed not by your grades but by your research performance and impact. You could explore some course registration strategies: 
+
+**Audit a class:** if you don't want to do the homework: you just need to send an email and change to audit ([instruction](https://registrar.washington.edu/registration/policies-procedures/)).
+
+**Grade options**: a great option (C/NC) if you'd like to attend some hard classes but do not want to influence your GPA.
+
+**Time conflicts**: send an email to the registration office if the conflict is less than an hour per week ([instruction](https://registrar.washington.edu/registration/policies-procedures/)), need professors' permission if the conflict is more than one hour per week.
+
+**Register for other-major-only courses** See their own website or ask the instructors. For Allen School (CSE), to complete the petition for both undergraduate and graduate level classes ([instruction](https://www.cs.washington.edu/students/ugrad/non-major-registration)).
+
+**Where can I find the syllabus?** Google it with codes and names. All URBDP course syllabi can be found here: [MUP Courses + Syllabi](https://urbdp.be.uw.edu/programs/mup-graduate-degree/udp-course-listings-and-syllabi/).
+
 #### Planning, Policy, and Institutions
 
 - URBDP 561 Urban Economics and Public Policy
