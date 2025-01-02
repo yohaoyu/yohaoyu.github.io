@@ -122,12 +122,12 @@ html {
   font-size: 62.5%; }
 body {
   font-size: 1.6em; /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: 1.55;
-  font-weight: 400;
-  letter-spacing: -.01rem;
-  font-family:  "Optima", 'Linux Biolinum', "Roboto Slab", "Open Sans",  "Helvetica Neue",  "Palatino" ,"Microsoft Yahei", Helvetica, "Raleway" ;
+  line-height: 1.6;
+  font-weight: 300;
+  letter-spacing: -.005rem;
+  font-family:  "Optima", 'Linux Biolinum', "Roboto Slab", "Open Sans",  "Helvetica Neue",  "Palatino" ,"Microsoft Yahei", Helvetica, "Raleway", -apple-system, "Commissioner" ;
   /* font-family: ,system-ui, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  color: #373737; }
+  color: #343434; }
 
 
 /* Typography
@@ -304,7 +304,7 @@ ul ol,
 ol ol,
 ol ul {
   margin: 0.45rem 0 0.45rem 3rem;
-  font-size: 90%; }
+  font-size: 100%; }
 li {
   margin-bottom: 0.45rem; }
 
