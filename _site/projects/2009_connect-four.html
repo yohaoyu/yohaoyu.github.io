@@ -78,7 +78,35 @@
     <section class="header">
       <div class="row">
         <div class="three columns">
-          <a href="/"><img class="u-max-full-width" src='/assets/profile-pics/photo.jpg'></a>
+          <a href="/">
+            <img id="profile-pic" class="u-max-full-width" src="" alt="Profile picture">
+          </a>
+          
+
+          <script>
+            const pics = [
+              { src: '/assets/profile-pics/photo1.jpg', weight: 0.3 },
+              { src: '/assets/profile-pics/photo2.png', weight: 0.3 },
+              { src: '/assets/profile-pics/photo3.jpg', weight: 0.05 },
+              { src: '/assets/profile-pics/photo4.jpg', weight: 0.05 },
+              { src: '/assets/profile-pics/photo5.jpg', weight: 0.2 },
+              { src: '/assets/profile-pics/photo6.jpg', weight: 0.1 }
+            ];
+          
+            function weightedRandom(pics) {
+              const totalWeight = pics.reduce((sum, pic) => sum + pic.weight, 0);
+              const rand = Math.random() * totalWeight;
+              let cumulative = 0;
+              for (let i = 0; i < pics.length; i++) {
+                cumulative += pics[i].weight;
+                if (rand < cumulative) return pics[i].src;
+              }
+            }
+          
+            document.getElementById('profile-pic').src = weightedRandom(pics);
+          </script>
+
+          <!--<a href="/"><img class="u-max-full-width" src='/assets/profile-pics/photo.jpg'></a>-->
         </div>
         <div class="nine columns main-description">  
             <!--<h2 style="display: inline-block; font-family: 'Noto Serif SC','WenQuanYi Zen Hei', 'serif';font-size: 25px; font-weight: 600;margin-bottom: 4px;"  > <span>岳皓宇</span></h2>-->
