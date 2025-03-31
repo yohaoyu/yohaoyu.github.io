@@ -85,13 +85,11 @@
 
           <script>
             const pics = [
-              { src: '{{ site.baseurl }}/assets/profile-pics/photo1.jpg', weight: 0.3 },
-              { src: '{{ site.baseurl }}/assets/profile-pics/photo2.png', weight: 0.3 },
-              { src: '{{ site.baseurl }}/assets/profile-pics/photo3.jpg', weight: 0.05 },
-              { src: '{{ site.baseurl }}/assets/profile-pics/photo4.jpg', weight: 0.05 },
-              { src: '{{ site.baseurl }}/assets/profile-pics/photo5.jpg', weight: 0.2 },
-              { src: '{{ site.baseurl }}/assets/profile-pics/photo6.jpg', weight: 0.1 }
-            ];
+              { src: '{{ site.baseurl }}/assets/profile-pics/photo1.jpg', weight: 10 },
+              { src: '{{ site.baseurl }}/assets/profile-pics/photo2.png', weight: 8 },
+              { src: '{{ site.baseurl }}/assets/profile-pics/photo3.jpg', weight: 0.1 },
+              { src: '{{ site.baseurl }}/assets/profile-pics/photo4.jpg', weight: 0.1 },
+              { src: '{{ site.baseurl }}/assets/profile-pics/photo5.jpg', weight: 5 }            ];
           
             function weightedRandom(pics) {
               const totalWeight = pics.reduce((sum, pic) => sum + pic.weight, 0);
